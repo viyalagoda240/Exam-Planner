@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Exam Study Planner</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5f7;--card:#fff;--ink:#16222c;--mut:#566673;--line:#d9e1e7;--ac:#0b6e7a;--on:#fff;--ok:#1a7f45;--bad:#c0392b;--O:#2f6fdb;--D:#0b7f74;--M:#7a4fd1;--S:#b82e80;--E:#9a6500;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f171d;--card:#17222a;--ink:#e8eef2;--mut:#98a7b3;--line:#2a3a45;--ac:#4fc3d0;--on:#06151a;--ok:#4cc77e;--bad:#ff7b6b;--O:#6ea3ff;--D:#3fcfbf;--M:#b394ff;--S:#ff7fc4;--E:#f0b44a;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0f171d;--card:#17222a;--ink:#e8eef2;--mut:#98a7b3;--line:#2a3a45;--ac:#4fc3d0;--on:#06151a;--ok:#4cc77e;--bad:#ff7b6b;--O:#6ea3ff;--D:#3fcfbf;--M:#b394ff;--S:#ff7fc4;--E:#f0b44a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 'Atkinson Hyperlegible',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:16px 14px 40px}
+body.hp main{padding-bottom:240px}
+a{color:var(--ac)}
+h1{font-size:1.35rem;margin:0 0 2px}
+h2{font-size:1.02rem;margin:0 0 6px;display:flex;justify-content:space-between;gap:8px;align-items:baseline;flex-wrap:wrap}
+h2 small{font-weight:400;color:var(--mut)}
+p{margin:6px 0}
+.mut,.sm{color:var(--mut)}.sm{font-size:.84rem}
+header,.day,.miss,details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:14px}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+.cd div{background:var(--bg);border-radius:10px;padding:10px 4px;text-align:center}
+.cd b{display:block;font-size:2rem;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--ac)}
+.cd span{color:var(--mut);font-size:.85rem}
+.cd .big{grid-column:1/-1;font-size:1.3rem}
+.bar{height:8px;border-radius:8px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .3s}
+.lg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.85rem;margin:10px 0}
+.lg i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--c);margin-right:5px}
+.miss{border:2px solid var(--bad)}.miss h2{color:var(--bad)}
+.day.today{border:2px solid var(--ac)}.day.full{opacity:.7}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 6px}
+.chips b{font-size:.8rem;padding:2px 10px;border-radius:99px;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent)}
+ul{list-style:none;margin:0;padding:0}
+.t{display:flex;gap:10px;align-items:center;padding:9px 8px 9px 10px;margin-top:6px;border-left:4px solid var(--c);border-radius:0 8px 8px 0}
+.t.on{background:color-mix(in srgb,var(--c) 12%,transparent)}
+.t input{width:22px;height:22px;accent-color:var(--c);flex:none}
+.t label{flex:1;display:flex;flex-direction:column;cursor:pointer}
+.t.x .tt{text-decoration:line-through;color:var(--mut)}
+button{font:inherit;font-weight:700;border:0;border-radius:10px;padding:10px 14px;cursor:pointer;background:var(--ac);color:var(--on)}
+.go{flex:none;padding:7px 12px;font-size:.9rem}
+button:focus-visible,input:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+summary{cursor:pointer;font-weight:700}
+details li{font-size:.88rem;padding:3px 0}
+#pop{position:fixed;left:0;right:0;bottom:0;z-index:20;max-width:760px;margin:0 auto;background:var(--card);border-top:3px solid var(--ac);border-radius:16px 16px 0 0;box-shadow:0 -6px 24px rgba(0,0,0,.2);padding:12px 16px calc(14px + env(safe-area-inset-bottom,0px))}
+#pop.run{border-top-color:var(--ok)}
+.pt{display:flex;justify-content:space-between;gap:10px;font-weight:700}
+#px{background:none;color:var(--mut);font-size:1.3rem;padding:0 6px}
+#pc{font-size:2.8rem;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.1}
+.pb{height:8px;border-radius:8px;background:var(--line);overflow:hidden;margin:8px 0}
+.pb i{display:block;height:100%;width:0;background:var(--ac)}
+#pop.run .pb i{background:var(--ok)}
+.pa{display:flex;gap:10px;margin-top:10px}.pa button{flex:1}
+#pg.stop{background:var(--bad)}#pd{background:var(--ok)}
+@media(max-width:420px){.cd b{font-size:1.6rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head>
+<body><main>
+<header>
+<h1>Semester 3.2 exam planner</h1>
+<p class="mut">Exam starts 2 Nov 2026 at 9:00. The plan runs 16 Oct to 1 Nov, with at most 2 subjects a day.</p>
+<div id="cd" class="cd"></div>
+<div class="bar"><i id="ob"></i></div>
+<p id="os" class="sm"></p>
+<div id="lg" class="lg"></div>
+<p class="sm">Embedded Systems had no lecture notes in the zip, so its tasks follow the past-paper topics. Use your own notes for them. <a href="#" id="jt">Go to today</a></p>
+</header>
+<section id="ms" class="miss" hidden><h2><span>Missed work (<span id="mc">0</span>)</span><small>Finished one late? Tick it.</small></h2><ul id="ml"></ul></section>
+<div id="days"></div>
+<details><summary>Recorded study sessions (<span id="lc">0</span>)</summary><ul id="log"></ul></details>
+</main>
+<div id="pop" hidden>
+<div class="pt"><span id="pn"></span><button id="px" aria-label="Close timer">×</button></div>
+<div id="pc">00:00</div><div id="pl" class="sm"></div>
+<div class="pb"><i id="pbar"></i></div>
+<div class="pa"><button id="pg">Start</button><button id="pd">Done</button></div>
+</div>
+<script>
+const RAW=`1|M|90|Ch1 Part 1 – systems of linear equations (handwritten)|Chapter 1 Part 1.pdf
+1|S|60|Lecture 1 – course intro, statistical learning review|Lecture1_Notes_1 (+Sinhala)
+2|O|75|Lesson 1, first half – what an OS is, its parts
+2|O|75|Lesson 1, second half – OS types, user and kernel mode
+2|O|90|Lesson 2 part 1 – process states, PCB, schedulers
+2|D|60|Lecture 1 – networks, nodes, links, protocols, history|01.pptx
+2|D|75|Lecture 2 part 1 – NIC, hub, switch, router, modem|02.pptx
+3|M|120|Ch1_2 – Gaussian elimination, pivoting, back substitution|Chapter 1_2.pdf
+3|M|30|MATLAB – graphical method, Gaussian elimination|MATLAB Part.pdf, Gaussian Elimination by using MATLAB.pdf
+3|M|105|Ch2 Lesson 1 – numerical differentiation, forward difference|Chapter 2_1.pdf
+3|E|75|Embedded basics – definition, features, uses, MCU vs MPU
+3|E|60|Functional vs non-functional needs, hard vs soft real-time
+4|D|90|Lecture 2 part 2 – IPv4, classes, subnetting practice|02.pptx
+4|D|45|Lecture 3 – PAN, LAN, MAN, WAN, VPN, SAN|03.pptx
+4|D|60|Lecture 5 part 1 – data and signals, digital/analog, modes
+4|D|60|Lecture 5 part 2 – AM, FSK, PSK, transmission impairments
+4|S|120|Lecture 2 – PCA: idea, steps, R code|Lecture2_PCA_Notes (+Sinhala)
+5|O|120|Lesson 2 part 2 – CPU scheduling (FCFS, RR) with Gantt practice
+5|O|75|Lesson 3 part 1 – deadlock and the 4 necessary conditions
+5|O|75|Lesson 3 part 2 – Banker's algorithm practice
+5|E|90|Sensors, actuators, controller – street light, waste bin designs
+6|M|75|Ch2 Lesson 2 – backward difference formulas|Chapter 2_2.pdf
+6|M|90|Ch2 Lesson 3 – numerical integration, trapezoidal rule|Numerical Integration.pdf
+6|M|90|Ch2 Lesson 4 – Simpson's rule with practice|Numerical Integration_Part 2.pdf
+6|S|90|Lecture 3 part 1 – MCA for categorical data|Lecture3_MCA_FAMD_Notes (+Sinhala)
+7|D|75|Lecture 6 – twisted pair, coax, fibre, wireless
+7|D|90|Lecture 7 part 1 – error types, parity, checksum, CRC
+7|D|60|Lecture 7 part 2 – error correction, Hamming code
+7|O|60|Lesson 4 part 1 – IPC and race conditions
+7|O|75|Lesson 4 part 2 – critical section, Peterson, semaphores
+8|E|75|Design practice – pseudocode and flowcharts for scenarios
+8|E|75|Microcontroller architecture, fetch-decode-execute cycle
+8|E|90|AVR assembly 1 – registers, ldi, sub, dec, brne, flags
+8|S|75|Lecture 3 part 2 – FAMD and intro to clustering|Lecture3_MCA_FAMD_Notes
+8|S|75|Lecture 4 part 1 – k-means clustering with R|Lecture4_Clustering_Notes_2 (+Sinhala)
+9|M|90|Ch3 Lesson 1 – initial value problems, Euler method|Lecture 1 new.pdf
+9|M|105|Ch3 Lesson 2 – multistep methods, stability|Lecture 2.pdf
+9|M|75|Ch3 Lesson 3 – predictor-corrector methods|Lecture 3.pdf
+9|O|75|Lesson 5 part 1 – address binding, contiguous allocation
+10|D|75|Lecture 8 – FDM, TDM, WDM multiplexing
+10|D|60|Lecture 9 – framing: character count, byte and bit stuffing
+10|D|75|Lecture 10 – flow control: stop-and-wait, sliding window
+10|S|60|Lecture 4 part 2 – hierarchical clustering with R|Lecture4_Clustering_Notes_2
+10|S|105|Lecture 5 – FAMD, HCPC customer segmentation, tutorials|Lecture5_FAMD_Notes_2
+11|E|90|AVR assembly 2 – DDRx, PORTx, PINx, switch to LED
+11|E|90|Embedded C – functions, polling vs interrupts, ISR
+11|E|75|Timers and delay generation (1-second timer interrupt)
+11|O|90|Lesson 5 part 2 – paging, segmentation, virtual memory
+12|M|60|Ch4 – boundary value problems, shooting method|Chapter 04, Lecture 1.pdf
+12|M|45|Tutorial 1 – solve every question|Tut 01.pdf
+12|M|45|Tutorial 2 – solve every question|Tut 02.pdf
+12|M|45|Tutorial 3 – solve every question|Tut 03.pdf
+12|S|90|Day 6 part 1 – recommender systems, similarity, ratings|Day6_Recommender_Systems_Notes (+Sinhala)
+12|S|90|Day 6 part 2 – UV-decomposition, RMSE, R code|Day6_Recommender_Systems_Notes
+13|S|90|Day 7 part 1 – SVM, margins, kernels with R|SVM_SVR_NeuralNets_Notes (+Sinhala)
+13|S|90|Day 7 part 2 – SVR and intro to neural networks|SVM_SVR_NeuralNets_Notes
+13|S|60|Neural network ideas for MCQs – RNN, overfitting, gradients
+13|E|60|Communication – UART, SPI, I2C, sync vs async
+13|E|90|Past paper 2025 Feb – attempt, then check notes
+14|O|90|Past paper 2023 Jan – attempt, then check notes
+14|O|90|Past paper 2025 Feb – attempt, then check notes
+14|D|60|Practicals 1–5 – read and redo
+14|D|75|Past paper 2023 Jan – attempt, then check notes
+14|D|75|Past paper 2025 Feb – attempt, then check notes
+15|M|120|Past paper 2025 Mar – full timed paper (RK4, Taylor, fixed point)|Past Paper/2025 Mar.pdf
+15|S|45|Past paper 2026 Mar – Q1 (15 MCQs)
+15|S|105|Past paper 2026 Mar – R code questions Q2 to Q4
+15|S|90|R code from memory and final revision (PCA, k-means, SVM)
+16|E|90|Past paper 2025 Feb ICT – attempt, then check notes
+16|E|90|Past paper 2026 Mar – attempt, then check notes
+16|E|60|Embedded final revision – key points, assembly, diagrams
+16|O|90|Past paper 2026 Mar – attempt, then check notes
+16|O|60|OS final revision – scheduling, Banker's, summary sheet
+17|D|75|Past paper 2026 Mar – attempt, then check notes
+17|D|45|Past paper 2013 Oct – skim the topics
+17|D|60|Networking final revision – subnetting, CRC, diagrams
+17|M|90|Numerical Analysis final revision – formula sheet, redo examples`;
+const S={O:{n:'Operating Systems',c:'COM3306'},D:{n:'Data Communication and Networking',c:'COM3401'},M:{n:'Numerical Analysis II',c:'MAT3222'},S:{n:'Neural Networks and ML',c:'STA3402'},E:{n:'Embedded Systems',c:'COM3307'}};
+const T=RAW.trim().split('\n').map((l,i)=>{const[d,s,m,t,f]=l.split('|');return{i,d:+d,s,m:+m,t,f:f||''}});
+const $=id=>document.getElementById(id),pad=n=>String(n).padStart(2,'0');
+const dt=d=>new Date(2026,9,15+d),ky=x=>x.getFullYear()+'-'+pad(x.getMonth()+1)+'-'+pad(x.getDate()),dk=d=>ky(dt(d));
+const hm=m=>m>=60?Math.floor(m/60)+'h'+(m%60?' '+m%60+'m':''):m+'m';
+const clk=s=>{s=Math.max(0,Math.floor(s));const h=Math.floor(s/3600);return(h?h+':':'')+pad(Math.floor(s%3600/60))+':'+pad(s%60)};
+const dur=s=>{s=Math.floor(s);return s<60?s+'s':s<3600?Math.floor(s/60)+'m '+pad(s%60)+'s':Math.floor(s/3600)+'h '+pad(Math.floor(s%3600/60))+'m'};
+let st={done:{},secs:{},log:[],run:null,sel:null,hb:0};
+try{Object.assign(st,JSON.parse(localStorage.getItem('plan1')||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem('plan1',JSON.stringify(st))}catch(e){}};
+const sec=i=>(st.secs[i]||0)+(st.run&&st.run.id===i?(Date.now()-st.run.t0)/1000:0);
+function stop(end){const r=st.run;if(!r)return;end=end||Date.now();const s=Math.max(0,(end-r.t0)/1000);st.secs[r.id]=(st.secs[r.id]||0)+s;if(s>=1)st.log.push({id:r.id,a:r.t0,b:end});st.run=null}
+function start(i){if(st.run&&st.run.id!==i)stop();if(!st.run)st.run={id:i,t0:Date.now()};st.sel=i;st.hb=Date.now()}
+function mark(i,v){if(v){if(st.run&&st.run.id===i)stop();st.done[i]=1;if(st.sel===i)st.sel=null}else delete st.done[i]}
+const act=f=>{f();save();draw()};
+if(st.run){stop(Math.min(Date.now(),st.hb||Date.now()));save()}
+function row(t,tag){const d=!!st.done[t.i],on=!!(st.run&&st.run.id===t.i),s=sec(t.i);
+const sub=[S[t.s].c,t.f,'plan '+hm(t.m),s>=1?'studied '+dur(s):'',tag].filter(Boolean).join(', ');
+return `<li class="t${d?' x':''}${on?' on':''}" style="--c:var(--${t.s})"><input type="checkbox" id="c${t.i}" data-c="${t.i}"${d?' checked':''} aria-label="Done"><label for="c${t.i}"><span class="tt">${t.t}</span><span class="sm">${sub}</span></label>${d?'':`<button class="go" data-go="${t.i}">${on?'Running':s>=1?'Resume':'Start'}</button>`}</li>`}
+function draw(){
+const tk=ky(new Date()),fd=d=>dt(d).toLocaleDateString('en-GB',{day:'numeric',month:'short'});
+const miss=T.filter(t=>dk(t.d)<tk&&!st.done[t.i]);
+$('ms').hidden=!miss.length;$('mc').textContent=miss.length;
+$('ml').innerHTML=miss.map(t=>row(t,'Day '+t.d+', '+fd(t.d))).join('');
+let h='';
+for(let d=1;d<=17;d++){const L=T.filter(t=>t.d===d),sub=[...new Set(L.map(t=>t.s))],tot=L.reduce((a,t)=>a+t.m,0),stu=L.reduce((a,t)=>a+sec(t.i),0),dn=L.filter(t=>st.done[t.i]).length,now=dk(d)===tk;
+h+=`<section class="day${now?' today':''}${dn===L.length?' full':''}" id="d${d}"><h2><span>Day ${d}: ${dt(d).toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'})}${now?' (today)':''}</span><small>${dn}/${L.length} done, ${hm(tot)} planned${stu>=60?', studied '+dur(stu):''}</small></h2><p class="chips">${sub.map(s=>`<b style="--c:var(--${s})">${S[s].c} ${S[s].n}</b>`).join('')}</p><ul>${L.map(t=>row(t)).join('')}</ul></section>`}
+$('days').innerHTML=h;
+const dm=T.filter(t=>st.done[t.i]).reduce((a,t)=>a+t.m,0),tm=T.reduce((a,t)=>a+t.m,0),all=T.reduce((a,t)=>a+sec(t.i),0);
+$('ob').style.width=dm/tm*100+'%';
+$('os').textContent=`${Math.round(dm/tm*100)}% finished: ${hm(dm)} of ${hm(tm)} planned. Recorded study time: ${dur(all)}.`;
+$('lg').innerHTML=Object.keys(S).map(k=>{const a=T.filter(t=>t.s===k);return `<span style="--c:var(--${k})"><i></i>${S[k].n} ${a.filter(t=>st.done[t.i]).length}/${a.length}</span>`}).join('');
+$('lc').textContent=st.log.length;
+$('log').innerHTML=st.log.slice(-40).reverse().map(l=>`<li>${new Date(l.a).toLocaleString('en-GB',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}, ${dur((l.b-l.a)/1000)}: ${T[l.id].t}</li>`).join('')||'<li class="mut">No sessions yet. Press Start on a task.</li>';
+const i=st.sel,t=i==null?null:T[i],r=!!(t&&st.run&&st.run.id===i);
+$('pop').hidden=!t;document.body.classList.toggle('hp',!!t);
+if(t){$('pn').textContent=t.t;$('pg').textContent=r?'Stop':sec(i)>=1?'Start again':'Start';$('pg').className=r?'stop':'';$('px').hidden=r;$('pop').classList.toggle('run',r)}
+tick()}
+function tick(){
+const n=Date.now(),x=new Date(2026,10,2,9,0,0)-n;
+if(x<=0)$('cd').innerHTML='<b class="big">Exam time. Good luck!</b>';
+else{const s=Math.floor(x/1e3);$('cd').innerHTML=[[Math.floor(s/86400),'days'],[Math.floor(s%86400/3600),'hours'],[Math.floor(s%3600/60),'min'],[s%60,'sec']].map(([v,u])=>`<div><b>${pad(v)}</b><span>${u}</span></div>`).join('')}
+const i=st.sel;
+if(i!=null){const e=sec(i),m=T[i].m*60;$('pc').textContent=clk(e);$('pl').textContent=e<=m?'Time left: '+clk(m-e)+' of '+hm(T[i].m):'Over plan by '+clk(e-m);$('pbar').style.width=Math.min(100,e/m*100)+'%'}
+if(st.run){st.hb=n;save();document.title='▶ '+clk(sec(st.run.id))+' '+T[st.run.id].t}else document.title='Exam Study Planner'}
+document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)act(()=>start(+g.dataset.go))});
+document.addEventListener('change',e=>{const c=e.target.closest('[data-c]');if(c)act(()=>mark(+c.dataset.c,c.checked))});
+$('pg').onclick=()=>act(()=>st.run?stop():start(st.sel));
+$('pd').onclick=()=>act(()=>mark(st.sel,true));
+$('px').onclick=()=>act(()=>{st.sel=null});
+$('jt').onclick=e=>{e.preventDefault();const t=document.querySelector('.today');if(t)t.scrollIntoView({behavior:'smooth'})};
+draw();setInterval(tick,1000);
+</script></body></html>
