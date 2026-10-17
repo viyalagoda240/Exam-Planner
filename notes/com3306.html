@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COM3306 Operating Systems – Gap Notes</title>
+<style>
+@font-face{font-family:'NoteBody';src:url('atk-400.woff2') format('woff2');font-weight:400;font-style:normal}
+@font-face{font-family:'NoteBody';src:url('atk-700.woff2') format('woff2');font-weight:700;font-style:normal}
+@font-face{font-family:'NoteBody';src:url('atk-400i.woff2') format('woff2');font-weight:400;font-style:italic}
+@font-face{font-family:'NoteSinhala';src:url('sinhala-400.woff2') format('woff2');font-weight:400}
+@font-face{font-family:'NoteSinhala';src:url('sinhala-700.woff2') format('woff2');font-weight:700}
+@font-face{font-family:'NoteMono';src:url('jbm-400.woff2') format('woff2');font-weight:400}
+
+:root{--ink:#1B2740;--muted:#55627A;--line:#D5DCE6;--accent:#2347B8;--si:#FFF6CC;--si-line:#E2B714;--ans:#EEF3FF;--tip:#E8F7EE;--tip-line:#2E9B57;--mark:#FFE066;--code:#F3F5F9}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;background:#fff;color:var(--ink);font:15px/1.6 'NoteBody','Noto Sans','NoteSinhala','Noto Sans Sinhala',system-ui,sans-serif}
+.note{max-width:820px;margin:0 auto;padding:28px 22px 40px}
+.note-head{border-bottom:3px double var(--line);padding-bottom:14px;margin-bottom:18px}
+.eyebrow{text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;color:var(--muted);margin:0 0 6px;font-weight:700}
+h1{font-size:27px;line-height:1.2;margin:0 0 8px;text-wrap:balance}
+.lede{color:var(--muted);margin:0}
+h2{font-size:20px;margin:30px 0 10px;padding-top:6px;border-top:1px solid var(--line);text-wrap:balance;break-after:avoid}
+h3{font-size:16px;margin:20px 0 6px;break-after:avoid}
+h4{font-size:14px;margin:14px 0 6px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+p{margin:6px 0}
+ul,ol{margin:6px 0;padding-left:22px}
+li{margin:3px 0}
+.toc{background:var(--code);border-radius:8px;padding:10px 16px;margin:0 0 10px;font-size:14px}
+.toc ol{columns:2;column-gap:28px;margin:0}
+.toc a{color:var(--accent);text-decoration:none}
+.si{background:var(--si);border-left:4px solid var(--si-line);padding:8px 12px;margin:12px 0;border-radius:0 6px 6px 0;font-family:'NoteSinhala','Noto Sans Sinhala','NoteBody',sans-serif;line-height:1.75;break-inside:avoid}
+.si-inline{font-family:'NoteSinhala','Noto Sans Sinhala',sans-serif}
+.ans{background:var(--ans);border-radius:6px;padding:8px 12px;margin:10px 0;break-inside:avoid}
+.tip{background:var(--tip);border-left:4px solid var(--tip-line);padding:8px 12px;border-radius:0 6px 6px 0;margin:10px 0}
+.exam{font-size:12.5px;color:var(--accent);font-weight:700;margin-top:10px}
+.exam::before{content:"Past papers ▸ "}
+.small{font-size:13px;color:var(--muted)}
+.formula{font-family:'NoteMono','JetBrains Mono',monospace;background:var(--code);border-radius:6px;padding:8px 12px;font-size:13.5px}
+.formula p{margin:2px 0}
+.formula-inline{font-family:'NoteMono','JetBrains Mono',monospace}
+.verdict{font-size:15px}
+table{border-collapse:collapse;width:100%;margin:8px 0;font-size:13.5px;break-inside:avoid}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}
+thead th{background:var(--code)}
+table.num td,table.num th{text-align:center;font-variant-numeric:tabular-nums}
+table.num tfoot td{font-weight:700;background:var(--ans)}
+.tbl-wrap{overflow-x:auto}
+table.lru td.new{background:var(--mark);font-weight:700}
+table.lru td.fault{color:#C0362C;font-weight:700}
+code{font-family:'NoteMono','JetBrains Mono',monospace;font-size:.9em;background:var(--code);padding:1px 4px;border-radius:3px}
+pre{background:var(--code);border-radius:6px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;break-inside:avoid}
+pre code{background:none;padding:0;font-size:inherit}
+dl.defs dt{font-weight:700;margin-top:8px}
+dl.defs dd{margin:2px 0 6px 16px}
+figure.diagram{margin:12px 0;text-align:center;color:var(--ink);break-inside:avoid}
+figure.diagram svg{width:100%;max-width:640px;height:auto}
+figcaption{font-size:12.5px;color:var(--muted)}
+.gantt-wrap{margin:8px 0 4px;break-inside:avoid}
+.gantt{display:flex;border:1.5px solid var(--ink);border-radius:4px;overflow:hidden}
+.gseg{border-right:1.5px solid var(--ink);text-align:center;padding:6px 0;font-weight:700;font-size:13px;min-width:0;background:var(--ans)}
+.gseg:last-child{border-right:0}
+.gseg.idle{background:repeating-linear-gradient(45deg,#fff,#fff 4px,var(--code) 4px,var(--code) 8px);color:var(--muted)}
+.gticks{display:flex;font-size:11.5px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.gtick{min-width:0;text-align:left;margin-left:-3px}
+.gtick.end{flex:0 0 0;margin-left:-6px}
+.frame-diagram{display:flex;flex-wrap:wrap;border:1.5px solid var(--ink);border-radius:4px;overflow:hidden;font-size:12px;margin:8px 0}
+.frame-diagram span{flex:1 1 auto;padding:6px 8px;border-right:1px solid var(--ink);text-align:center;background:var(--ans)}
+.frame-diagram span.wide{flex:3 1 auto;background:#fff}
+.frame-diagram span:last-child{border-right:0}
+.bits p{margin:4px 0}
+.bits .lbl{display:block;font-size:12px;color:var(--muted)}
+.bits code{font-size:13.5px;letter-spacing:.06em;word-break:break-all}
+mark{background:var(--mark);color:inherit;font-weight:700;padding:0 1px}
+.note-foot{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+@media print{.note{padding:0}.toc{break-after:avoid}}
+</style></head>
+<body><main class="note" id="note-com3306">
+<header class="note-head">
+  <p class="eyebrow">COM3306 · Operating Systems · 3 credits · Exam: 3 hours, answer all 5</p>
+  <h1>Operating Systems – Gap Notes &amp; Worked Answers</h1>
+  <p class="lede">Your five lessons cover introduction, processes, deadlock, IPC and memory. These notes fill what the past papers ask but the lessons don't cover: <b>file management</b>, the <b>Banker's algorithm</b>, <b>I/O topics</b> (BIOS, DMA, interrupts), plus fully worked answers for the calculations that come every year.</p>
+</header>
+
+<nav class="toc" aria-label="Contents">
+  <ol>
+    <li><a href="#os-files">Files and access methods</a></li>
+    <li><a href="#os-dirs">Directory structures</a></li>
+    <li><a href="#os-alloc">File allocation and i-nodes</a></li>
+    <li><a href="#os-free">Free memory: bitmaps vs linked lists</a></li>
+    <li><a href="#os-perm">File permissions and protection</a></li>
+    <li><a href="#os-banker">Banker's algorithm (worked)</a></li>
+    <li><a href="#os-sched">CPU scheduling Gantt charts (worked)</a></li>
+    <li><a href="#os-lru">LRU page replacement (worked)</a></li>
+    <li><a href="#os-io">BIOS, DMA, I/O addressing, interrupts</a></li>
+    <li><a href="#os-map">Past paper map</a></li>
+  </ol>
+</nav>
+
+<section id="os-files">
+  <h2>1. Files and access methods</h2>
+  <div class="ans">
+    <p>A <b>file</b> is a named collection of related information stored on secondary storage. The OS's <b>file system</b> decides how files are named, stored, organised, protected and accessed.</p>
+  </div>
+  <ul>
+    <li><b>Attributes:</b> name, identifier, type, location (disk blocks), size, protection (owner, permissions), timestamps (created, modified, accessed).</li>
+    <li><b>Operations:</b> create, open, read, write, seek (reposition), close, delete, truncate.</li>
+  </ul>
+  <h3>Access methods</h3>
+  <table>
+    <thead><tr><th>Method</th><th>How it works</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td><b>Sequential</b></td><td>Records are read one after another in order, like a tape.</td><td>Reading a log file, compilers, media players</td></tr>
+      <tr><td><b>Direct (random / relative)</b></td><td>Any block can be read or written directly by its block number, in any order, without reading the ones before it.</td><td>Databases, airline reservation records</td></tr>
+      <tr><td><b>Indexed</b></td><td>An index (like a book index) holds pointers to blocks; first search the index, then jump to the block.</td><td>Large databases, library catalogues</td></tr>
+    </tbody>
+  </table>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Sequential = පොතක් මුල ඉඳන් අගට කියවනවා වගේ, පිළිවෙළට. Direct = පොතේ 250 පිටුවට කෙලින්ම පනිනවා වගේ – block number එක දන්නවා නම් කෙලින්ම යන්න පුළුවන්, ඉක්මනුයි (database වලට හොඳයි). Indexed = පොතේ index එක බලලා පිටුව හොයාගෙන යනවා වගේ.</p>
+  </div>
+</section>
+
+<section id="os-dirs">
+  <h2>2. Directory structures</h2>
+  <table>
+    <thead><tr><th>Structure</th><th>Idea</th><th>Good</th><th>Bad</th></tr></thead>
+    <tbody>
+      <tr><td><b>Single-level</b></td><td>One directory for all files of all users.</td><td>Very simple, fast to implement.</td><td>Every file name must be unique for everyone → <b>naming conflicts</b>; no grouping; no privacy; searching gets slow as files grow – does not scale.</td></tr>
+      <tr><td><b>Two-level</b></td><td>A master directory with one user directory (UFD) per user.</td><td>Different users can use the same file name; users are isolated (security); faster search inside a user's own directory.</td><td>Users cannot group their own files into folders; sharing between users is awkward.</td></tr>
+      <tr><td><b>Tree (hierarchical)</b></td><td>Directories inside directories, one root; absolute and relative paths.</td><td>Natural grouping, efficient search by path, each user has a home subtree, permissions per directory.</td><td>A file cannot appear in two places (no direct sharing); deleting a directory must handle its subtree.</td></tr>
+      <tr><td><b>Acyclic graph (DAG)</b></td><td>A tree that also allows <b>shared</b> subdirectories/files through links, but no cycles.</td><td>Sharing without copying: one copy, many paths → no inconsistent copies, saves space.</td><td>Same file has several names (aliasing); deletion needs reference counts to avoid dangling links.</td></tr>
+      <tr><td><b>General graph</b></td><td>Links allowed anywhere, cycles possible.</td><td>Most flexible.</td><td>Cycles cause infinite loops in searches; needs garbage collection.</td></tr>
+    </tbody>
+  </table>
+  <h3>2026 Q5(d) – multi-user system: direct access, tree and DAG (7 marks)</h3>
+  <div class="ans">
+    <ul>
+      <li><b>Preventing data conflicts:</b> a <b>tree</b> gives every user a separate home directory, so two users can both have <code>report.txt</code> without clashing. A <b>DAG</b> lets users share one real copy of a file through links, so there are no out-of-date duplicate copies.</li>
+      <li><b>Improving efficiency:</b> <b>direct access</b> lets a program jump straight to the record it needs instead of reading the whole file – fast for databases with many users. A tree shortens searches (only one directory path is searched); a DAG avoids storing duplicates.</li>
+      <li><b>Maintaining security:</b> permissions can be set on each directory and file in the tree (owner/group/others), so users cannot reach each other's private folders. In a DAG, only the users given a link (and permission) can reach a shared file; reference counts stop a file being deleted while others still use it.</li>
+    </ul>
+  </div>
+  <h3>2025 Q5(d) – single-level vs two-level: efficiency and scalability</h3>
+  <p>A single-level directory must be searched in full for every lookup and all names must be unique, so it becomes slow and unmanageable as users and files grow – <b>poor scalability</b>. A two-level directory searches only one user's directory (<b>faster</b>), allows the same name for different users and isolates users, so it <b>scales better</b> – but still offers no sub-folders for organising many files.</p>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Single-level = හැමෝගෙම files එකම folder එකක – නම් ගැටෙනවා, files වැඩි වෙද්දී හොයන්න අමාරුයි. Two-level = හැම user කෙනෙක්ටම තමන්ගේම folder එකක්. Tree = folders ඇතුළේ folders (අපේ computer එකේ වගේ). DAG = tree එකක්ම, ඒත් එක file එකක් links හරහා තැන් කිහිපයක පෙන්නන්න පුළුවන් – copy කරන්නේ නැතුව share කරනවා.</p>
+  </div>
+</section>
+
+<section id="os-alloc">
+  <h2>3. File allocation and i-nodes</h2>
+  <table>
+    <thead><tr><th>Method</th><th>How</th><th>Advantage</th><th>Disadvantage</th></tr></thead>
+    <tbody>
+      <tr><td><b>Contiguous</b></td><td>File stored in consecutive blocks; directory keeps start block + length.</td><td>Fast sequential and direct access.</td><td>External fragmentation; hard to grow a file.</td></tr>
+      <tr><td><b>Linked</b></td><td>Each block holds a pointer to the next block (FAT keeps the pointers in a table).</td><td>No external fragmentation; files grow easily.</td><td>Slow direct access (must follow the chain); a broken pointer loses the rest.</td></tr>
+      <tr><td><b>Indexed</b></td><td>An index block holds all the block addresses of the file.</td><td>Fast direct access, no external fragmentation.</td><td>Index block overhead for small files.</td></tr>
+    </tbody>
+  </table>
+  <h3>I-nodes (2023 Q5(c), 4 marks)</h3>
+  <div class="ans">
+    <p>An <b>i-node (index node)</b> is a small fixed-size data structure used in UNIX/Linux file systems. There is one i-node per file. It stores the file's <b>attributes</b> (owner, permissions, size, timestamps, link count) and the <b>disk addresses</b> of the file's blocks: about 12 direct block pointers, plus a single-indirect, a double-indirect and a triple-indirect pointer for large files. The directory entry only maps a <b>file name → i-node number</b>.</p>
+    <p><b>Uses / advantages:</b> only the i-nodes of <b>open</b> files need to be in memory (saves RAM); small files are reached quickly through direct pointers while very large files are still supported through indirect blocks; several names (hard links) can point to the same i-node, which makes sharing easy.</p>
+  </div>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> i-node එක කියන්නේ file එකක "ID card" එක වගේ – owner කවුද, permissions මොනවද, size එක, වෙලාවන්, සහ disk එකේ data blocks තියෙන තැන් (addresses) ඒකේ තියෙනවා. Directory එකේ තියෙන්නේ "file නම → i-node අංකය" විතරයි. Open කරපු files වල i-nodes විතරක් RAM එකට ගන්න නිසා memory ඉතුරුයි; ලොකු files වලට indirect pointers තියෙනවා.</p>
+  </div>
+</section>
+
+<section id="os-free">
+  <h2>4. Free memory management: bitmaps vs linked lists (2023 Q5(a))</h2>
+  <div class="ans">
+    <p><b>Bitmap:</b> memory is divided into equal allocation units; each unit has one bit (0 = free, 1 = used). The bitmap has a fixed size that depends only on memory size and unit size. Simple, but to place a process of k units the OS must search the bitmap for k consecutive 0 bits, which is slow. Small units → big bitmap; big units → wasted space in the last unit.</p>
+    <p><b>Linked list:</b> a list of segments, each either a process (P) or a hole (H), with start address, length and a pointer to the next entry, kept sorted by address. Allocation uses first fit, next fit, best fit or worst fit; when a process ends, neighbouring holes are merged easily. The list grows and shrinks with the number of segments, and searching can be faster than scanning bits.</p>
+  </div>
+  <table>
+    <thead><tr><th></th><th>Bitmap</th><th>Linked list</th></tr></thead>
+    <tbody>
+      <tr><td>Space used</td><td>Fixed, known in advance</td><td>Varies with number of holes/processes</td></tr>
+      <tr><td>Finding free space</td><td>Slow – scan for a run of 0s</td><td>Faster – walk the hole entries</td></tr>
+      <tr><td>Freeing memory</td><td>Just clear bits</td><td>Merge with neighbouring holes</td></tr>
+      <tr><td>Simplicity</td><td>Very simple</td><td>More complex (pointers)</td></tr>
+    </tbody>
+  </table>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Bitmap = memory එකේ හැම කොටසකටම bit එකක් (0 හිස්, 1 පිරිලා). Size එක ස්ථිරයි, ඒත් ලොකු process එකකට හිස් තැනක් හොයන්න 0 දිගටම තියෙන තැනක් scan කරන්න ඕනේ – හෙමින්. Linked list = "process කොටසක් / හිස් කොටසක්" කියලා ලැයිස්තුවක්; හිස් තැන් හොයන්න ඉක්මන්, process එකක් ඉවර වුණාම අල්ලපු හිස් තැන් එකතු කරන්න ලේසියි.</p>
+  </div>
+</section>
+
+<section id="os-perm">
+  <h2>5. File permissions and protection (2025 Q5(c), 4 marks)</h2>
+  <div class="ans">
+    <p><b>File system permissions</b> are rules attached to each file and directory that say <b>who</b> may do <b>what</b> with it. In UNIX/Linux there are three rights – <b>read (r)</b>, <b>write (w)</b>, <b>execute (x)</b> – for three classes of users – <b>owner (u)</b>, <b>group (g)</b>, <b>others (o)</b>.</p>
+    <p><b>How they control access:</b> every time a process tries to open, change or run a file, the OS compares the process's user ID and group ID with the file's owner, group and permission bits, and allows or refuses the operation. Access Control Lists (ACLs) extend this with per-user rules (used by Windows NTFS).</p>
+  </div>
+  <p><b>Example:</b> <code>-rwxr-x---  report.sh</code> → owner can read, write, execute; group can read and execute; others have no access. In numbers: <code>chmod 750 report.sh</code> (r = 4, w = 2, x = 1 → 7 = rwx, 5 = r-x, 0 = ---).</p>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Permissions කියන්නේ file එකකට "කාටද මොනවද කරන්න පුළුවන්" කියන නීති. r = කියවන්න, w = වෙනස් කරන්න, x = run කරන්න. Owner, group, others කියලා කොටස් 3කට වෙන වෙනම දෙනවා. File එකක් open කරන හැම වෙලාවකම OS එක මේ bits බලලා ඉඩ දෙනවද නැද්ද කියලා තීරණය කරනවා.</p>
+  </div>
+</section>
+
+<section id="os-banker">
+  <h2>6. Banker's algorithm</h2>
+  <div class="ans">
+    <p>The <b>Banker's algorithm</b> is a <b>deadlock-avoidance</b> algorithm. Before granting a request, the OS checks whether the system would still be in a <b>safe state</b> – a state where there is at least one order (safe sequence) in which every process can get its maximum need and finish. If the request leads to an unsafe state, the process waits.</p>
+  </div>
+  <p><b>Safety algorithm steps</b></p>
+  <ol>
+    <li><b>Need = Max − Allocation</b> for every process.</li>
+    <li><b>Work = Available</b>. Mark every process "not finished".</li>
+    <li>Find a not-finished process whose <b>Need ≤ Work</b> (every resource type).</li>
+    <li>Pretend it finishes: <b>Work = Work + its Allocation</b>; mark it finished; add it to the safe sequence.</li>
+    <li>Repeat steps 3–4. If all processes finish → <b>SAFE</b> (give the sequence). If you get stuck → <b>UNSAFE</b>.</li>
+  </ol>
+  <h3>2026 Q4(d) – worked answer (8 marks)</h3>
+  <p>Available = <b>(3, 3, 2)</b>. Step 1 – Need table:</p><div class="tbl-wrap"><table class="num"><thead><tr><th rowspan="2">Process</th><th colspan="3">Allocation</th><th colspan="3">Max</th><th colspan="3">Need = Max − Alloc</th></tr><tr><th>A</th><th>B</th><th>C</th><th>A</th><th>B</th><th>C</th><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><td>P0</td><td>0</td><td>1</td><td>0</td><td>7</td><td>5</td><td>3</td><td><b>7</b></td><td><b>4</b></td><td><b>3</b></td></tr><tr><td>P1</td><td>2</td><td>0</td><td>0</td><td>3</td><td>2</td><td>2</td><td><b>1</b></td><td><b>2</b></td><td><b>2</b></td></tr><tr><td>P2</td><td>3</td><td>0</td><td>2</td><td>9</td><td>0</td><td>2</td><td><b>6</b></td><td><b>0</b></td><td><b>0</b></td></tr><tr><td>P3</td><td>2</td><td>1</td><td>1</td><td>2</td><td>2</td><td>2</td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td></tr><tr><td>P4</td><td>0</td><td>0</td><td>2</td><td>4</td><td>3</td><td>3</td><td><b>4</b></td><td><b>3</b></td><td><b>1</b></td></tr></tbody></table></div><p>Step 2 – Work = Available = (3, 3, 2), then the safety check (scan P0…P4 in order each round):</p><div class="tbl-wrap"><table class="num"><thead><tr><th>Step</th><th>Process</th><th>Need ≤ Work?</th><th>New Work = Work + Allocation</th></tr></thead><tbody><tr><td>1</td><td>P1</td><td>(1, 2, 2) ≤ (3, 3, 2) ✓</td><td>(3, 3, 2) + (2, 0, 0) = <b>(5, 3, 2)</b></td></tr><tr><td>2</td><td>P3</td><td>(0, 1, 1) ≤ (5, 3, 2) ✓</td><td>(5, 3, 2) + (2, 1, 1) = <b>(7, 4, 3)</b></td></tr><tr><td>3</td><td>P4</td><td>(4, 3, 1) ≤ (7, 4, 3) ✓</td><td>(7, 4, 3) + (0, 0, 2) = <b>(7, 4, 5)</b></td></tr><tr><td>4</td><td>P0</td><td>(7, 4, 3) ≤ (7, 4, 5) ✓</td><td>(7, 4, 5) + (0, 1, 0) = <b>(7, 5, 5)</b></td></tr><tr><td>5</td><td>P2</td><td>(6, 0, 0) ≤ (7, 5, 5) ✓</td><td>(7, 5, 5) + (3, 0, 2) = <b>(10, 5, 7)</b></td></tr></tbody></table></div><p class="verdict">All processes can finish → the system is in a <b>SAFE</b> state. Safe sequence: <b>⟨P1, P3, P4, P0, P2⟩</b>.</p>
+  <h3>2025 Q4(c) – worked answer</h3>
+  <p>Available = <b>(1, 1)</b>. Step 1 – Need table:</p><div class="tbl-wrap"><table class="num"><thead><tr><th rowspan="2">Process</th><th colspan="2">Allocation</th><th colspan="2">Max</th><th colspan="2">Need = Max − Alloc</th></tr><tr><th>A</th><th>B</th><th>A</th><th>B</th><th>A</th><th>B</th></tr></thead><tbody><tr><td>P1</td><td>1</td><td>2</td><td>3</td><td>3</td><td><b>2</b></td><td><b>1</b></td></tr><tr><td>P2</td><td>2</td><td>1</td><td>4</td><td>2</td><td><b>2</b></td><td><b>1</b></td></tr><tr><td>P3</td><td>1</td><td>1</td><td>2</td><td>2</td><td><b>1</b></td><td><b>1</b></td></tr></tbody></table></div><p>Step 2 – Work = Available = (1, 1), then the safety check (scan P0…P2 in order each round):</p><div class="tbl-wrap"><table class="num"><thead><tr><th>Step</th><th>Process</th><th>Need ≤ Work?</th><th>New Work = Work + Allocation</th></tr></thead><tbody><tr><td>1</td><td>P3</td><td>(1, 1) ≤ (1, 1) ✓</td><td>(1, 1) + (1, 1) = <b>(2, 2)</b></td></tr><tr><td>2</td><td>P1</td><td>(2, 1) ≤ (2, 2) ✓</td><td>(2, 2) + (1, 2) = <b>(3, 4)</b></td></tr><tr><td>3</td><td>P2</td><td>(2, 1) ≤ (3, 4) ✓</td><td>(3, 4) + (2, 1) = <b>(5, 5)</b></td></tr></tbody></table></div><p class="verdict">All processes can finish → the system is in a <b>SAFE</b> state. Safe sequence: <b>⟨P3, P1, P2⟩</b>.</p><p class="small">Since a safe sequence exists, the system is <b>not deadlocked</b>.</p>
+  <h3>RAG method vs Banker's algorithm (2025 Q4(b))</h3>
+  <table>
+    <thead><tr><th></th><th>Resource Allocation Graph</th><th>Banker's algorithm</th></tr></thead>
+    <tbody>
+      <tr><td>Works for</td><td>Single instance of each resource type</td><td>Multiple instances of each resource type</td></tr>
+      <tr><td>How</td><td>Draw processes, resources and claim/request/assignment edges; a cycle means deadlock (single instance)</td><td>Matrices (Allocation, Max, Need, Available) and the safety algorithm</td></tr>
+      <tr><td>Cost</td><td>Simple, visual, cheap</td><td>More computation; processes must declare their maximum need in advance</td></tr>
+      <tr><td>Common</td><td colspan="2">Both are used for deadlock avoidance/detection and both keep the system out of unsafe states</td></tr>
+    </tbody>
+  </table>
+  <p class="small"><b>Major disadvantage of Banker's (2023 Q4(b)):</b> every process must state its <b>maximum</b> resource need in advance, the number of processes and resources must be fixed, and running the safety check on every request is expensive – so it is rarely practical in real systems.</p>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> මුලින්ම Need = Max − Allocation table එක හදන්න. ඊට පස්සේ Work = Available. "මගේ Need එක Work එකට වඩා අඩු හෝ සමානද?" කියලා process එකින් එක බලන්න. හරි නම් ඒ process එක ඉවර වෙනවා කියලා හිතලා ඒකේ Allocation එක Work එකට එකතු කරන්න. ඔක්කොම process ඉවර කරන්න පුළුවන් නම් SAFE, ඒ පිළිවෙළ තමයි safe sequence එක. හැම පියවරකම Work එක ලියලා පෙන්නන්න – marks තියෙන්නේ එතන.</p>
+  </div>
+</section>
+
+<section id="os-sched">
+  <h2>7. CPU scheduling – Gantt charts and averages</h2>
+  <div class="formula">
+    <p>Completion time (CT) = time the process finishes</p>
+    <p>Turnaround time (TAT) = CT − Arrival time</p>
+    <p>Waiting time (WT) = TAT − Burst time</p>
+  </div>
+  <p class="small">Round Robin rule used here (state it in your answer): when a new process arrives at the same moment a running process's quantum ends, the <b>new arrival joins the ready queue first</b>, then the preempted process.</p>
+  <h3>2026 Q2(d): P1(0,7), P2(2,4), P3(4,1), P4(5,4), P5(6,6)</h3>
+  <h4>FCFS</h4>
+  <div class="gantt-wrap"><div class="gantt"><div class="gseg" style="flex:7"><span>P1</span></div><div class="gseg" style="flex:4"><span>P2</span></div><div class="gseg" style="flex:1"><span>P3</span></div><div class="gseg" style="flex:4"><span>P4</span></div><div class="gseg" style="flex:6"><span>P5</span></div></div><div class="gticks"><div class="gtick" style="flex:7">0</div><div class="gtick" style="flex:4">7</div><div class="gtick" style="flex:1">11</div><div class="gtick" style="flex:4">12</div><div class="gtick" style="flex:6">16</div><div class="gtick end">22</div></div></div><div class="tbl-wrap"><table class="num"><thead><tr><th>Process</th><th>Arrival</th><th>Burst</th><th>CT</th><th>TAT = CT − AT</th><th>WT = TAT − BT</th></tr></thead><tbody><tr><td>P1</td><td>0</td><td>7</td><td>7</td><td>7</td><td>0</td></tr><tr><td>P2</td><td>2</td><td>4</td><td>11</td><td>9</td><td>5</td></tr><tr><td>P3</td><td>4</td><td>1</td><td>12</td><td>8</td><td>7</td></tr><tr><td>P4</td><td>5</td><td>4</td><td>16</td><td>11</td><td>7</td></tr><tr><td>P5</td><td>6</td><td>6</td><td>22</td><td>16</td><td>10</td></tr></tbody><tfoot><tr><td colspan="3">Average</td><td>13.60</td><td>10.20</td><td>5.80</td></tr></tfoot></table></div>
+  <h4>Round Robin, quantum = 3 ms</h4>
+  <div class="gantt-wrap"><div class="gantt"><div class="gseg" style="flex:3"><span>P1</span></div><div class="gseg" style="flex:3"><span>P2</span></div><div class="gseg" style="flex:3"><span>P1</span></div><div class="gseg" style="flex:1"><span>P3</span></div><div class="gseg" style="flex:3"><span>P4</span></div><div class="gseg" style="flex:3"><span>P5</span></div><div class="gseg" style="flex:1"><span>P2</span></div><div class="gseg" style="flex:1"><span>P1</span></div><div class="gseg" style="flex:1"><span>P4</span></div><div class="gseg" style="flex:3"><span>P5</span></div></div><div class="gticks"><div class="gtick" style="flex:3">0</div><div class="gtick" style="flex:3">3</div><div class="gtick" style="flex:3">6</div><div class="gtick" style="flex:1">9</div><div class="gtick" style="flex:3">10</div><div class="gtick" style="flex:3">13</div><div class="gtick" style="flex:1">16</div><div class="gtick" style="flex:1">17</div><div class="gtick" style="flex:1">18</div><div class="gtick" style="flex:3">19</div><div class="gtick end">22</div></div></div><div class="tbl-wrap"><table class="num"><thead><tr><th>Process</th><th>Arrival</th><th>Burst</th><th>CT</th><th>TAT = CT − AT</th><th>WT = TAT − BT</th></tr></thead><tbody><tr><td>P1</td><td>0</td><td>7</td><td>18</td><td>18</td><td>11</td></tr><tr><td>P2</td><td>2</td><td>4</td><td>17</td><td>15</td><td>11</td></tr><tr><td>P3</td><td>4</td><td>1</td><td>10</td><td>6</td><td>5</td></tr><tr><td>P4</td><td>5</td><td>4</td><td>19</td><td>14</td><td>10</td></tr><tr><td>P5</td><td>6</td><td>6</td><td>22</td><td>16</td><td>10</td></tr></tbody><tfoot><tr><td colspan="3">Average</td><td>17.20</td><td>13.80</td><td>9.40</td></tr></tfoot></table></div>
+  <p><b>Which suits an interactive system?</b> <b>Round Robin</b> – every process gets the CPU within a short, bounded time (quantum), so users see quick responses, even though the average waiting time here is higher. FCFS lets a long job block everyone (convoy effect).</p>
+  <h3>2025 Q2(d): P0(0,5), P1(1,4), P2(1,9), P3(3,5), P4(4,2), P5(5,6)</h3>
+  <h4>FCFS</h4>
+  <div class="gantt-wrap"><div class="gantt"><div class="gseg" style="flex:5"><span>P0</span></div><div class="gseg" style="flex:4"><span>P1</span></div><div class="gseg" style="flex:9"><span>P2</span></div><div class="gseg" style="flex:5"><span>P3</span></div><div class="gseg" style="flex:2"><span>P4</span></div><div class="gseg" style="flex:6"><span>P5</span></div></div><div class="gticks"><div class="gtick" style="flex:5">0</div><div class="gtick" style="flex:4">5</div><div class="gtick" style="flex:9">9</div><div class="gtick" style="flex:5">18</div><div class="gtick" style="flex:2">23</div><div class="gtick" style="flex:6">25</div><div class="gtick end">31</div></div></div><div class="tbl-wrap"><table class="num"><thead><tr><th>Process</th><th>Arrival</th><th>Burst</th><th>CT</th><th>TAT = CT − AT</th><th>WT = TAT − BT</th></tr></thead><tbody><tr><td>P0</td><td>0</td><td>5</td><td>5</td><td>5</td><td>0</td></tr><tr><td>P1</td><td>1</td><td>4</td><td>9</td><td>8</td><td>4</td></tr><tr><td>P2</td><td>1</td><td>9</td><td>18</td><td>17</td><td>8</td></tr><tr><td>P3</td><td>3</td><td>5</td><td>23</td><td>20</td><td>15</td></tr><tr><td>P4</td><td>4</td><td>2</td><td>25</td><td>21</td><td>19</td></tr><tr><td>P5</td><td>5</td><td>6</td><td>31</td><td>26</td><td>20</td></tr></tbody><tfoot><tr><td colspan="3">Average</td><td>18.50</td><td>16.17</td><td>11.00</td></tr></tfoot></table></div>
+  <h4>SJF (non-preemptive)</h4>
+  <div class="gantt-wrap"><div class="gantt"><div class="gseg" style="flex:5"><span>P0</span></div><div class="gseg" style="flex:2"><span>P4</span></div><div class="gseg" style="flex:4"><span>P1</span></div><div class="gseg" style="flex:5"><span>P3</span></div><div class="gseg" style="flex:6"><span>P5</span></div><div class="gseg" style="flex:9"><span>P2</span></div></div><div class="gticks"><div class="gtick" style="flex:5">0</div><div class="gtick" style="flex:2">5</div><div class="gtick" style="flex:4">7</div><div class="gtick" style="flex:5">11</div><div class="gtick" style="flex:6">16</div><div class="gtick" style="flex:9">22</div><div class="gtick end">31</div></div></div><div class="tbl-wrap"><table class="num"><thead><tr><th>Process</th><th>Arrival</th><th>Burst</th><th>CT</th><th>TAT = CT − AT</th><th>WT = TAT − BT</th></tr></thead><tbody><tr><td>P0</td><td>0</td><td>5</td><td>5</td><td>5</td><td>0</td></tr><tr><td>P1</td><td>1</td><td>4</td><td>11</td><td>10</td><td>6</td></tr><tr><td>P2</td><td>1</td><td>9</td><td>31</td><td>30</td><td>21</td></tr><tr><td>P3</td><td>3</td><td>5</td><td>16</td><td>13</td><td>8</td></tr><tr><td>P4</td><td>4</td><td>2</td><td>7</td><td>3</td><td>1</td></tr><tr><td>P5</td><td>5</td><td>6</td><td>22</td><td>17</td><td>11</td></tr></tbody><tfoot><tr><td colspan="3">Average</td><td>15.33</td><td>13.00</td><td>7.83</td></tr></tfoot></table></div>
+  <h4>Round Robin, quantum = 3 ms</h4>
+  <div class="gantt-wrap"><div class="gantt"><div class="gseg" style="flex:3"><span>P0</span></div><div class="gseg" style="flex:3"><span>P1</span></div><div class="gseg" style="flex:3"><span>P2</span></div><div class="gseg" style="flex:3"><span>P3</span></div><div class="gseg" style="flex:2"><span>P0</span></div><div class="gseg" style="flex:2"><span>P4</span></div><div class="gseg" style="flex:3"><span>P5</span></div><div class="gseg" style="flex:1"><span>P1</span></div><div class="gseg" style="flex:3"><span>P2</span></div><div class="gseg" style="flex:2"><span>P3</span></div><div class="gseg" style="flex:3"><span>P5</span></div><div class="gseg" style="flex:3"><span>P2</span></div></div><div class="gticks"><div class="gtick" style="flex:3">0</div><div class="gtick" style="flex:3">3</div><div class="gtick" style="flex:3">6</div><div class="gtick" style="flex:3">9</div><div class="gtick" style="flex:2">12</div><div class="gtick" style="flex:2">14</div><div class="gtick" style="flex:3">16</div><div class="gtick" style="flex:1">19</div><div class="gtick" style="flex:3">20</div><div class="gtick" style="flex:2">23</div><div class="gtick" style="flex:3">25</div><div class="gtick" style="flex:3">28</div><div class="gtick end">31</div></div></div><div class="tbl-wrap"><table class="num"><thead><tr><th>Process</th><th>Arrival</th><th>Burst</th><th>CT</th><th>TAT = CT − AT</th><th>WT = TAT − BT</th></tr></thead><tbody><tr><td>P0</td><td>0</td><td>5</td><td>14</td><td>14</td><td>9</td></tr><tr><td>P1</td><td>1</td><td>4</td><td>20</td><td>19</td><td>15</td></tr><tr><td>P2</td><td>1</td><td>9</td><td>31</td><td>30</td><td>21</td></tr><tr><td>P3</td><td>3</td><td>5</td><td>25</td><td>22</td><td>17</td></tr><tr><td>P4</td><td>4</td><td>2</td><td>16</td><td>12</td><td>10</td></tr><tr><td>P5</td><td>5</td><td>6</td><td>28</td><td>23</td><td>17</td></tr></tbody><tfoot><tr><td colspan="3">Average</td><td>22.33</td><td>20.00</td><td>14.83</td></tr></tfoot></table></div>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> FCFS = ආපු පිළිවෙළට. SJF (non-preemptive) = CPU එක හිස් වුණාම, ඒ වෙලාවට ඇවිත් ඉන්න අයගෙන් burst time එක අඩුම එකා. Round Robin = හැමෝටම quantum එකක් (3 ms) ගානේ වාරෙට; ඉවර නැත්නම් queue එකේ අගට යනවා. Gantt chart එක ඇඳලා, ඊට පස්සේ CT, TAT = CT − arrival, WT = TAT − burst table එක හදලා average ගන්න.</p>
+  </div>
+</section>
+
+<section id="os-lru">
+  <h2>8. LRU page replacement (2023 Q5(d), 8 marks)</h2>
+  <p>Reference string: 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with <b>4 page frames</b>. LRU replaces the page that has <b>not been used for the longest time</b>.</p>
+  <div class="tbl-wrap"><table class="num lru"><thead><tr><th>Reference</th><th>7</th><th>0</th><th>1</th><th>2</th><th>0</th><th>3</th><th>0</th><th>4</th><th>2</th><th>3</th><th>0</th><th>3</th><th>2</th><th>3</th></tr></thead><tbody><tr><th>Frame 1</th><td class="new">7</td><td>7</td><td>7</td><td>7</td><td>7</td><td class="new">3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td></tr><tr><th>Frame 2</th><td></td><td class="new">0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th>Frame 3</th><td></td><td></td><td class="new">1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="new">4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr><tr><th>Frame 4</th><td></td><td></td><td></td><td class="new">2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr><tr><th>Fault?</th><td class="fault">F</td><td class="fault">F</td><td class="fault">F</td><td class="fault">F</td><td class="hit">–</td><td class="fault">F</td><td class="hit">–</td><td class="fault">F</td><td class="hit">–</td><td class="hit">–</td><td class="hit">–</td><td class="hit">–</td><td class="hit">–</td><td class="hit">–</td></tr></tbody></table></div><p class="verdict">Page faults = <b>6</b> (the first 4 fill empty frames, then 3 replaces 7 and 4 replaces 1). Hits = 8.</p><p class="small">Check yourself: with 3 frames the same string gives 9 faults.</p>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Page එකක් frames වල නැත්නම් page fault (F). Frames පිරිලා නම්, වැඩිම කාලයක් පාවිච්චි නොකරපු (least recently used) page එක අයින් කරනවා – ඒ සඳහා ආපස්සට බලලා අන්තිමට පාවිච්චි කළේ කවදද කියලා බලන්න. මෙතන faults 6යි.</p>
+  </div>
+</section>
+
+<section id="os-io">
+  <h2>9. BIOS, DMA, I/O addressing and interrupts</h2>
+  <h3>Why do computers need a BIOS? (2023 Q2(a))</h3>
+  <div class="ans">
+    <p>The <b>BIOS</b> (Basic Input/Output System) is firmware stored in ROM/flash on the motherboard. When the power is switched on, RAM is empty, so the CPU needs a fixed program to start from. The BIOS: (1) runs the <b>POST</b> (power-on self-test) to check RAM, keyboard and disks; (2) <b>initialises the hardware</b>; (3) finds the boot device and <b>loads the bootloader</b>, which loads the operating system; (4) provides basic low-level I/O routines and the setup (CMOS) settings. Modern PCs use <b>UEFI</b>, which does the same job.</p>
+  </div>
+  <h3>DMA (2023 Q4(d))</h3>
+  <div class="ans">
+    <p><b>Direct Memory Access</b>: a DMA controller moves a block of data between an I/O device and memory <b>without the CPU copying each byte</b>. The CPU only sets up the transfer (memory address, byte count, direction) and receives one interrupt when it is finished.</p>
+    <p><b>Increases concurrency:</b> while the DMA controller transfers data, the CPU runs other processes – CPU work and I/O happen at the same time.</p>
+    <p><b>Complicates hardware:</b> needs an extra DMA controller; the CPU and DMA compete for the memory bus (bus arbitration, cycle stealing); cache contents can become inconsistent with memory; more interrupt handling.</p>
+  </div>
+  <h3>Separate I/O space vs memory-mapped I/O (2023 Q3(c))</h3>
+  <p>With a <b>separate I/O address space</b> (port-mapped, special IN/OUT instructions): the <b>whole memory address space stays free for RAM</b>; I/O instructions are easy to recognise and can be restricted to the kernel (protection); device registers are never cached by mistake; address decoding for memory is simpler. (Memory-mapped I/O instead uses normal load/store instructions on device registers, which is more flexible but uses up memory addresses and needs caching disabled for those addresses.)</p>
+  <h3>Precise vs imprecise interrupts (2025 Q5(e), 5 marks)</h3>
+  <div class="ans">
+    <p>A <b>precise interrupt</b> leaves the machine in a well-defined state: (1) the program counter is saved in a known place; (2) all instructions before it have <b>fully completed</b>; (3) <b>no instruction after it</b> has started (or its effects are undone); (4) the state of the instruction at the PC is known. The OS can simply restart from the saved PC.</p>
+    <p>An <b>imprecise interrupt</b> does not meet these conditions – in pipelined or superscalar CPUs, several instructions may be half-finished. The CPU dumps a lot of internal state for the OS, so interrupt handling becomes <b>slow and complex</b>.</p>
+  </div>
+  <h3>Why busy waiting is a poor way to get mutual exclusion (2023 Q3(b))</h3>
+  <p>A process that busy-waits keeps <b>using CPU time while doing nothing useful</b> (spinning in a loop). It can also cause the <b>priority inversion problem</b>: a high-priority process spins forever while a low-priority process inside the critical section never gets the CPU to leave it. Blocking (sleep/wakeup, semaphores) is better.</p>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> BIOS = computer එක on කළාම මුලින්ම run වෙන program එක – hardware check කරලා (POST), OS එක load කරනවා. DMA = CPU එකට කරදර නොකර device එකයි RAM එකයි අතර data කෙලින්ම යවන controller එක; ඒ අතරේ CPU එකට වෙන වැඩ කරන්න පුළුවන්. Precise interrupt = interrupt එක ආව වෙලාවේ machine එකේ තත්ත්වය පැහැදිලියි (කලින් instructions ඉවරයි, පස්සේ ඒවා පටන් ගත්තේ නෑ).</p>
+  </div>
+</section>
+
+<section id="os-map">
+  <h2>10. Past paper map</h2>
+  <table>
+    <thead><tr><th>Topic</th><th>2023 Jan</th><th>2025 Feb</th><th>2026 Mar</th><th>Where to study</th></tr></thead>
+    <tbody>
+      <tr><td>OS basics, kernel, architectures</td><td>Q1</td><td>Q1</td><td>Q1</td><td>Lesson 1</td></tr>
+      <tr><td>Processes, schedulers, Gantt charts</td><td>Q2(c), Q3(a)</td><td>Q2</td><td>Q2</td><td>Lesson 2 + §7 here</td></tr>
+      <tr><td>IPC, critical section, semaphores, Peterson</td><td>Q2(b), Q3(b)</td><td>Q3</td><td>Q3</td><td>Lesson 4</td></tr>
+      <tr><td>Deadlock, Banker's</td><td>Q4</td><td>Q4</td><td>Q4</td><td>Lesson 3 + §6 here</td></tr>
+      <tr><td>Memory, paging, page replacement</td><td>Q3(d), Q5</td><td>Q4(e), Q5(a)(b)</td><td>Q5(a)–(c)</td><td>Lesson 5 + §4, §8 here</td></tr>
+      <tr><td>Files, directories, permissions</td><td>Q5(c)</td><td>Q5(c)(d)</td><td>Q5(d)</td><td>§1–§5 here</td></tr>
+      <tr><td>I/O: BIOS, DMA, interrupts</td><td>Q2(a), Q3(c), Q4(d)</td><td>Q5(e)</td><td>–</td><td>§9 here</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer class="note-foot">Study notes written for your Semester 3.2 exam plan from the past papers in your folder. Check anything that looks different from what your lecturer taught.</footer>
+</main></body></html>

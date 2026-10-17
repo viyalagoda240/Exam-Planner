@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COM3307 Embedded Systems – Exam Notes</title>
+<style>
+@font-face{font-family:'NoteBody';src:url('atk-400.woff2') format('woff2');font-weight:400;font-style:normal}
+@font-face{font-family:'NoteBody';src:url('atk-700.woff2') format('woff2');font-weight:700;font-style:normal}
+@font-face{font-family:'NoteBody';src:url('atk-400i.woff2') format('woff2');font-weight:400;font-style:italic}
+@font-face{font-family:'NoteSinhala';src:url('sinhala-400.woff2') format('woff2');font-weight:400}
+@font-face{font-family:'NoteSinhala';src:url('sinhala-700.woff2') format('woff2');font-weight:700}
+@font-face{font-family:'NoteMono';src:url('jbm-400.woff2') format('woff2');font-weight:400}
+
+:root{--ink:#1B2740;--muted:#55627A;--line:#D5DCE6;--accent:#2347B8;--si:#FFF6CC;--si-line:#E2B714;--ans:#EEF3FF;--tip:#E8F7EE;--tip-line:#2E9B57;--mark:#FFE066;--code:#F3F5F9}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;background:#fff;color:var(--ink);font:15px/1.6 'NoteBody','Noto Sans','NoteSinhala','Noto Sans Sinhala',system-ui,sans-serif}
+.note{max-width:820px;margin:0 auto;padding:28px 22px 40px}
+.note-head{border-bottom:3px double var(--line);padding-bottom:14px;margin-bottom:18px}
+.eyebrow{text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;color:var(--muted);margin:0 0 6px;font-weight:700}
+h1{font-size:27px;line-height:1.2;margin:0 0 8px;text-wrap:balance}
+.lede{color:var(--muted);margin:0}
+h2{font-size:20px;margin:30px 0 10px;padding-top:6px;border-top:1px solid var(--line);text-wrap:balance;break-after:avoid}
+h3{font-size:16px;margin:20px 0 6px;break-after:avoid}
+h4{font-size:14px;margin:14px 0 6px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+p{margin:6px 0}
+ul,ol{margin:6px 0;padding-left:22px}
+li{margin:3px 0}
+.toc{background:var(--code);border-radius:8px;padding:10px 16px;margin:0 0 10px;font-size:14px}
+.toc ol{columns:2;column-gap:28px;margin:0}
+.toc a{color:var(--accent);text-decoration:none}
+.si{background:var(--si);border-left:4px solid var(--si-line);padding:8px 12px;margin:12px 0;border-radius:0 6px 6px 0;font-family:'NoteSinhala','Noto Sans Sinhala','NoteBody',sans-serif;line-height:1.75;break-inside:avoid}
+.si-inline{font-family:'NoteSinhala','Noto Sans Sinhala',sans-serif}
+.ans{background:var(--ans);border-radius:6px;padding:8px 12px;margin:10px 0;break-inside:avoid}
+.tip{background:var(--tip);border-left:4px solid var(--tip-line);padding:8px 12px;border-radius:0 6px 6px 0;margin:10px 0}
+.exam{font-size:12.5px;color:var(--accent);font-weight:700;margin-top:10px}
+.exam::before{content:"Past papers ▸ "}
+.small{font-size:13px;color:var(--muted)}
+.formula{font-family:'NoteMono','JetBrains Mono',monospace;background:var(--code);border-radius:6px;padding:8px 12px;font-size:13.5px}
+.formula p{margin:2px 0}
+.formula-inline{font-family:'NoteMono','JetBrains Mono',monospace}
+.verdict{font-size:15px}
+table{border-collapse:collapse;width:100%;margin:8px 0;font-size:13.5px;break-inside:avoid}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}
+thead th{background:var(--code)}
+table.num td,table.num th{text-align:center;font-variant-numeric:tabular-nums}
+table.num tfoot td{font-weight:700;background:var(--ans)}
+.tbl-wrap{overflow-x:auto}
+table.lru td.new{background:var(--mark);font-weight:700}
+table.lru td.fault{color:#C0362C;font-weight:700}
+code{font-family:'NoteMono','JetBrains Mono',monospace;font-size:.9em;background:var(--code);padding:1px 4px;border-radius:3px}
+pre{background:var(--code);border-radius:6px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;break-inside:avoid}
+pre code{background:none;padding:0;font-size:inherit}
+dl.defs dt{font-weight:700;margin-top:8px}
+dl.defs dd{margin:2px 0 6px 16px}
+figure.diagram{margin:12px 0;text-align:center;color:var(--ink);break-inside:avoid}
+figure.diagram svg{width:100%;max-width:640px;height:auto}
+figcaption{font-size:12.5px;color:var(--muted)}
+.gantt-wrap{margin:8px 0 4px;break-inside:avoid}
+.gantt{display:flex;border:1.5px solid var(--ink);border-radius:4px;overflow:hidden}
+.gseg{border-right:1.5px solid var(--ink);text-align:center;padding:6px 0;font-weight:700;font-size:13px;min-width:0;background:var(--ans)}
+.gseg:last-child{border-right:0}
+.gseg.idle{background:repeating-linear-gradient(45deg,#fff,#fff 4px,var(--code) 4px,var(--code) 8px);color:var(--muted)}
+.gticks{display:flex;font-size:11.5px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.gtick{min-width:0;text-align:left;margin-left:-3px}
+.gtick.end{flex:0 0 0;margin-left:-6px}
+.frame-diagram{display:flex;flex-wrap:wrap;border:1.5px solid var(--ink);border-radius:4px;overflow:hidden;font-size:12px;margin:8px 0}
+.frame-diagram span{flex:1 1 auto;padding:6px 8px;border-right:1px solid var(--ink);text-align:center;background:var(--ans)}
+.frame-diagram span.wide{flex:3 1 auto;background:#fff}
+.frame-diagram span:last-child{border-right:0}
+.bits p{margin:4px 0}
+.bits .lbl{display:block;font-size:12px;color:var(--muted)}
+.bits code{font-size:13.5px;letter-spacing:.06em;word-break:break-all}
+mark{background:var(--mark);color:inherit;font-weight:700;padding:0 1px}
+.note-foot{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+@media print{.note{padding:0}.toc{break-after:avoid}}
+</style></head>
+<body><main class="note" id="note-com3307">
+<header class="note-head">
+  <p class="eyebrow">COM3307 · Embedded Systems · 3 credits · Exam: 3 hours</p>
+  <h1>Embedded Systems – Exam Notes</h1>
+  <p class="lede">Made from the 2025 and 2026 past papers, because the lecture notes were not in your folder. Every section ends with the past-paper questions it answers. English is written the way you can write it in the exam; the <span class="si-inline">සිංහල</span> boxes explain the idea simply.</p>
+</header>
+
+<nav class="toc" aria-label="Contents">
+  <ol start="0">
+    <li><a href="#es-guide">How this paper works</a></li>
+    <li><a href="#es-basics">What is an embedded system?</a></li>
+    <li><a href="#es-apps">Applications, microcontroller vs microprocessor</a></li>
+    <li><a href="#es-req">Requirements and real-time systems</a></li>
+    <li><a href="#es-components">Hardware components</a></li>
+    <li><a href="#es-comm">Communication: UART, SPI, I2C</a></li>
+    <li><a href="#es-interrupts">Polling, interrupts and ISRs</a></li>
+    <li><a href="#es-c">Embedded C: functions, ports, LED + button</a></li>
+    <li><a href="#es-timers">Hardware timers and a 1-second delay</a></li>
+    <li><a href="#es-asm">AVR assembly and status flags</a></li>
+    <li><a href="#es-arch">Microcontroller architecture, fetch–decode–execute</a></li>
+    <li><a href="#es-design">Design scenario questions (Q2 every year)</a></li>
+    <li><a href="#es-map">Past paper map</a></li>
+  </ol>
+</nav>
+
+<section id="es-guide">
+  <h2>0. How this paper works</h2>
+  <ul>
+    <li><b>Five questions, 3 hours.</b> Questions 1 and 2 are <b>compulsory</b>. Answer <b>any two</b> of Questions 3–5. Each question is about 25 marks.</li>
+    <li><b>Q1</b> is always definitions and comparisons: embedded system definition and characteristics, applications, microcontroller vs microprocessor, functional vs non-functional requirements.</li>
+    <li><b>Q2</b> is always a design scenario: smart waste bin (2025), smart street lighting (2026). You list sensors, controller and actuators, write the logic, and discuss challenges or improvements.</li>
+    <li><b>Q3–Q5</b> rotate: components and communication, interrupts and embedded C, timers and real-time (2025); AVR assembly, ports, fetch–decode–execute and architecture (2026).</li>
+  </ul>
+  <div class="tip"><b>Plan:</b> Master sections 1–4 and 11 first (they cover Q1 and Q2 = half the paper). Then make two of these strong: <b>AVR assembly</b> (section 9), <b>timers + interrupts</b> (sections 6 and 8), <b>architecture</b> (section 10).</div>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> ප්‍රශ්න 5යි. 1 සහ 2 අනිවාර්යයි. 3, 4, 5 න් ඕනෑම දෙකක් කරන්න. Q1 හැමදාම definitions සහ comparisons. Q2 හැමදාම "design එකක් කරන්න" ප්‍රශ්නයක් (smart bin, street light වගේ). ඉතින් මුලින්ම section 1–4 සහ 11 හොඳට ඉගෙන ගන්න – ඒකෙන් paper එකෙන් බාගයක් cover වෙනවා.</p>
+  </div>
+</section>
+
+<section id="es-basics">
+  <h2>1. What is an embedded system?</h2>
+  <div class="ans">
+    <p><b>Definition.</b> An embedded system is a combination of computer hardware and software, designed to perform a <b>specific, dedicated function</b> within a larger mechanical or electrical system. It usually runs a fixed program (firmware) and interacts with the physical world through sensors and actuators.</p>
+    <p><b>Examples:</b> washing machine controller, microwave oven, digital watch, car airbag controller, pacemaker, traffic light controller, smart meter.</p>
+  </div>
+  <h3>Key characteristics (how it differs from a general-purpose computer)</h3>
+  <ol>
+    <li><b>Dedicated function.</b> It does one job (or a small set of jobs) for its whole life. A PC runs any program the user installs.</li>
+    <li><b>Real-time operation.</b> It must react within a fixed time limit (an airbag must fire within milliseconds).</li>
+    <li><b>Resource-constrained.</b> Small memory (KB, not GB), slow CPU (MHz), limited power and low cost.</li>
+    <li><b>Reactive and connected to the physical world.</b> It reads sensors and drives actuators continuously.</li>
+    <li><b>High reliability and stability.</b> It must run for months or years without restarting, often with no human watching.</li>
+    <li><b>Low power consumption.</b> Many run on batteries, so they sleep whenever possible.</li>
+    <li><b>Fixed firmware.</b> The program is stored in ROM/Flash; the user normally cannot change it.</li>
+    <li><b>Small size, little or no user interface</b> (a few buttons, LEDs or a small display).</li>
+  </ol>
+  <p class="small">In the exam "explain three characteristics" = write three of these, each with one sentence of explanation and one example.</p>
+  <table>
+    <thead><tr><th>Feature</th><th>Embedded system</th><th>General-purpose computer</th></tr></thead>
+    <tbody>
+      <tr><td>Purpose</td><td>One dedicated task</td><td>Many tasks, any software</td></tr>
+      <tr><td>Hardware</td><td>Microcontroller, small memory</td><td>Powerful processor, GBs of RAM</td></tr>
+      <tr><td>Software</td><td>Fixed firmware, maybe an RTOS</td><td>Full OS (Windows, Linux), user installs apps</td></tr>
+      <tr><td>Timing</td><td>Real-time deadlines</td><td>Best effort</td></tr>
+      <tr><td>Power and cost</td><td>Very low</td><td>High</td></tr>
+      <tr><td>User interface</td><td>Minimal or none</td><td>Keyboard, mouse, large screen</td></tr>
+      <tr><td>Example</td><td>Washing machine controller</td><td>Laptop</td></tr>
+    </tbody>
+  </table>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Embedded system එකක් කියන්නේ <b>එක නිශ්චිත වැඩක්</b> කරන්න හදපු පොඩි computer එකක් – ඒක ලොකු machine එකක් ඇතුළේ "embed" වෙලා (හිරවෙලා) තියෙන්නේ. උදා: washing machine එකේ program එක control කරන chip එක.</p>
+    <p>Laptop එකකට ඕනෑම software එකක් දාන්න පුළුවන්. ඒත් washing machine controller එක කරන්නේ රෙදි හෝදන එක විතරයි. ඒකට memory ටිකයි, speed අඩුයි, current අඩුවෙන් ගන්නවා, ලාභයි, දවස් ගණන් restart නොකර වැඩ කරනවා, වෙලාවට response කරන්න ඕනේ (real-time).</p>
+  </div>
+  <p class="exam">Answers: 2025 Q1(a) 10 marks · 2026 Q1(a) 6 marks · 2025 ICT Q1(a)</p>
+</section>
+
+<section id="es-apps">
+  <h2>2. Applications, microcontroller vs microprocessor</h2>
+  <h3>Real-world applications and their impact</h3>
+  <table>
+    <thead><tr><th>Area</th><th>Example embedded systems</th><th>Impact</th></tr></thead>
+    <tbody>
+      <tr><td>Healthcare</td><td>Pacemaker, insulin pump, patient monitor, digital thermometer</td><td>Continuous monitoring, saves lives, home care</td></tr>
+      <tr><td>Automotive</td><td>Engine control unit (ECU), ABS brakes, airbag controller, reversing sensor</td><td>Safety, fuel efficiency, lower emissions</td></tr>
+      <tr><td>Home and consumer</td><td>Washing machine, microwave, smart TV, smart thermostat</td><td>Convenience, energy saving</td></tr>
+      <tr><td>Industry</td><td>PLCs, robot arms, conveyor control</td><td>Higher productivity, precision, safer workplaces</td></tr>
+      <tr><td>Agriculture</td><td>Smart irrigation with soil-moisture sensors</td><td>Saves water and labour, better yield</td></tr>
+      <tr><td>Communication</td><td>Routers, mobile phones, smart meters</td><td>Connectivity, remote monitoring</td></tr>
+    </tbody>
+  </table>
+  <p class="small">"Describe three applications and their impact" = pick three rows; for each write what the system does + one impact sentence.</p>
+
+  <h3>Microcontroller vs microprocessor</h3>
+  <div class="ans">
+    <p><b>Microcontroller (MCU):</b> a single chip that contains a CPU <b>plus</b> RAM, ROM/Flash, I/O ports, timers, ADC and serial interfaces. It is a complete small computer for a dedicated task. Examples: ATmega328P (Arduino Uno), PIC16F877A, 8051, ESP32.</p>
+    <p><b>Microprocessor (MPU):</b> a chip that contains <b>only the CPU</b>. RAM, storage and I/O must be added as separate chips. It is built for high processing power. Examples: Intel Core i5, AMD Ryzen, ARM Cortex-A in phones.</p>
+  </div>
+  <table>
+    <thead><tr><th>Point</th><th>Microcontroller</th><th>Microprocessor</th></tr></thead>
+    <tbody>
+      <tr><td>On the chip</td><td>CPU + memory + I/O + timers</td><td>CPU only</td></tr>
+      <tr><td>External parts needed</td><td>Very few</td><td>RAM, storage, I/O chips</td></tr>
+      <tr><td>Cost, size, power</td><td>Low</td><td>High</td></tr>
+      <tr><td>Speed</td><td>MHz range</td><td>GHz range</td></tr>
+      <tr><td>Used for</td><td>Dedicated control tasks (embedded)</td><td>General computing (PCs, laptops)</td></tr>
+    </tbody>
+  </table>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Microcontroller එකේ CPU එකයි, memory එකයි, input/output pins ටිකයි, timers ටිකයි ඔක්කොම <b>එකම chip එකේ</b> තියෙනවා – ඒ නිසා ලාභයි, පොඩියි, current අඩුවෙන් යනවා (උදා: Arduino එකේ ATmega328P). Microprocessor එකේ තියෙන්නේ CPU එක විතරයි – RAM, hard disk වගේ දේවල් වෙනම සවි කරන්න ඕනේ, ඒත් ගොඩක් වේගවත් (උදා: laptop එකේ Intel Core i5).</p>
+  </div>
+  <p class="exam">Answers: 2025 Q1(b) 10 marks, Q1(c) 5 marks · 2025 ICT Q1(b)(c)</p>
+</section>
+
+<section id="es-req">
+  <h2>3. Requirements and real-time systems</h2>
+  <h3>Functional vs non-functional requirements</h3>
+  <div class="ans">
+    <p><b>Functional requirements</b> say <b>what</b> the system must do – its functions and behaviour.</p>
+    <p><b>Non-functional requirements</b> say <b>how well</b> it must do it – quality limits such as response time, power, cost, size, reliability, accuracy and security.</p>
+  </div>
+  <p><b>Example: a smart home temperature monitor</b></p>
+  <ul>
+    <li>Functional: read the room temperature every 5 seconds; switch the fan on when the temperature is above 30 °C; show the temperature on an LCD; send an alert to the phone if it is above 35 °C.</li>
+    <li>Non-functional: respond within 1 second; accuracy ±0.5 °C; run 24/7 without failure; battery lasts at least 6 months; cost below Rs. 5,000.</li>
+  </ul>
+
+  <h3>Hard vs soft real-time systems</h3>
+  <div class="ans">
+    <p>A <b>real-time system</b> must produce the correct result <b>within a deadline</b>. A late answer is a wrong answer.</p>
+    <p><b>Hard real-time:</b> missing a deadline causes system failure, damage or danger to life. Examples: airbag controller, ABS braking, pacemaker, aircraft flight control.</p>
+    <p><b>Soft real-time:</b> missing a deadline only reduces quality; the system keeps working. Examples: video streaming (a frame is dropped), online games, music players, a smart TV menu.</p>
+  </div>
+  <table>
+    <thead><tr><th>Point</th><th>Hard real-time</th><th>Soft real-time</th></tr></thead>
+    <tbody>
+      <tr><td>Deadline miss</td><td>Not allowed – failure</td><td>Allowed sometimes – lower quality</td></tr>
+      <tr><td>Design</td><td>Worst-case timing must be guaranteed</td><td>Average performance is enough</td></tr>
+      <tr><td>Example</td><td>Airbag must fire within about 30 ms</td><td>Video call can skip a frame</td></tr>
+    </tbody>
+  </table>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Functional = system එක <b>කරන්න ඕනේ වැඩ</b> (temperature කියවන්න, fan එක on කරන්න). Non-functional = ඒ වැඩේ <b>කොච්චර හොඳට</b> කරන්න ඕනෙද (තත්පර 1කින් response, battery මාස 6ක්, මිල අඩු).</p>
+    <p>Hard real-time එකේ deadline එක miss වුණොත් ලොකු අනතුරක් (airbag එක පරක්කු වුණොත් මිනිහා මැරෙන්න පුළුවන්). Soft real-time එකේ miss වුණොත් quality එක ටිකක් අඩු වෙනවා විතරයි (video එකේ frame එකක් පනිනවා).</p>
+  </div>
+  <p class="exam">Answers: 2026 Q1(b) 8 marks · 2025 Q5(c) 5 marks · 2025 ICT Q5(c)</p>
+</section>
+
+<section id="es-components">
+  <h2>4. Hardware components of an embedded system</h2>
+  <figure class="diagram">
+    <svg viewBox="0 0 640 230" role="img" aria-label="Block diagram: sensors feed the microcontroller through input interfaces; the microcontroller drives actuators through output interfaces; power and communication modules connect to the microcontroller.">
+      <defs><marker id="arA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <g fill="none" stroke="currentColor" stroke-width="1.6">
+        <rect x="10" y="80" width="110" height="60" rx="6"/>
+        <rect x="160" y="80" width="90" height="60" rx="6"/>
+        <rect x="285" y="60" width="140" height="100" rx="8" stroke-width="2.4"/>
+        <rect x="460" y="80" width="80" height="60" rx="6"/>
+        <rect x="565" y="80" width="68" height="60" rx="6"/>
+        <rect x="285" y="180" width="140" height="40" rx="6"/>
+        <rect x="285" y="8" width="140" height="36" rx="6"/>
+        <path d="M120 110 H158" marker-end="url(#arA)"/>
+        <path d="M250 110 H283" marker-end="url(#arA)"/>
+        <path d="M425 110 H458" marker-end="url(#arA)"/>
+        <path d="M540 110 H563" marker-end="url(#arA)"/>
+        <path d="M355 178 V162" marker-end="url(#arA)"/>
+        <path d="M355 46 V58" marker-end="url(#arA)" marker-start="url(#arA)"/>
+      </g>
+      <g fill="currentColor" font-size="13" text-anchor="middle">
+        <text x="65" y="106">Sensors</text><text x="65" y="124" font-size="11">temp, light, distance</text>
+        <text x="205" y="106">Input</text><text x="205" y="124" font-size="11">GPIO / ADC</text>
+        <text x="355" y="98" font-weight="700">Microcontroller</text><text x="355" y="118" font-size="11">CPU + RAM + Flash</text><text x="355" y="134" font-size="11">timers, ports</text>
+        <text x="500" y="106">Output</text><text x="500" y="124" font-size="11">GPIO / PWM</text>
+        <text x="599" y="106">Actuators</text><text x="599" y="124" font-size="10">motor, LED</text>
+        <text x="355" y="205">Power management</text>
+        <text x="355" y="31">Communication (UART/SPI/I2C, Wi-Fi)</text>
+      </g>
+    </svg>
+    <figcaption>Basic block diagram of an embedded system – draw this in any "components" or design answer.</figcaption>
+  </figure>
+  <dl class="defs">
+    <dt>Microcontroller</dt><dd>The brain. Runs the program, reads inputs, takes decisions and controls the outputs.</dd>
+    <dt>Memory (RAM &amp; ROM)</dt><dd><b>Flash/ROM</b> (program memory) stores the firmware permanently – it is non-volatile. <b>RAM/SRAM</b> (data memory) holds variables and the stack while running – it is volatile. <b>EEPROM</b> stores small settings that must survive power loss (e.g. calibration values).</dd>
+    <dt>I/O interfaces</dt><dd>Connect the MCU to the outside world: digital GPIO pins, <b>ADC</b> (converts an analog sensor voltage into a number), <b>PWM</b> (controls motor speed or LED brightness), communication ports.</dd>
+    <dt>Sensors</dt><dd>Convert a physical quantity into an electrical signal. Examples: LM35 / DHT11 temperature, LDR light, HC-SR04 ultrasonic distance, PIR motion, soil moisture, MQ-2 gas.</dd>
+    <dt>Actuators</dt><dd>Convert an electrical signal into physical action. Examples: DC/servo/stepper motors, relays, LEDs, buzzers, solenoid valves, displays.</dd>
+    <dt>Communication modules</dt><dd>Exchange data with other chips or systems: UART, SPI, I2C (wired, on the board); Wi-Fi, Bluetooth, GSM, LoRa, Zigbee (wireless).</dd>
+    <dt>Power management unit</dt><dd>Regulates the voltage, manages the battery or solar charging, switches the MCU into sleep modes and protects against low voltage (brown-out). Gives long battery life and stable operation.</dd>
+  </dl>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Sensor = ලෝකයේ දෙයක් (උෂ්ණත්වය, එළිය, දුර) <b>electrical signal</b> එකක් කරනවා. Microcontroller = ඒ signal එක කියවලා <b>තීරණය</b> ගන්නවා. Actuator = තීරණය අනුව <b>වැඩක් කරනවා</b> (motor එක කරකවනවා, LED එක පත්තු කරනවා). Flash එකේ program එක ස්ථිරව තියෙනවා; RAM එකේ run වෙන වෙලාවේ variables තියෙනවා (current ගියාම මැකෙනවා). Power unit එක battery එක ඉතුරු කරනවා.</p>
+  </div>
+  <p class="exam">Answers: 2025 Q3(a) 9 marks (explain any three) · used in every Q2 design answer</p>
+</section>
+
+<section id="es-comm">
+  <h2>5. Communication: synchronous vs asynchronous, UART, SPI, I2C</h2>
+  <div class="ans">
+    <p><b>Synchronous communication:</b> the sender and receiver share a <b>common clock signal</b>. Each bit is read on a clock edge, so no start/stop bits are needed and it can be fast. Needs an extra clock wire. Examples: <b>SPI</b>, <b>I2C</b>.</p>
+    <p><b>Asynchronous communication:</b> there is <b>no shared clock</b>. Both sides agree on a speed (baud rate, e.g. 9600 bps) and every byte is wrapped with a <b>start bit</b> and <b>stop bit(s)</b>, sometimes a parity bit. Example: <b>UART</b> – an Arduino talking to a PC, a GPS module or a Bluetooth HC-05 module.</p>
+  </div>
+  <p><b>UART frame (one byte):</b> line idle = 1 → start bit 0 → 8 data bits (LSB first) → optional parity → stop bit 1. Wires: TX, RX, GND. Point-to-point, full duplex.</p>
+  <table>
+    <thead><tr><th></th><th>UART</th><th>SPI</th><th>I2C</th></tr></thead>
+    <tbody>
+      <tr><td>Type</td><td>Asynchronous</td><td>Synchronous</td><td>Synchronous</td></tr>
+      <tr><td>Wires</td><td>2 (TX, RX)</td><td>4 (SCLK, MOSI, MISO, SS)</td><td>2 (SDA, SCL)</td></tr>
+      <tr><td>Devices</td><td>2 (point-to-point)</td><td>1 master, many slaves (one SS line each)</td><td>Many masters and slaves, 7-bit addresses</td></tr>
+      <tr><td>Duplex</td><td>Full</td><td>Full</td><td>Half</td></tr>
+      <tr><td>Speed</td><td>Slow–medium (9600–115200 bps)</td><td>Fastest (MHz)</td><td>100 kHz / 400 kHz</td></tr>
+      <tr><td>Typical use</td><td>PC serial, GPS, Bluetooth, GSM</td><td>SD card, TFT display, flash memory</td><td>Sensors, RTC, small OLED displays</td></tr>
+    </tbody>
+  </table>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Synchronous වල දෙපැත්තටම පොදු <b>clock</b> wire එකක් තියෙනවා – clock එක "tick" වෙන හැම වෙලාවකම bit එකක් කියවනවා. Asynchronous වල clock එකක් නෑ – දෙන්නම එකම speed (baud rate) එකකට එකඟ වෙනවා; හැම byte එකටම මුලට start bit එකකුයි අගට stop bit එකකුයි දානවා, එතකොට byte එක පටන් ගත්තේ කොහෙන්ද කියලා receiver ට තේරෙනවා. UART = async. SPI, I2C = sync.</p>
+  </div>
+  <p class="exam">Answers: 2025 Q3(b) 8 marks · 2025 Q3(a) "communication modules"</p>
+</section>
+
+<section id="es-interrupts">
+  <h2>6. Polling, interrupt-driven I/O and ISRs</h2>
+  <div class="ans">
+    <p><b>Polling:</b> the CPU repeatedly checks (in a loop) whether a device needs service, e.g. "is the button pressed?" again and again. Simple to write, but it wastes CPU time and power, and a very short event can be missed or handled late.</p>
+    <p><b>Interrupt-driven I/O:</b> the device sends an <b>interrupt signal</b> to the CPU only when it needs attention. The CPU pauses the main program, runs a special function (the ISR), and then continues where it stopped. The CPU is free (or asleep) the rest of the time, and the response is fast.</p>
+  </div>
+  <h3>A scenario where interrupts are preferred</h3>
+  <p>An <b>emergency-stop button</b> on a factory machine: the motor must stop immediately, even if the main program is busy. With polling, the button might be checked too late. With an external interrupt (INT0), the CPU jumps to the stop routine within microseconds.</p>
+  <p class="small">Other good scenarios: a battery-powered sensor node that sleeps until a PIR motion sensor wakes it; receiving serial data (UART RX interrupt) so no byte is lost; counting fast pulses from a wheel encoder; an airbag crash sensor.</p>
+  <h3>Interrupt Service Routine (ISR)</h3>
+  <div class="ans">
+    <p>An <b>ISR</b> is a special function that the processor runs <b>automatically</b> when a specific interrupt occurs. It handles the event and then returns control to the interrupted program.</p>
+    <p><b>Purpose:</b> respond quickly to time-critical events; handle hardware events such as a timer overflow, a button press or received data; let the CPU do other work (or sleep) instead of waiting; save power.</p>
+  </div>
+  <p><b>What happens when an interrupt occurs:</b></p>
+  <ol>
+    <li>The device sets its interrupt flag.</li>
+    <li>The CPU finishes the current instruction.</li>
+    <li>It saves the return address (program counter) on the stack and disables further interrupts.</li>
+    <li>It jumps to the ISR address found in the <b>interrupt vector table</b>.</li>
+    <li>The ISR runs.</li>
+    <li>The <code>RETI</code> instruction restores the program counter, re-enables interrupts and the main program continues.</li>
+  </ol>
+  <p><b>Rules for a good ISR:</b> keep it short; no delays or long loops inside; use <code>volatile</code> variables to share data with the main program; clear the flag if the hardware does not.</p>
+<pre><code>// ATmega328P: toggle an LED on PB0 when a button on INT0 (PD2) is pressed
+#include &lt;avr/io.h&gt;
+#include &lt;avr/interrupt.h&gt;
+
+ISR(INT0_vect) {            // runs automatically on the interrupt
+    PORTB ^= (1 &lt;&lt; PB0);    // toggle LED
+}
+
+int main(void) {
+    DDRB  |= (1 &lt;&lt; PB0);    // LED pin = output
+    PORTD |= (1 &lt;&lt; PD2);    // pull-up on the button pin
+    EICRA |= (1 &lt;&lt; ISC01);  // interrupt on falling edge (button press)
+    EIMSK |= (1 &lt;&lt; INT0);   // enable INT0
+    sei();                  // enable global interrupts
+    while (1) { }           // main program is free to do other work
+}</code></pre>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Polling කියන්නේ CPU එක නැවත නැවත "button එක press කළාද? press කළාද?" කියලා අහන එක – මහන්සියි, current නාස්තියි. Interrupt කියන්නේ button එකම "මට දැන් උදව් ඕනේ" කියලා CPU එකට කියන එක. එතකොට CPU එක කරමින් හිටපු වැඩේ නවත්තලා <b>ISR</b> එක run කරනවා, ඊට පස්සේ ආයෙත් කලින් වැඩේට යනවා. ISR එක කෙටි වෙන්න ඕනේ.</p>
+  </div>
+  <p class="exam">Answers: 2025 Q3(c) 4 marks, Q3(d) 4 marks, Q4(c) 5 marks · 2025 ICT same</p>
+</section>
+
+<section id="es-c">
+  <h2>7. Embedded C: functions, port registers, LED + button</h2>
+  <h3>Why functions are useful in embedded C</h3>
+  <ol>
+    <li><b>Modularity:</b> a big program is split into small tasks (<code>readSensor()</code>, <code>updateDisplay()</code>).</li>
+    <li><b>Reusability:</b> write once, call many times (<code>delay_ms(500)</code> used everywhere).</li>
+    <li><b>Smaller code size:</b> no repeated code, so less Flash memory is used – important on small MCUs.</li>
+    <li><b>Readability and maintenance:</b> <code>led_on()</code> is easier to understand than a bit operation.</li>
+    <li><b>Easier testing and debugging:</b> each function can be tested alone.</li>
+    <li><b>Hides hardware details:</b> if the LED moves to another pin, only one function changes.</li>
+  </ol>
+<pre><code>void led_on(void)  { PORTB |=  (1 &lt;&lt; PB0); }   // set bit = LED ON
+void led_off(void) { PORTB &amp;= ~(1 &lt;&lt; PB0); }   // clear bit = LED OFF
+uint8_t button_pressed(void) {                  // button to GND, pull-up on
+    return !(PIND &amp; (1 &lt;&lt; PD2));               // pressed reads 0
+}</code></pre>
+  <h3>AVR port registers</h3>
+  <table>
+    <thead><tr><th>Register</th><th>Meaning</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td><code>DDRx</code></td><td>Data Direction Register: 1 = output, 0 = input</td><td><code>DDRB = 0xFF;</code> all PORTB pins output</td></tr>
+      <tr><td><code>PORTx</code></td><td>Output value (1 = high, 0 = low). On an input pin, 1 turns on the internal pull-up</td><td><code>PORTB = 0xAA;</code></td></tr>
+      <tr><td><code>PINx</code></td><td>Reads the actual logic level on the pins</td><td><code>if (PIND &amp; (1 &lt;&lt; PD2))</code></td></tr>
+    </tbody>
+  </table>
+  <h3>Turn ON an LED when a button is pressed</h3>
+  <p class="small">Assumptions (always write them): LED on PB0 with a resistor (active high). Push button between PD2 and GND, internal pull-up enabled, so pressed = 0.</p>
+<pre><code>#include &lt;avr/io.h&gt;
+
+int main(void) {
+    DDRB  |=  (1 &lt;&lt; PB0);      // PB0 output (LED)
+    DDRD  &amp;= ~(1 &lt;&lt; PD2);      // PD2 input (button)
+    PORTD |=  (1 &lt;&lt; PD2);      // enable pull-up
+
+    while (1) {
+        if (!(PIND &amp; (1 &lt;&lt; PD2)))     // button pressed (reads 0)
+            PORTB |=  (1 &lt;&lt; PB0);     // LED ON
+        else
+            PORTB &amp;= ~(1 &lt;&lt; PB0);     // LED OFF
+    }
+}</code></pre>
+  <p><b>Pseudocode</b></p>
+<pre><code>START
+  set LED pin as OUTPUT
+  set button pin as INPUT with pull-up
+  LOOP forever
+     read button pin
+     IF button is pressed THEN LED = ON
+     ELSE LED = OFF
+  END LOOP</code></pre>
+  <p><b>Flow diagram (draw as boxes):</b> Start → Configure pins → Read button → ◇ Pressed? → Yes: LED ON / No: LED OFF → back to Read button.</p>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> <code>DDRx</code> = pin එක input ද output ද කියලා කියන register එක (1 = output). <code>PORTx</code> = output pin එකට 1 ද 0 ද යවන්නේ කියන එක. <code>PINx</code> = input pin එකේ දැන් තියෙන අගය කියවන එක. Button එක GND එකට සම්බන්ධ කරලා pull-up එක on කළාම, press කළාම 0 කියවෙනවා – ඒකයි <code>!</code> (NOT) එක දාලා තියෙන්නේ. Flow chart හෝ pseudocode ලිව්වත් marks ලැබෙනවා – ප්‍රශ්නයේම එහෙම කියනවා.</p>
+  </div>
+  <p class="exam">Answers: 2025 Q4(a) 10 marks, Q4(b) 10 marks · 2026 Q4(b) 15 marks (with PORTD → PORTB)</p>
+</section>
+
+<section id="es-timers">
+  <h2>8. Hardware timers and a 1-second delay</h2>
+  <div class="ans">
+    <p>A <b>hardware timer</b> is a counter register inside the microcontroller that counts clock pulses <b>independently of the CPU</b>. The clock first passes through a <b>prescaler</b> (÷1, ÷8, ÷64, ÷256, ÷1024), then the counter register (<code>TCNT0</code>) increases by one on every tick.</p>
+    <p>An <b>8-bit timer</b> counts 0 → 255. On the next tick it <b>overflows</b> back to 0 and sets the overflow flag, which can trigger an interrupt. In <b>CTC mode</b> (Clear Timer on Compare) the counter is compared with <code>OCR0A</code>; when they are equal the counter resets to 0 and a compare-match interrupt can run.</p>
+    <p><b>Delay generation:</b> because the tick time is fixed, counting a known number of ticks gives an exact time. The CPU can either wait for the flag (polling) or keep working and let the timer interrupt count the time.</p>
+  </div>
+  <div class="formula">
+    <p>Tick time = prescaler ÷ clock frequency</p>
+    <p>Overflow time (8-bit) = 256 × tick time</p>
+  </div>
+  <h3>Worked example: 1-second delay, 8-bit timer, 1 MHz clock (2025 Q5(b))</h3>
+  <table>
+    <thead><tr><th>Prescaler</th><th>Tick time</th><th>Overflow time (256 ticks)</th><th>Overflows in 1 s</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>1 µs</td><td>0.256 ms</td><td>3906.25</td></tr>
+      <tr><td>8</td><td>8 µs</td><td>2.048 ms</td><td>488.28</td></tr>
+      <tr><td>64</td><td>64 µs</td><td>16.384 ms</td><td>61.04</td></tr>
+      <tr><td>1024</td><td>1.024 ms</td><td>262.144 ms</td><td>3.81</td></tr>
+    </tbody>
+  </table>
+  <p><b>Exact method (CTC):</b> prescaler 8 → tick = 8 ÷ 1 MHz = 8 µs. For 1 ms we need 1 ms ÷ 8 µs = <b>125 ticks</b>, so set <code>OCR0A = 124</code> (counts 0…124). The compare interrupt now runs every 1 ms. Count <b>1000</b> interrupts = <b>exactly 1.000 s</b>.</p>
+  <p><b>Simple overflow method:</b> prescaler 64 → overflow every 16.384 ms. 1 s ÷ 16.384 ms = 61.04, so count <b>61 overflows</b> ≈ 0.9994 s (0.06 % error).</p>
+<pre><code>// ATmega328P, 1 MHz clock: toggle an LED on PB5 every 1 second
+#include &lt;avr/io.h&gt;
+#include &lt;avr/interrupt.h&gt;
+
+volatile uint16_t ms = 0;
+
+ISR(TIMER0_COMPA_vect) {          // runs every 1 ms
+    ms++;
+    if (ms &gt;= 1000) {             // 1000 ms = 1 s
+        ms = 0;
+        PORTB ^= (1 &lt;&lt; PB5);      // 1-second event
+    }
+}
+
+int main(void) {
+    DDRB  |= (1 &lt;&lt; PB5);          // LED output
+    TCCR0A = (1 &lt;&lt; WGM01);        // CTC mode
+    OCR0A  = 124;                 // 125 ticks x 8 us = 1 ms
+    TIMSK0 = (1 &lt;&lt; OCIE0A);       // enable compare-match interrupt
+    TCCR0B = (1 &lt;&lt; CS01);         // prescaler 8 -&gt; timer starts
+    sei();                        // global interrupts on
+    while (1) { }                 // CPU free for other work
+}</code></pre>
+  <p><b>Pseudocode / flow (enough for full marks if you explain the numbers):</b></p>
+<pre><code>MAIN: set LED pin output
+      set timer: prescaler 8, CTC mode, compare value 124
+      enable compare interrupt, enable global interrupts
+      LOOP forever (do other work)
+
+ISR (every 1 ms): count = count + 1
+      IF count = 1000 THEN  toggle LED (1 second passed), count = 0
+      RETURN</code></pre>
+  <p class="small">Register names are for the ATmega328P (Arduino Uno). Other AVR chips use slightly different names (e.g. ATmega32 uses <code>TCCR0</code>, <code>TIMSK</code>); the idea is the same.</p>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Timer එක කියන්නේ CPU එකෙන් ස්වාධීනව clock pulses ගණන් කරන counter එකක්. Prescaler එකෙන් clock එක බෙදනවා (÷8 නම් 1 MHz → tick එකක් 8 µs). 8-bit timer එක 255 දක්වා ගණන් කරලා ආයෙත් 0 ට යනවා (overflow). අපිට ඕනේ තත්පර 1ක් නම්: 8 µs × 125 = 1 ms; ඒ 1 ms interrupt එක 1000 පාරක් ගණන් කළාම හරියටම 1 s. Exam එකේ ගණනය (tick time, ticks ගණන, interrupts ගණන) පැහැදිලිව පෙන්නන්න – marks වැඩිපුරම එතන.</p>
+  </div>
+  <p class="exam">Answers: 2025 Q5(a) 10 marks, Q5(b) 10 marks · 2025 ICT same</p>
+</section>
+
+<section id="es-asm">
+  <h2>9. AVR assembly and status flags</h2>
+  <ul>
+    <li>AVR is an <b>8-bit RISC</b> microcontroller with <b>32 general-purpose registers</b>, R0–R31. <code>LDI</code> works only with <b>R16–R31</b>.</li>
+    <li>Most instructions take 1 clock cycle. It uses a <b>Harvard architecture</b> (separate program and data memory).</li>
+  </ul>
+  <table>
+    <thead><tr><th>Instruction</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td><code>LDI Rd, K</code></td><td>Load an immediate number K into Rd (R16–R31)</td></tr>
+      <tr><td><code>MOV Rd, Rr</code></td><td>Copy Rr into Rd</td></tr>
+      <tr><td><code>ADD / SUB Rd, Rr</code></td><td>Rd = Rd + Rr / Rd = Rd − Rr</td></tr>
+      <tr><td><code>INC / DEC Rd</code></td><td>Add 1 / subtract 1</td></tr>
+      <tr><td><code>OUT A, Rr</code></td><td>Copy a register to an I/O register (e.g. PORTB)</td></tr>
+      <tr><td><code>IN Rd, A</code></td><td>Copy an I/O register (e.g. PIND) into a register</td></tr>
+      <tr><td><code>SBI / CBI A, b</code></td><td>Set / clear one bit of an I/O register</td></tr>
+      <tr><td><code>SBIS / SBIC A, b</code></td><td>Skip the next instruction if the bit is set / cleared</td></tr>
+      <tr><td><code>RJMP k</code></td><td>Jump to label k</td></tr>
+      <tr><td><code>BRNE / BREQ k</code></td><td>Branch if Z = 0 (not equal) / if Z = 1 (equal)</td></tr>
+    </tbody>
+  </table>
+  <h3>Status register (SREG) flags</h3>
+  <table>
+    <thead><tr><th>Flag</th><th>Set (=1) when…</th></tr></thead>
+    <tbody>
+      <tr><td><b>C</b> Carry</td><td>an addition carries out of bit 7, or a subtraction needs a borrow</td></tr>
+      <tr><td><b>Z</b> Zero</td><td>the result is 0</td></tr>
+      <tr><td><b>N</b> Negative</td><td>bit 7 of the result is 1</td></tr>
+      <tr><td><b>V</b> Overflow</td><td>a signed (two's complement) overflow happened</td></tr>
+      <tr><td><b>S</b> Sign</td><td>S = N XOR V</td></tr>
+      <tr><td><b>H</b> Half carry</td><td>a carry/borrow between bit 3 and bit 4</td></tr>
+      <tr><td><b>I</b> Interrupt</td><td>global interrupts are enabled (<code>SEI</code>)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>2026 Q3(a): final value of r16</h3>
+<pre><code>ldi r16, 0x05    ; r16 = 5
+ldi r17, 0x03    ; r17 = 3
+sub r16, r17     ; r16 = 5 - 3</code></pre>
+  <div class="ans">
+    <p><b>r16 = 0x02</b> (binary 0000 0010).</p>
+    <p>SUB can change the flags <b>H, S, V, N, Z, C</b>. Here: <b>Z = 0</b> (result is not zero), <b>C = 0</b> (5 ≥ 3, no borrow), <b>N = 0</b> (bit 7 is 0), <b>V = 0</b> (no signed overflow), <b>S = N ⊕ V = 0</b>, <b>H = 0</b> (low nibble 5 ≥ 3, no borrow from bit 4). LDI does not change any flag.</p>
+  </div>
+
+  <h3>2026 Q3(b): what does this loop do?</h3>
+<pre><code>      ldi  r18, 0x03   ; counter = 3
+Loop: dec  r18         ; counter = counter - 1
+      brne Loop        ; repeat while counter != 0 (Z = 0)</code></pre>
+  <div class="ans">
+    <p>It is a <b>count-down loop</b> that runs <b>3 times</b> and is used as a short <b>software delay</b>.</p>
+    <ul>
+      <li>Pass 1: r18 = 3 → 2, Z = 0 → branch back.</li>
+      <li>Pass 2: r18 = 2 → 1, Z = 0 → branch back.</li>
+      <li>Pass 3: r18 = 1 → 0, <b>Z = 1</b> → BRNE does not branch; the program continues with the next instruction.</li>
+    </ul>
+    <p>DEC changes S, V, N, Z (not C). Time: LDI 1 cycle + 3 × DEC (1) + 2 taken BRNE (2 each) + 1 not-taken BRNE (1) = <b>9 cycles</b> = 9 µs at 1 MHz. A bigger starting value gives a longer delay.</p>
+  </div>
+
+  <h3>2026 Q4(a): PORTB as output, send 0xAA</h3>
+<pre><code>ldi r16, 0xFF     ; 1111 1111
+out DDRB, r16     ; all PORTB pins = output
+ldi r16, 0xAA     ; 1010 1010
+out PORTB, r16    ; PB7, PB5, PB3, PB1 = HIGH; PB6, PB4, PB2, PB0 = LOW</code></pre>
+
+  <h3>2026 Q4(b): switch on PORTD turns ON an LED on PORTB</h3>
+  <p class="small">Assumptions: switch on PD0 to GND with the pull-up on (pressed = 0); LED on PB0 (active high).</p>
+<pre><code>        ldi  r16, 0x01
+        out  DDRB, r16     ; PB0 output (LED)
+        ldi  r16, 0x00
+        out  DDRD, r16     ; PORTD input (switch)
+        ldi  r16, 0x01
+        out  PORTD, r16    ; pull-up on PD0
+MAIN:   sbis PIND, 0       ; if PD0 = 1 (not pressed) skip next line
+        rjmp LED_ON        ; PD0 = 0 -&gt; pressed
+        cbi  PORTB, 0      ; LED OFF
+        rjmp MAIN
+LED_ON: sbi  PORTB, 0      ; LED ON
+        rjmp MAIN</code></pre>
+  <p><b>Pseudocode version:</b> set PB0 as output, PORTD as input → loop: read PD0 → if pressed, PB0 = 1 else PB0 = 0 → repeat.</p>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> AVR වල registers 32ක් (R0–R31). <code>LDI</code> කරන්න පුළුවන් R16–R31 වලට විතරයි. <code>SUB</code> එකෙන් පස්සේ flags බලන්න: result එක 0 ද? (Z), borrow එකක් ආවද? (C), bit 7 = 1 ද? (N). 5 − 3 = 2 නිසා ඔක්කොම flags 0යි. <code>DEC</code> + <code>BRNE</code> loop එකේ r18, 3 → 2 → 1 → 0 වෙනවා; 0 වුණාම Z = 1 වෙලා loop එකෙන් එළියට යනවා – ඒ කියන්නේ loop එක 3 පාරක් යනවා, පොඩි delay එකක්.</p>
+  </div>
+  <p class="exam">Answers: 2026 Q3(a) 12 marks, Q3(b) 13 marks, Q4(a) 10 marks, Q4(b) 15 marks</p>
+</section>
+
+<section id="es-arch">
+  <h2>10. Microcontroller architecture and the fetch–decode–execute cycle</h2>
+  <figure class="diagram">
+    <svg viewBox="0 0 640 250" role="img" aria-label="Microcontroller block diagram: CPU with ALU, control unit and registers connected by buses to program memory, data memory and input/output ports.">
+      <defs><marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <g fill="none" stroke="currentColor" stroke-width="1.6">
+        <rect x="220" y="10" width="200" height="120" rx="8" stroke-width="2.4"/>
+        <rect x="235" y="40" width="80" height="34" rx="4"/>
+        <rect x="325" y="40" width="80" height="34" rx="4"/>
+        <rect x="235" y="84" width="170" height="34" rx="4"/>
+        <rect x="10" y="20" width="160" height="56" rx="6"/>
+        <rect x="470" y="20" width="160" height="56" rx="6"/>
+        <rect x="10" y="180" width="160" height="56" rx="6"/>
+        <rect x="470" y="180" width="160" height="56" rx="6"/>
+        <path d="M170 48 H218" marker-end="url(#arB)"/>
+        <path d="M420 48 H468" marker-end="url(#arB)" marker-start="url(#arB)"/>
+        <path d="M320 132 V160 H90 V178" marker-start="url(#arB)"/>
+        <path d="M320 160 H550 V178" marker-end="url(#arB)"/>
+      </g>
+      <g fill="currentColor" font-size="13" text-anchor="middle">
+        <text x="320" y="30" font-weight="700">CPU</text>
+        <text x="275" y="62">ALU</text><text x="365" y="62">Control unit</text>
+        <text x="320" y="106">Registers R0–R31, PC, SREG</text>
+        <text x="90" y="44">Program memory</text><text x="90" y="62" font-size="11">Flash – instructions</text>
+        <text x="550" y="44">Data memory</text><text x="550" y="62" font-size="11">SRAM – variables, stack</text>
+        <text x="90" y="204">Input port</text><text x="90" y="222" font-size="11">PIND ← switch</text>
+        <text x="550" y="204">Output port</text><text x="550" y="222" font-size="11">PORTB → LED</text>
+        <text x="320" y="154" font-size="11">data bus</text>
+      </g>
+    </svg>
+    <figcaption>Simple microcontroller model (Harvard: program and data memory on separate buses).</figcaption>
+  </figure>
+  <dl class="defs">
+    <dt>CPU</dt><dd><b>ALU</b> does arithmetic and logic; the <b>control unit</b> decodes instructions and sends control signals; <b>registers</b> hold the data being worked on. The <b>program counter (PC)</b> holds the address of the next instruction; <b>SREG</b> holds the flags.</dd>
+    <dt>Program memory (Flash)</dt><dd>Stores the program instructions; non-volatile.</dd>
+    <dt>Data memory (SRAM)</dt><dd>Stores variables and the stack while the program runs; volatile.</dd>
+    <dt>I/O ports</dt><dd>Connect pins to the outside: inputs (switches, sensors) and outputs (LEDs, motors).</dd>
+  </dl>
+  <h3>Fetch–decode–execute</h3>
+  <ol>
+    <li><b>Fetch:</b> the CPU reads the instruction at the address in the PC from program memory into the instruction register; the PC increases to point to the next instruction.</li>
+    <li><b>Decode:</b> the control unit works out the operation (opcode) and the operands (which registers or constant).</li>
+    <li><b>Execute:</b> the ALU performs the operation, the result is written back to a register or memory, and the flags in SREG are updated.</li>
+  </ol>
+  <p><b>Example: <code>ADD R16, R17</code></b> with R16 = 5 and R17 = 3. Fetch: the instruction is read from Flash at address PC; PC = PC + 1. Decode: "ADD, destination R16, source R17". Execute: the ALU adds 5 + 3 = 8, writes 8 into R16, sets Z = 0, C = 0, N = 0.</p>
+  <p class="small">AVR overlaps these steps (a 2-stage pipeline): while one instruction executes, the next is being fetched, so most instructions finish in one clock cycle.</p>
+  <h3>Data flow: input port → CPU → output port (2026 Q5(b))</h3>
+  <ol>
+    <li><b>Read from an input port:</b> <code>IN R16, PIND</code> – the switch level on the pin is copied over the data bus into register R16.</li>
+    <li><b>Processed by the CPU:</b> e.g. <code>ANDI R16, 0x01</code> or a compare – the ALU tests the bit; the control unit decides what to do next (branch).</li>
+    <li><b>Sent to an output port:</b> <code>OUT PORTB, R16</code> – the register value travels over the data bus to the PORTB latch and appears on the pins, switching the LED on.</li>
+  </ol>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> CPU එක instruction එකක් run කරන්නේ පියවර 3කින්: (1) <b>Fetch</b> – PC එකේ address එකෙන් instruction එක Flash එකෙන් ගන්නවා, PC එක එකකින් වැඩි කරනවා; (2) <b>Decode</b> – මේ instruction එක මොකක්ද (ADD ද SUB ද), කොයි registers ද කියලා තේරුම් ගන්නවා; (3) <b>Execute</b> – ALU එකෙන් ගණනය කරලා result එක register එකට දානවා, flags update කරනවා. Diagram එකේ boxes 5ම (CPU, program memory, data memory, registers, I/O ports) අනිවාර්යයෙන් ඇඳලා, ඊතලවලින් data යන පාර පෙන්නන්න.</p>
+  </div>
+  <p class="exam">Answers: 2026 Q5(a) 10 marks, Q5(b) 15 marks</p>
+</section>
+
+<section id="es-design">
+  <h2>11. Design scenario questions (Q2 every year)</h2>
+  <div class="tip"><b>Answer template – use these headings:</b> 1) Assumptions · 2) Inputs / sensors (and why) · 3) Controller · 4) Outputs / actuators · 5) Communication · 6) Power · 7) Logic (pseudocode or flowchart) · 8) Challenges with solutions / improvements.</div>
+
+  <h3>A. Smart waste bin that sends an alert when full (2025 Q2)</h3>
+  <p><b>Assumptions:</b> street bin 100 cm deep; "full" = 80 % or more; the city office receives alerts through GSM SMS or Wi-Fi.</p>
+  <ul>
+    <li><b>Sensors:</b> HC-SR04 ultrasonic sensor under the lid measures the distance to the garbage (fill level). Optional load cell (weight) and gas sensor (smell).</li>
+    <li><b>Controller:</b> ESP32 (built-in Wi-Fi, low-power sleep) or ATmega328P + SIM800L GSM module.</li>
+    <li><b>Actuators / outputs:</b> LED indicator (green/red), buzzer, alert message to the collection team; optional servo motor to lock the lid when full.</li>
+    <li><b>Power:</b> battery + small solar panel; MCU sleeps between readings.</li>
+  </ul>
+<pre><code>LOOP every 10 minutes
+   d = average of 5 ultrasonic readings          (removes noise)
+   fill% = (binDepth - d) / binDepth x 100
+   IF fill% &gt;= 80 AND alertSent = false THEN
+        send "Bin #12 full" message; LED = RED; alertSent = true
+   ELSE IF fill% &lt; 30 THEN                        (bin was emptied)
+        alertSent = false; LED = GREEN
+   go to deep sleep until next reading
+END LOOP</code></pre>
+  <table>
+    <thead><tr><th>Challenge</th><th>Solution</th></tr></thead>
+    <tbody>
+      <tr><td>Wrong readings from uneven garbage or dirt on the sensor</td><td>Average/median of several readings; mount the sensor at the top centre; add a weight sensor as a second check</td></tr>
+      <tr><td>No mains power on the street</td><td>Solar panel + battery, deep-sleep mode</td></tr>
+      <tr><td>Weak network coverage</td><td>GSM or LoRa; store the alert and retry until sent</td></tr>
+      <tr><td>Rain, heat, vandalism</td><td>Waterproof (IP65) sealed enclosure, tamper-proof mounting</td></tr>
+    </tbody>
+  </table>
+
+  <h3>B. Smart street lighting (2026 Q2)</h3>
+  <ul>
+    <li><b>Sensors:</b> LDR (ambient light level, read through the ADC); PIR motion sensor (people or vehicles nearby). Optional real-time clock (RTC).</li>
+    <li><b>Actuators:</b> LED street lamp driven by <b>PWM</b> through a MOSFET driver (brightness control); relay for an AC lamp.</li>
+    <li><b>Controller:</b> microcontroller with ADC + PWM, e.g. ATmega328P.</li>
+  </ul>
+<pre><code>LOOP
+   light = read LDR (ADC)
+   IF light &gt; DAY_LEVEL THEN           lamp OFF            (daytime)
+   ELSE IF motion detected THEN        lamp 100 % for 60 s (someone is passing)
+   ELSE                                lamp 30 %           (night, no traffic)
+   use two thresholds (hysteresis) so the lamp does not flicker at dusk
+END LOOP</code></pre>
+  <p><b>Two improvements (evaluate = say the benefit and any cost):</b></p>
+  <ol>
+    <li><b>Motion-based dimming</b> (PIR + PWM): bright only when needed – saves about 40–60 % energy and extends LED life; small extra cost for the sensor.</li>
+    <li><b>Solar panel + battery</b>: works during power cuts and needs no grid cable – very reliable; higher installation cost.</li>
+    <li><b>Fault reporting</b> over GSM/LoRa: the lamp reports when it fails, so repairs are faster – improves reliability.</li>
+  </ol>
+
+  <h3>C. Smart home temperature monitoring (2026 Q1(c))</h3>
+  <ul>
+    <li><b>Inputs:</b> temperature sensor (DHT22 / LM35), humidity sensor, user set-point buttons or phone app.</li>
+    <li><b>Outputs:</b> LCD display, fan or air-conditioner through a relay, buzzer alarm, phone notification over Wi-Fi.</li>
+    <li><b>Processing unit:</b> ESP32 (Wi-Fi built in) or ATmega328P – reads the sensor, compares with the set point, controls the outputs.</li>
+    <li><b>Two constraints:</b> (1) <b>Real-time response</b> – the alarm must sound within seconds of overheating. (2) <b>Low power and low cost</b> – it runs all day every day, so it must use little electricity and be cheap enough for homes. (Others: accuracy ±0.5 °C, reliability.)</li>
+  </ul>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Design ප්‍රශ්නයකට පිළිතුරු දෙද්දී හැමවෙලේම මේ headings 8 භාවිතා කරන්න: assumptions → sensors → controller → actuators → communication → power → logic (pseudocode) → challenges/improvements. හැම sensor එකකටම "ඇයි" කියන එකත් එක වාක්‍යයකින් ලියන්න (justify). Pseudocode එකේ IF/ELSE පැහැදිලිව තියෙන්න ඕනේ. "Evaluate" කියලා තිබ්බොත් වාසියයි, අවාසිය/වියදමයි දෙකම ලියන්න.</p>
+  </div>
+  <p class="exam">Answers: 2025 Q2(a)(b)(c) 25 marks · 2026 Q2(a)(b)(c) 25 marks · 2026 Q1(c) 11 marks · 2025 ICT Q2</p>
+</section>
+
+<section id="es-map">
+  <h2>12. Past paper map</h2>
+  <table>
+    <thead><tr><th>Question</th><th>2025 Feb (and ICT 2025 – same paper)</th><th>2026 Mar</th></tr></thead>
+    <tbody>
+      <tr><td>Q1</td><td>Definition + 3 characteristics (§1), 3 applications (§2), MCU vs MPU (§2)</td><td>Definition + characteristics (§1), functional vs non-functional (§3), temperature monitor (§11C)</td></tr>
+      <tr><td>Q2</td><td>Smart waste bin (§11A)</td><td>Smart street lighting (§11B)</td></tr>
+      <tr><td>Q3</td><td>Components (§4), sync vs async (§5), polling vs interrupts (§6)</td><td>AVR SUB + flags, DEC/BRNE loop (§9)</td></tr>
+      <tr><td>Q4</td><td>Functions in C, LED + button, ISR (§6, §7)</td><td>PORTB 0xAA, switch → LED (§7, §9)</td></tr>
+      <tr><td>Q5</td><td>Timers, 1-second delay, hard vs soft real-time (§8, §3)</td><td>Fetch–decode–execute, architecture data flow (§10)</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer class="note-foot">Study notes written for your Semester 3.2 exam plan from the past papers in your folder. Check anything that looks different from what your lecturer taught.</footer>
+</main></body></html>

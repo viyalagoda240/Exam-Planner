@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COM3401 Networking – Lecture 4 Gap Notes</title>
+<style>
+@font-face{font-family:'NoteBody';src:url('atk-400.woff2') format('woff2');font-weight:400;font-style:normal}
+@font-face{font-family:'NoteBody';src:url('atk-700.woff2') format('woff2');font-weight:700;font-style:normal}
+@font-face{font-family:'NoteBody';src:url('atk-400i.woff2') format('woff2');font-weight:400;font-style:italic}
+@font-face{font-family:'NoteSinhala';src:url('sinhala-400.woff2') format('woff2');font-weight:400}
+@font-face{font-family:'NoteSinhala';src:url('sinhala-700.woff2') format('woff2');font-weight:700}
+@font-face{font-family:'NoteMono';src:url('jbm-400.woff2') format('woff2');font-weight:400}
+
+:root{--ink:#1B2740;--muted:#55627A;--line:#D5DCE6;--accent:#2347B8;--si:#FFF6CC;--si-line:#E2B714;--ans:#EEF3FF;--tip:#E8F7EE;--tip-line:#2E9B57;--mark:#FFE066;--code:#F3F5F9}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;background:#fff;color:var(--ink);font:15px/1.6 'NoteBody','Noto Sans','NoteSinhala','Noto Sans Sinhala',system-ui,sans-serif}
+.note{max-width:820px;margin:0 auto;padding:28px 22px 40px}
+.note-head{border-bottom:3px double var(--line);padding-bottom:14px;margin-bottom:18px}
+.eyebrow{text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;color:var(--muted);margin:0 0 6px;font-weight:700}
+h1{font-size:27px;line-height:1.2;margin:0 0 8px;text-wrap:balance}
+.lede{color:var(--muted);margin:0}
+h2{font-size:20px;margin:30px 0 10px;padding-top:6px;border-top:1px solid var(--line);text-wrap:balance;break-after:avoid}
+h3{font-size:16px;margin:20px 0 6px;break-after:avoid}
+h4{font-size:14px;margin:14px 0 6px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+p{margin:6px 0}
+ul,ol{margin:6px 0;padding-left:22px}
+li{margin:3px 0}
+.toc{background:var(--code);border-radius:8px;padding:10px 16px;margin:0 0 10px;font-size:14px}
+.toc ol{columns:2;column-gap:28px;margin:0}
+.toc a{color:var(--accent);text-decoration:none}
+.si{background:var(--si);border-left:4px solid var(--si-line);padding:8px 12px;margin:12px 0;border-radius:0 6px 6px 0;font-family:'NoteSinhala','Noto Sans Sinhala','NoteBody',sans-serif;line-height:1.75;break-inside:avoid}
+.si-inline{font-family:'NoteSinhala','Noto Sans Sinhala',sans-serif}
+.ans{background:var(--ans);border-radius:6px;padding:8px 12px;margin:10px 0;break-inside:avoid}
+.tip{background:var(--tip);border-left:4px solid var(--tip-line);padding:8px 12px;border-radius:0 6px 6px 0;margin:10px 0}
+.exam{font-size:12.5px;color:var(--accent);font-weight:700;margin-top:10px}
+.exam::before{content:"Past papers ▸ "}
+.small{font-size:13px;color:var(--muted)}
+.formula{font-family:'NoteMono','JetBrains Mono',monospace;background:var(--code);border-radius:6px;padding:8px 12px;font-size:13.5px}
+.formula p{margin:2px 0}
+.formula-inline{font-family:'NoteMono','JetBrains Mono',monospace}
+.verdict{font-size:15px}
+table{border-collapse:collapse;width:100%;margin:8px 0;font-size:13.5px;break-inside:avoid}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}
+thead th{background:var(--code)}
+table.num td,table.num th{text-align:center;font-variant-numeric:tabular-nums}
+table.num tfoot td{font-weight:700;background:var(--ans)}
+.tbl-wrap{overflow-x:auto}
+table.lru td.new{background:var(--mark);font-weight:700}
+table.lru td.fault{color:#C0362C;font-weight:700}
+code{font-family:'NoteMono','JetBrains Mono',monospace;font-size:.9em;background:var(--code);padding:1px 4px;border-radius:3px}
+pre{background:var(--code);border-radius:6px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;break-inside:avoid}
+pre code{background:none;padding:0;font-size:inherit}
+dl.defs dt{font-weight:700;margin-top:8px}
+dl.defs dd{margin:2px 0 6px 16px}
+figure.diagram{margin:12px 0;text-align:center;color:var(--ink);break-inside:avoid}
+figure.diagram svg{width:100%;max-width:640px;height:auto}
+figcaption{font-size:12.5px;color:var(--muted)}
+.gantt-wrap{margin:8px 0 4px;break-inside:avoid}
+.gantt{display:flex;border:1.5px solid var(--ink);border-radius:4px;overflow:hidden}
+.gseg{border-right:1.5px solid var(--ink);text-align:center;padding:6px 0;font-weight:700;font-size:13px;min-width:0;background:var(--ans)}
+.gseg:last-child{border-right:0}
+.gseg.idle{background:repeating-linear-gradient(45deg,#fff,#fff 4px,var(--code) 4px,var(--code) 8px);color:var(--muted)}
+.gticks{display:flex;font-size:11.5px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.gtick{min-width:0;text-align:left;margin-left:-3px}
+.gtick.end{flex:0 0 0;margin-left:-6px}
+.frame-diagram{display:flex;flex-wrap:wrap;border:1.5px solid var(--ink);border-radius:4px;overflow:hidden;font-size:12px;margin:8px 0}
+.frame-diagram span{flex:1 1 auto;padding:6px 8px;border-right:1px solid var(--ink);text-align:center;background:var(--ans)}
+.frame-diagram span.wide{flex:3 1 auto;background:#fff}
+.frame-diagram span:last-child{border-right:0}
+.bits p{margin:4px 0}
+.bits .lbl{display:block;font-size:12px;color:var(--muted)}
+.bits code{font-size:13.5px;letter-spacing:.06em;word-break:break-all}
+mark{background:var(--mark);color:inherit;font-weight:700;padding:0 1px}
+.note-foot{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+@media print{.note{padding:0}.toc{break-after:avoid}}
+</style></head>
+<body><main class="note" id="note-com3401">
+<header class="note-head">
+  <p class="eyebrow">COM3401 · Data Communication and Networking · 4 credits · Exam: 3 hours, answer all 5</p>
+  <h1>Networking – Lecture 4 Gap Notes &amp; Worked Answers</h1>
+  <p class="lede">Lecture 4 (the OSI reference model) was missing from your folder, but every paper asks about layers, the transport layer and IP addressing. These notes cover that gap, then give fully worked answers for the calculation questions (TDM, FDM, CRC, bit stuffing, subnetting).</p>
+</header>
+
+<nav class="toc" aria-label="Contents">
+  <ol>
+    <li><a href="#net-layers">Layered architecture: peers, interfaces, protocol stack</a></li>
+    <li><a href="#net-osi">The OSI 7-layer model</a></li>
+    <li><a href="#net-tcpip">TCP/IP model, routers, application protocols</a></li>
+    <li><a href="#net-transport">Transport layer: TCP vs UDP, error control</a></li>
+    <li><a href="#net-ip">IPv4: classful, CIDR, subnetting (worked)</a></li>
+    <li><a href="#net-calc">Past-paper calculations (worked)</a></li>
+    <li><a href="#net-quick">Quick answers for short questions</a></li>
+    <li><a href="#net-map">Past paper map</a></li>
+  </ol>
+</nav>
+
+<section id="net-layers">
+  <h2>1. Layered network architecture</h2>
+  <p>Networking is split into <b>layers</b>. Each layer does one part of the job, uses the services of the layer below and offers services to the layer above. This reduces complexity, lets different vendors' equipment work together (standards) and lets one layer change without changing the others.</p>
+  <dl class="defs">
+    <dt>Peers</dt><dd>The entities in the <b>same layer</b> on two different machines. They talk to each other using that layer's <b>protocol</b> (e.g. the transport layer of host A and the transport layer of host B).</dd>
+    <dt>Interfaces</dt><dd>The boundary <b>between two adjacent layers on the same machine</b>. It defines which operations and services the lower layer offers to the upper layer.</dd>
+    <dt>Protocol</dt><dd>The rules (format, order of messages, actions) that peers use to communicate.</dd>
+    <dt>Protocol stack</dt><dd>The list of protocols used by a system, <b>one protocol per layer</b> (e.g. HTTP / TCP / IP / Ethernet).</dd>
+    <dt>Encapsulation</dt><dd>Each layer adds its own header (and the data link layer a trailer) to the data from the layer above; the receiver removes them layer by layer.</dd>
+  </dl>
+  <h3>Why clear interfaces between layers matter (2026 Q3(d)(i))</h3>
+  <ul>
+    <li>A layer's implementation can be <b>replaced</b> (e.g. Ethernet → Wi-Fi) without changing the layers above, as long as the interface stays the same.</li>
+    <li>Each layer only passes the <b>minimum information</b> needed, which keeps the design simple and easy to test.</li>
+    <li>Different vendors can build different layers that still work together.</li>
+  </ul>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Layers කියන්නේ තැපැල් ක්‍රමයක් වගේ: ලියුම ලියන කෙනා, කවරයට දාලා address ලියන කෙනා, තැපැල් කාර්යාලය, ප්‍රවාහනය – හැමෝම තමන්ගේ වැඩේ විතරයි කරන්නේ. <b>Peers</b> = machines දෙකක එකම layer එක (එකිනෙකා සමඟ protocol එකෙන් කතා කරනවා). <b>Interface</b> = එකම machine එකේ උඩ layer එකයි යට layer එකයි අතර "දොර". Interface එක පැහැදිලි නම් එක layer එකක් වෙනස් කළත් අනිත් ඒවාට බලපාන්නේ නෑ.</p>
+  </div>
+  <p class="exam">Answers: 2023 Q4(a) 6 marks · 2026 Q3(d)(i)</p>
+</section>
+
+<section id="net-osi">
+  <h2>2. The OSI 7-layer model</h2>
+  <table>
+    <thead><tr><th>#</th><th>Layer</th><th>Main job</th><th>Data unit / devices</th></tr></thead>
+    <tbody>
+      <tr><td>7</td><td><b>Application</b></td><td>Network services for user programs (web, email, file transfer)</td><td>Data · HTTP, SMTP, FTP, DNS</td></tr>
+      <tr><td>6</td><td><b>Presentation</b></td><td>Data format translation, encryption, compression</td><td>Data · JPEG, TLS, ASCII</td></tr>
+      <tr><td>5</td><td><b>Session</b></td><td>Opens, manages and closes sessions (dialogue control, checkpoints)</td><td>Data</td></tr>
+      <tr><td>4</td><td><b>Transport</b></td><td>End-to-end (process-to-process) delivery, ports, segmentation, error and flow control</td><td>Segment · TCP, UDP</td></tr>
+      <tr><td>3</td><td><b>Network</b></td><td>Logical (IP) addressing and routing between networks</td><td>Packet · IP · router</td></tr>
+      <tr><td>2</td><td><b>Data link</b></td><td>Framing, MAC addresses, error detection, flow control, medium access on one link</td><td>Frame · switch, bridge, NIC</td></tr>
+      <tr><td>1</td><td><b>Physical</b></td><td>Sends raw bits as signals; cables, connectors, voltages, bit rate</td><td>Bits · hub, repeater, cable</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Memory trick (layer 1 → 7): <b>P</b>lease <b>D</b>o <b>N</b>ot <b>T</b>hrow <b>S</b>ausage <b>P</b>izza <b>A</b>way.</p>
+  <h3>Error handling in the data link layer (2026 Q3(d)(ii))</h3>
+  <p>Bits can be corrupted by noise on a link. The data link layer adds an error-detecting code (a <b>CRC/FCS</b> in the trailer, or parity). The receiver recalculates it; if it does not match, the frame is <b>discarded</b> and, in reliable links, <b>retransmitted</b> (ARQ). This stops corrupted data from being passed up to the network layer and fixes errors <b>hop by hop</b>, close to where they happen – cheaper than end-to-end recovery.</p>
+  <h3>The data link layer PDU – the frame (2023 Q4(c), 5 marks)</h3>
+  <div class="frame-diagram" role="img" aria-label="Frame: header with flag, addresses and control, then payload, then trailer with FCS and flag">
+    <span>Flag / preamble</span><span>Destination address</span><span>Source address</span><span>Control / type</span><span class="wide">Payload (packet from network layer)</span><span>FCS (CRC)</span><span>Flag</span>
+  </div>
+  <p>The PDU is called a <b>frame</b>. <b>Header:</b> start flag/preamble (marks the beginning), destination and source <b>MAC addresses</b>, control or type/length field. <b>Payload:</b> the network-layer packet. <b>Trailer:</b> <b>FCS</b> (frame check sequence, a CRC for error detection) and end flag.</p>
+  <h3>A mechanism to detect a single-bit error (2023 Q4(d))</h3>
+  <p><b>Parity check:</b> the sender adds one bit so that the number of 1s is even (even parity). Any single flipped bit makes the count odd, so the receiver detects it. Example: data 1011001 has four 1s → parity bit 0 → send 10110010. If one bit flips, the count of 1s becomes odd → error detected. (CRC also detects all single-bit errors.)</p>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> OSI layers 7 උඩ ඉඳන්: Application, Presentation, Session, Transport, Network, Data link, Physical. Data link layer එකේ data unit එක <b>frame</b> එක – header එකේ MAC addresses, අගට (trailer) CRC එක. Receiver ට CRC එක ගැලපෙන්නේ නැත්නම් frame එක අයින් කරලා ආයෙත් එවන්න කියනවා. Parity bit එකෙන් 1 ගණන even ද කියලා බලලා single-bit error එකක් අල්ලගන්න පුළුවන්.</p>
+  </div>
+  <p class="exam">Answers: 2026 Q3(d)(ii) · 2023 Q4(c) 5 marks, Q4(d) 5 marks</p>
+</section>
+
+<section id="net-tcpip">
+  <h2>3. TCP/IP model, routers and application protocols</h2>
+  <table>
+    <thead><tr><th>TCP/IP layer</th><th>Matches OSI</th><th>Protocols</th></tr></thead>
+    <tbody>
+      <tr><td>Application</td><td>Application + Presentation + Session (7, 6, 5)</td><td>HTTP, SMTP, FTP, DNS, DHCP</td></tr>
+      <tr><td>Transport</td><td>Transport (4)</td><td>TCP, UDP</td></tr>
+      <tr><td>Internet</td><td>Network (3)</td><td>IP, ICMP, ARP</td></tr>
+      <tr><td>Network access (link)</td><td>Data link + Physical (2, 1)</td><td>Ethernet, Wi-Fi</td></tr>
+    </tbody>
+  </table>
+  <h3>Which TCP/IP layers are implemented in routers? (2025 Q3(d), 4 marks)</h3>
+  <p>Routers implement the <b>network access (physical + data link) layers and the internet (IP) layer</b> – the bottom three OSI layers. A router receives a frame, removes the link header, reads the <b>destination IP address</b>, looks up its routing table and forwards the packet in a new frame on the next link. It does not need the transport or application layers to forward packets (those run only on the end hosts).</p>
+  <h3>Need for an OSI layer 3 in a broadcast network (2025 Q3(c))</h3>
+  <p>Inside <b>one</b> broadcast network (a single LAN or Wi-Fi cell) every station receives every frame, so there is no path to choose – the data link layer with MAC addresses is enough and layer 3 is very thin or not needed. Layer 3 <b>becomes necessary</b> when several networks are connected: it gives logical (IP) addresses that work across networks, routes packets between them and separates broadcast domains.</p>
+  <h3>Application layer protocols (2023 Q4(b), 2025 Q3(e))</h3>
+  <table>
+    <thead><tr><th>Protocol</th><th>Application</th></tr></thead>
+    <tbody>
+      <tr><td>HTTP / HTTPS</td><td>Web browsing</td></tr>
+      <tr><td>SMTP</td><td>Sending email</td></tr>
+      <tr><td>POP3 / IMAP</td><td>Receiving email</td></tr>
+      <tr><td>FTP</td><td>File transfer</td></tr>
+      <tr><td>DNS</td><td>Converts domain names to IP addresses</td></tr>
+      <tr><td>DHCP</td><td>Gives IP addresses to devices automatically</td></tr>
+      <tr><td>Telnet / SSH</td><td>Remote login</td></tr>
+    </tbody>
+  </table>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> TCP/IP model එකේ layers 4යි: Application, Transport, Internet, Network access. Router එකක් වැඩ කරන්නේ යට layers 3න් (physical, data link, network) – IP address එක බලලා packet එක ඊළඟ network එකට යවනවා. එක LAN එකක් ඇතුළේ හැමෝටම frame එක ලැබෙන නිසා routing ඕනේ නෑ; networks කිහිපයක් සම්බන්ධ කරද්දී තමයි layer 3 ඕනේ වෙන්නේ.</p>
+  </div>
+  <p class="exam">Answers: 2025 Q3(c)(d)(e) 12 marks · 2023 Q4(b) 4 marks</p>
+</section>
+
+<section id="net-transport">
+  <h2>4. Transport layer: TCP vs UDP and error control</h2>
+  <p>The transport layer gives <b>process-to-process</b> delivery using <b>port numbers</b>, splits data into segments and reassembles them, and (in TCP) provides flow control, error control and congestion control.</p>
+  <h3>Connection-oriented vs connectionless (2026 Q5(b), 4 marks)</h3>
+  <div class="ans">
+    <p><b>Connection-oriented (TCP):</b> a connection is set up first (three-way handshake) and closed at the end. Delivery is <b>reliable and in order</b> – acknowledgements, sequence numbers and retransmission – with flow and congestion control.</p>
+    <p><b>Connectionless (UDP):</b> no connection set-up; each datagram is sent independently. <b>No acknowledgements, no guarantee</b> of delivery or order, but low delay and low overhead.</p>
+    <p><b>Main difference:</b> TCP guarantees reliable, ordered delivery over an established connection; UDP sends independent datagrams with no guarantee, trading reliability for speed.</p>
+  </div>
+  <h3>Functions of transport-layer error control (2026 Q5(a), 2023 Q5(c), 4 marks)</h3>
+  <ol>
+    <li>Detect and discard <b>corrupted</b> segments (checksum).</li>
+    <li>Detect <b>lost</b> segments (acknowledgements + timers) and <b>retransmit</b> them.</li>
+    <li>Detect <b>out-of-order</b> segments (sequence numbers) and put them back in order.</li>
+    <li>Detect and discard <b>duplicate</b> segments.</li>
+  </ol>
+  <h3>TCP or UDP for text messaging? (2025 Q5(a), 4 marks)</h3>
+  <p><b>TCP.</b> A text message must arrive <b>complete, correct and in the right order</b> – a missing or jumbled part changes the meaning. A small extra delay is acceptable for text, so TCP's reliability (acknowledgements, retransmission, ordering) is worth its overhead. UDP suits live voice/video, where speed matters more than a lost packet.</p>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> TCP = මුලින්ම connection එකක් හදලා (handshake), ලැබුණාද කියලා ACK බලලා, නැති වුණොත් ආයෙත් යවලා, පිළිවෙළට ලබා දෙනවා – විශ්වාසයි, ටිකක් හෙමින්. UDP = connection නැතුව කෙලින්ම යවනවා – ඉක්මනුයි, ඒත් නැති වුණොත් බලන්නේ නෑ. Text messages වලට TCP – මැසේජ් එකේ කොටසක් නැති වෙන්න බෑ.</p>
+  </div>
+</section>
+
+<section id="net-ip">
+  <h2>5. IPv4 addressing – classful, CIDR and subnetting</h2>
+  <h3>Classful addressing (2026 Q5(c), 2023 Q5(d))</h3>
+  <p><b>Classful addressing</b> is the original IPv4 scheme where the 32-bit address space is divided into five fixed <b>classes</b> (A–E). The class decides where the network part ends and the host part begins.</p>
+  <table>
+    <thead><tr><th>Class</th><th>First bits</th><th>First byte</th><th>Default mask</th><th>Network / host</th></tr></thead>
+    <tbody>
+      <tr><td>A</td><td><code>0</code></td><td>0–127</td><td>255.0.0.0 (/8)</td><td>1 byte / 3 bytes</td></tr>
+      <tr><td>B</td><td><code>10</code></td><td>128–191</td><td>255.255.0.0 (/16)</td><td>2 bytes / 2 bytes</td></tr>
+      <tr><td>C</td><td><code>110</code></td><td>192–223</td><td>255.255.255.0 (/24)</td><td>3 bytes / 1 byte</td></tr>
+      <tr><td>D</td><td><code>1110</code></td><td>224–239</td><td>–</td><td>Multicast</td></tr>
+      <tr><td>E</td><td><code>1111</code></td><td>240–255</td><td>–</td><td>Reserved</td></tr>
+    </tbody>
+  </table>
+  <p><b>Finding the class from binary (2026 Q5(d), 4 marks):</b> look at the leading bits of the first byte: 0 → A; 10 → B; 110 → C; 1110 → D. Stop at the first 0.</p>
+  <h3>2025 Q5(b) – network and host identifiers</h3>
+  <ul>
+    <li><code>156.43.24.32</code>: 156 = <code>10011100</code> → starts <code>10</code> → <b>Class B</b> → netid <b>156.43</b>, hostid <b>24.32</b>.</li>
+    <li><code>199.60.52.121</code>: 199 = <code>11000111</code> → starts <code>110</code> → <b>Class C</b> → netid <b>199.60.52</b>, hostid <b>121</b>.</li>
+  </ul>
+  <h3>CIDR block – 2025 Q5(c) and 2026 Q5(e) (same address)</h3>
+  <p>2026 gives it in binary: <code>00010100 00010000 00000100 00010010</code> = <b>20.16.4.18</b>; mask <code>11111111 11111111 11111111 11110000</code> = 28 ones → <b>/28</b>.</p>
+  <div class="formula">
+    <p>Number of addresses = 2<sup>32 − n</sup></p>
+    <p>First address = address AND mask · Last address = first + (number − 1)</p>
+  </div>
+  <div class="ans">
+    <ol>
+      <li>Dotted decimal: <b>20.16.4.18</b></li>
+      <li>Mask: <b>/28</b> = <b>255.255.255.240</b></li>
+      <li>Number of addresses: 2<sup>32−28</sup> = 2<sup>4</sup> = <b>16</b></li>
+      <li>First: last byte 18 AND 240 → 00010010 AND 11110000 = 00010000 = 16 → <b>20.16.4.16</b>. Last: 16 + 15 = 31 → <b>20.16.4.31</b>.</li>
+    </ol>
+  </div>
+  <h3>Subnetting – 2025 Q5(d) (6 marks)</h3>
+  <p>Block <b>34.17.4.128/25</b> → 2<sup>7</sup> = 128 addresses (34.17.4.128 – 34.17.4.255). Needed: subnets of 32, 64 and 32 addresses. <b>Give the largest subnet first</b> so every subnet starts on a boundary that is a multiple of its size.</p>
+  <table>
+    <thead><tr><th>Subnet</th><th>Size</th><th>Prefix</th><th>Subnet mask</th><th>Subnet address</th><th>Range</th></tr></thead>
+    <tbody>
+      <tr><td>Subnet 2</td><td>64 = 2<sup>6</sup></td><td>/26</td><td>255.255.255.192</td><td>34.17.4.128/26</td><td>34.17.4.128 – 34.17.4.191</td></tr>
+      <tr><td>Subnet 1</td><td>32 = 2<sup>5</sup></td><td>/27</td><td>255.255.255.224</td><td>34.17.4.192/27</td><td>34.17.4.192 – 34.17.4.223</td></tr>
+      <tr><td>Subnet 3</td><td>32 = 2<sup>5</sup></td><td>/27</td><td>255.255.255.224</td><td>34.17.4.224/27</td><td>34.17.4.224 – 34.17.4.255</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Prefix for a subnet of size 2<sup>k</sup> = 32 − k. 64 → /26, 32 → /27.</p>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Class එක හොයන්න පළවෙනි byte එක binary කරලා මුල් bits බලන්න: 0 = A, 10 = B, 110 = C. CIDR වලදී /n කියන්නේ mask එකේ 1 ගණන. Addresses ගණන = 2^(32−n). පළවෙනි address එක = IP AND mask (host bits ඔක්කොම 0); අන්තිම එක = පළවෙනි එක + (ගණන − 1). Subnetting කරද්දී ලොකුම subnet එකට මුලින්ම තැන දෙන්න.</p>
+  </div>
+</section>
+
+<section id="net-calc">
+  <h2>6. Past-paper calculations (worked)</h2>
+  <h3>Synchronous TDM – 2026 Q4(e)</h3>
+  <p>Five digital channels × 64 kbps. (i) Synchronous TDM gives every channel a slot in every frame, so the link needs at least <b>5 × 64 = 320 kbps</b> (ignoring framing bits). (ii) Statistical TDM gives slots <b>only to channels that have data</b>, so the link can be sized for the <b>average</b> load – e.g. if each channel is busy about half the time, roughly <b>160 kbps</b> plus a little address overhead. The difference: synchronous TDM wastes slots on idle channels; statistical TDM does not.</p>
+  <h3>Why statistical TDM is more efficient (2026 Q4(d), 2025 Q4(d))</h3>
+  <p>In synchronous TDM each input owns a fixed slot even when it has nothing to send, so many slots travel empty. Statistical (asynchronous) TDM allocates slots <b>dynamically</b> to active inputs only, so fewer slots are wasted and the output link can be slower than the sum of all input rates. (Cost: each slot needs an address field.)</p>
+  <h3>Synchronous TDM with a sync bit – 2023 Q5(b)</h3>
+  <p>20 sources × 100 kbps, each output slot carries 1 bit from each source, plus 1 synchronisation bit per frame.</p>
+  <ol>
+    <li>Frame size = 20 × 1 + 1 = <b>21 bits</b> (frame rate = 100,000 frames/s → output 2.1 Mbps).</li>
+    <li>Efficiency = useful bits ÷ total bits = 20 ÷ 21 = <b>95.24 %</b>.</li>
+    <li>With 2 bits per slot: frame = 20 × 2 + 1 = 41 bits → efficiency = 40 ÷ 41 = <b>97.56 %</b> (fewer sync bits per data bit).</li>
+  </ol>
+  <h3>FDM bandwidth – 2025 Q4(e)</h3>
+  <p>5 channels × 10 kHz, guard band 500 Hz between neighbouring channels → 4 guard bands.</p>
+  <p class="formula-inline">Total = 5 × 10 kHz + 4 × 0.5 kHz = 50 + 2 = <b>52 kHz</b></p>
+  <h3>CRC sizes – 2025 Q4(b)</h3>
+  <p>Dataword k = 10 bits, codeword n = 14 bits.</p>
+  <ol>
+    <li>0s added to the dataword = n − k = <b>4</b>.</li>
+    <li>FCS (remainder) size = <b>4 bits</b>.</li>
+    <li>Divisor size = n − k + 1 = <b>5 bits</b>.</li>
+    <li>A suitable divisor: <b>10011</b> (x<sup>4</sup> + x + 1) – 5 bits, starts and ends with 1.</li>
+  </ol>
+  <h3>Bit stuffing – 2025 Q4(a)</h3>
+  <p><b>Rule:</b> the frame flag is <code>01111110</code>. To stop the same pattern appearing inside the data, the sender inserts a <b>0 after every five consecutive 1s</b> in the data. The receiver removes a 0 that follows five 1s.</p><div class="bits"><p><span class="lbl">Data (27 bits)</span><code>011111101111101111111111110</code></p><p><span class="lbl">After stuffing (31 bits, stuffed 0s highlighted)</span><code>011111<mark>0</mark>1011111<mark>0</mark>011111<mark>0</mark>11111<mark>0</mark>110</code></p><p><span class="lbl">Sent frame</span><code>01111110 0111110101111100111110111110110 01111110</code></p></div><p class="small">Four 0s were stuffed: one inside the first run of six 1s, one after the run of five 1s, and two inside the run of twelve 1s.</p>
+  <h3>Character count framing – 2026 Q4(b)</h3>
+  <p>The first byte of each frame holds the <b>number of characters in the frame</b> (including itself). The receiver reads this count to know where the frame ends and the next begins. Example: <code>5 A B C D | 3 E F</code>. Weakness: if the count is corrupted, the receiver loses track of every following frame boundary (loses synchronisation).</p>
+  <h3>Radio and TV broadcasting – 2026 Q4(c)</h3>
+  <p><b>Frequency Division Multiplexing (FDM):</b> each station is given its own carrier frequency band; all stations transmit at the same time through the air, separated by guard bands; the receiver tunes (filters) to one band.</p>
+  <div class="si" lang="si">
+    <p><b>සිංහලෙන්:</b> Synchronous TDM = හැම channel එකකටම හැම frame එකකම ස්ථිර slot එකක් – data නැති වෙලාවටත් slot එක හිස්ව යනවා. Statistical TDM = data තියෙන අයට විතරක් slot දෙනවා – ඉතුරුයි. FDM ගණනයේදී guard bands ගණන = channels − 1. CRC: එකතු කරන 0 ගණන = FCS size = n − k; divisor එකේ bits = n − k + 1. Bit stuffing: 1 පහක් එක දිගට ආවොත් ඊළඟට 0 එකක් දාන්න.</p>
+  </div>
+</section>
+
+<section id="net-quick">
+  <h2>7. Quick answers for short questions</h2>
+  <dl class="defs">
+    <dt>Modem (2026 Q3(b))</dt><dd>MOdulator–DEModulator: converts digital data from a computer into analog signals for a telephone/cable line and back again. A pair is needed – one at each end – because both ends must convert (2023 Q3(a)).</dd>
+    <dt>Gateway (2026 Q3(b))</dt><dd>A device that connects networks that use <b>different protocols</b> and translates between them (can work up to the application layer), e.g. connecting a LAN to the Internet or to a different network architecture.</dd>
+    <dt>Bridges vs routers (2025 Q3(a))</dt><dd><b>Differences:</b> a bridge works at the data link layer, forwards frames by MAC address and joins segments of the same network (one broadcast domain); a router works at the network layer, forwards packets by IP address, joins different networks, chooses best paths and separates broadcast domains. <b>Similarities:</b> both connect network segments, store and forward traffic, filter traffic and reduce collisions.</dd>
+    <dt>Characteristics used to classify networks (2025 Q3(b))</dt><dd>Geographic size (PAN, LAN, MAN, WAN); ownership (private/public, EPN, VPN); topology (bus, star, ring, mesh); transmission medium (wired/wireless); architecture (client–server or peer-to-peer).</dd>
+    <dt>Uses of networks in scientific work (2026 Q3(a))</dt><dd>Sharing research data between universities; remote access to expensive instruments (telescopes, labs); distributed/grid/cloud computing for big simulations; sensor networks for weather and environmental monitoring; online journals and databases; video conferencing and collaboration.</dd>
+    <dt>Star topology (2026 Q3(c))</dt><dd>Topology = how devices and links are arranged. In a star, every device has its own cable to a central switch/hub. One cable failure affects only one device and it is easy to add devices, but if the central switch fails, the whole network stops.</dd>
+  </dl>
+</section>
+
+<section id="net-map">
+  <h2>8. Past paper map</h2>
+  <table>
+    <thead><tr><th>Topic</th><th>2023 Jan</th><th>2025 Feb</th><th>2026 Mar</th><th>Study</th></tr></thead>
+    <tbody>
+      <tr><td>Communication model, data transmission</td><td>Q1</td><td>Q1</td><td>Q1</td><td>Lecture 5</td></tr>
+      <tr><td>Signals, bandwidth, modulation, impairments</td><td>Q1(c)(d), Q2</td><td>Q2(a)–(c)</td><td>Q2</td><td>Lecture 5</td></tr>
+      <tr><td>Transmission media</td><td>Q3(b)(c)</td><td>Q2(d)(e)</td><td>–</td><td>Lecture 6</td></tr>
+      <tr><td>Network types, devices, topology</td><td>Q3(a)(d)</td><td>Q3(a)(b)</td><td>Q3(a)–(c)</td><td>Lectures 1–3, §7 here</td></tr>
+      <tr><td>Layers, OSI, TCP/IP, protocols</td><td>Q4(a)–(c)</td><td>Q3(c)–(e)</td><td>Q3(d)</td><td>§1–§3 here</td></tr>
+      <tr><td>Framing, error detection, multiplexing</td><td>Q4(d), Q5(a)(b)</td><td>Q4</td><td>Q4</td><td>Lectures 7–9, §6 here</td></tr>
+      <tr><td>Transport layer, IP addressing</td><td>Q5(c)–(e)</td><td>Q5</td><td>Q5</td><td>Lecture 2, §4–§5 here</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer class="note-foot">Study notes written for your Semester 3.2 exam plan from the past papers in your folder. Check anything that looks different from what your lecturer taught.</footer>
+</main></body></html>

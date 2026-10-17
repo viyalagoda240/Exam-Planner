@@ -1,0 +1,1527 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Semester 3.2 Study Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;600&family=Noto+Sans+Sinhala:wght@400;600;700&display=swap">
+<style>
+/* Layout: a study desk – ruled answer-sheet header with a red margin line, highlighter colours per subject,
+   ballpoint-blue accent; one centred column (max 1100px) that splits into main + side rail on wide screens. */
+:root{
+  --bg:#F3F5F8; --surface:#FFFFFF; --surface-2:#F7F9FC; --ink:#172033; --muted:#5B6577; --faint:#8A93A3;
+  --line:#DDE3EA; --line-strong:#C6CFDB; --accent:#2347B8; --accent-ink:#FFFFFF; --accent-soft:#E6ECFB;
+  --margin:#C8402F; --margin-soft:#FBE7E4; --ok:#1F8A4C; --ok-soft:#E3F4EA; --warn:#B06A00; --warn-soft:#FFF1D6;
+  --rule:rgba(35,71,184,.10);
+  --sta:#FFE873; --sta-ink:#5A4A00; --sta-strong:#C9A100;
+  --net:#BDEFBA; --net-ink:#14532D; --net-strong:#2E9B57;
+  --os:#FFCDE2; --os-ink:#7A1D43; --os-strong:#D2427A;
+  --es:#FFD8AE; --es-ink:#7A3A00; --es-strong:#E07A12;
+  --mat:#C9E4FF; --mat-ink:#123F73; --mat-strong:#2B7BD6;
+  --sem:#E4E7EC; --sem-ink:#3D4655; --sem-strong:#7A8494;
+  --shadow:0 1px 2px rgba(20,30,50,.06),0 6px 18px rgba(20,30,50,.06);
+  --f-display:'Archivo','Noto Sans Sinhala',system-ui,sans-serif;
+  --f-body:'Noto Sans','Noto Sans Sinhala',system-ui,sans-serif;
+  --f-si:'Noto Sans Sinhala','Noto Sans',system-ui,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F141D; --surface:#161D29; --surface-2:#1B2331; --ink:#E7ECF4; --muted:#A1ACBD; --faint:#768296;
+  --line:#283244; --line-strong:#364257; --accent:#86A6FF; --accent-ink:#0F141D; --accent-soft:#1F2A44;
+  --margin:#FF7B6B; --margin-soft:#3A1F1E; --ok:#58C98A; --ok-soft:#173326; --warn:#F2B451; --warn-soft:#3A2D14;
+  --rule:rgba(134,166,255,.08);
+  --sta:#4A3F0A; --sta-ink:#FFE680; --sta-strong:#E8C531;
+  --net:#163D25; --net-ink:#A6F0B8; --net-strong:#4CC27A;
+  --os:#47182D; --os-ink:#FFB3D2; --os-strong:#F06A9E;
+  --es:#4A2A0C; --es-ink:#FFCB94; --es-strong:#F29A3D;
+  --mat:#132F4F; --mat-ink:#A9D4FF; --mat-strong:#5BA4F0;
+  --sem:#262D39; --sem-ink:#C5CCD8; --sem-strong:#8D97A8;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0F141D; --surface:#161D29; --surface-2:#1B2331; --ink:#E7ECF4; --muted:#A1ACBD; --faint:#768296;
+  --line:#283244; --line-strong:#364257; --accent:#86A6FF; --accent-ink:#0F141D; --accent-soft:#1F2A44;
+  --margin:#FF7B6B; --margin-soft:#3A1F1E; --ok:#58C98A; --ok-soft:#173326; --warn:#F2B451; --warn-soft:#3A2D14;
+  --rule:rgba(134,166,255,.08);
+  --sta:#4A3F0A; --sta-ink:#FFE680; --sta-strong:#E8C531;
+  --net:#163D25; --net-ink:#A6F0B8; --net-strong:#4CC27A;
+  --os:#47182D; --os-ink:#FFB3D2; --os-strong:#F06A9E;
+  --es:#4A2A0C; --es-ink:#FFCB94; --es-strong:#F29A3D;
+  --mat:#132F4F; --mat-ink:#A9D4FF; --mat-strong:#5BA4F0;
+  --sem:#262D39; --sem-ink:#C5CCD8; --sem-strong:#8D97A8;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg)}
+body{color:var(--ink);font:15px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+[lang="si"],.si-text{font-family:var(--f-si);line-height:1.75}
+button,input,select{font:inherit;color:inherit}
+a{color:var(--accent)}
+:focus-visible{outline:2.5px solid var(--accent);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.tnum{font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- header: ruled answer sheet ---------- */
+.sheet{background:var(--surface);border-bottom:1px solid var(--line);
+  background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 27px,var(--rule) 27px,var(--rule) 28px);
+  position:relative}
+.sheet::before{content:"";position:absolute;top:0;bottom:0;left:max(10px,calc(50% - 560px));width:2px;background:var(--margin);opacity:.55}
+.sheet .wrap{padding-block:18px 14px;display:grid;grid-template-columns:1fr auto;gap:14px 24px;align-items:end}
+.brand{min-width:0}
+.eyebrow{font:700 11.5px/1.2 var(--f-body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+h1.title{font:800 clamp(24px,4.2vw,36px)/1.05 var(--f-display);font-stretch:85%;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.sub{margin:6px 0 0;color:var(--muted);font-size:14px}
+.count{justify-self:end;text-align:right}
+.count .lbl{font:700 11px/1.2 var(--f-body);letter-spacing:.09em;text-transform:uppercase;color:var(--margin)}
+.count .digits{font:800 clamp(28px,5vw,44px)/1 var(--f-display);font-stretch:70%;font-variant-numeric:tabular-nums;color:var(--ink);display:flex;gap:10px;justify-content:flex-end;margin-top:4px}
+.count .digits span{display:flex;flex-direction:column;align-items:center;min-width:1.6em}
+.count .digits small{font:600 10.5px/1.4 var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-stretch:100%}
+.count .when{font-size:12.5px;color:var(--muted);margin-top:4px}
+@media (max-width:640px){.sheet::before{left:6px}.sheet .wrap{grid-template-columns:1fr}.count{justify-self:start;text-align:left}.count .digits{justify-content:flex-start}}
+
+/* ---------- tabs ---------- */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--bg)}
+.tabs .wrap{display:flex;gap:4px;align-items:center;overflow-x:auto;scrollbar-width:none}
+.tabs .wrap::-webkit-scrollbar{display:none}
+.tab{appearance:none;border:0;background:none;padding:12px 12px 10px;font-weight:700;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;display:flex;gap:6px;align-items:center}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tab .badge{background:var(--margin);color:#fff;border-radius:999px;font-size:11px;padding:1px 7px;font-variant-numeric:tabular-nums}
+.tabs .spacer{flex:1}
+.sync{font-size:12px;color:var(--faint);white-space:nowrap;display:flex;align-items:center;gap:6px}
+.sync i{width:8px;height:8px;border-radius:50%;background:var(--faint);display:inline-block}
+.sync.on i{background:var(--ok)}
+
+main{padding-block:20px 120px}
+.view[hidden]{display:none!important}
+h2.h{font:800 22px/1.15 var(--f-display);font-stretch:90%;margin:0 0 4px;text-wrap:balance}
+.h-sub{color:var(--muted);margin:0 0 14px;font-size:14px}
+.section-title{font:700 12px/1.2 var(--f-body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px;display:flex;align-items:center;gap:10px}
+.section-title::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ---------- cards & grid ---------- */
+.grid-today{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:22px;align-items:start}
+@media (max-width:900px){.grid-today{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.pad{padding:16px}
+.stack{display:flex;flex-direction:column;gap:12px}
+
+.dayhead{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:baseline;margin-bottom:6px}
+.dayhead .big{font:800 26px/1.1 var(--f-display);font-stretch:88%}
+.dayhead .meta{color:var(--muted)}
+.progress{height:10px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);overflow:hidden}
+.progress > i{display:block;height:100%;background:var(--accent);border-radius:999px;transition:width .3s}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0 4px}
+.stat{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0}
+.stat b{display:block;font:800 20px/1.1 var(--f-display);font-stretch:85%;font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;color:var(--muted)}
+
+/* subject chips */
+.chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:2px 10px;font-size:12.5px;font-weight:700;white-space:nowrap;line-height:1.6}
+.chip.s-STA3402{background:var(--sta);color:var(--sta-ink)}
+.chip.s-COM3401{background:var(--net);color:var(--net-ink)}
+.chip.s-COM3306{background:var(--os);color:var(--os-ink)}
+.chip.s-COM3307{background:var(--es);color:var(--es-ink)}
+.chip.s-MAT3222{background:var(--mat);color:var(--mat-ink)}
+.chip.s-MAT3130{background:var(--sem);color:var(--sem-ink)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:0 0 auto}
+.d-STA3402{background:var(--sta-strong)}.d-COM3401{background:var(--net-strong)}.d-COM3306{background:var(--os-strong)}
+.d-COM3307{background:var(--es-strong)}.d-MAT3222{background:var(--mat-strong)}.d-MAT3130{background:var(--sem-strong)}
+.kind{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line-strong);border-radius:4px;padding:0 5px}
+.kind.paper{color:var(--margin);border-color:color-mix(in srgb,var(--margin) 45%,transparent)}
+.kind.revise{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+.kind.practice,.kind.tut,.kind.lab{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 45%,transparent)}
+
+/* subject group inside a day */
+.sgroup{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);overflow:hidden;box-shadow:var(--shadow)}
+.sgroup + .sgroup{margin-top:14px}
+.sgroup > header{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.sgroup > header .name{font-weight:700;min-width:0}
+.sgroup > header .tot{margin-left:auto;color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.sgroup.s-STA3402{border-left:5px solid var(--sta-strong)}.sgroup.s-COM3401{border-left:5px solid var(--net-strong)}
+.sgroup.s-COM3306{border-left:5px solid var(--os-strong)}.sgroup.s-COM3307{border-left:5px solid var(--es-strong)}.sgroup.s-MAT3222{border-left:5px solid var(--mat-strong)}
+
+/* task row */
+.task{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 12px;padding:12px 14px;border-top:1px solid var(--line)}
+.sgroup > header + .task{border-top:0}
+.task.done .t-title{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line-strong)}
+.task.missed{background:var(--margin-soft)}
+.tick{appearance:none;width:24px;height:24px;border:2px solid var(--line-strong);border-radius:6px;margin:1px 0 0;cursor:pointer;display:grid;place-items:center;background:var(--surface);flex:0 0 auto}
+.tick:checked{background:var(--ok);border-color:var(--ok)}
+.tick:checked::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.t-body{min-width:0}
+.t-title{font-weight:700;line-height:1.35;overflow-wrap:anywhere}
+.t-meta{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:4px;font-size:13px;color:var(--muted)}
+.t-meta .spent{font-variant-numeric:tabular-nums}
+.t-meta .spent.over{color:var(--warn)}
+.t-meta .when{color:var(--margin);font-weight:700}
+.t-actions{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.mats{grid-column:2 / -1;display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.mat{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-strong);background:var(--surface);border-radius:7px;padding:4px 9px;font-size:12.5px;cursor:pointer;max-width:100%;text-align:left}
+.mat:hover{border-color:var(--accent);color:var(--accent)}
+.mat .ic{width:16px;height:16px;flex:0 0 auto}
+.mat .lbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.tip{grid-column:2 / -1;margin-top:6px}
+.tip summary{cursor:pointer;font-size:12.5px;color:var(--accent);font-weight:700;list-style:none;display:inline-flex;gap:6px;align-items:center}
+.tip summary::-webkit-details-marker{display:none}
+.tip summary::before{content:"▸";transition:transform .15s}
+.tip[open] summary::before{transform:rotate(90deg)}
+.tip p{margin:6px 0 0;font-size:13.5px;background:var(--warn-soft);border-radius:8px;padding:8px 10px}
+.tip .est{display:block;color:var(--muted);font-size:12px;margin-top:6px;font-family:var(--f-body)}
+
+/* buttons */
+.btn{appearance:none;border:1px solid var(--line-strong);background:var(--surface);border-radius:8px;padding:7px 12px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;line-height:1.2}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn.danger{color:var(--margin);border-color:color-mix(in srgb,var(--margin) 50%,transparent)}
+.btn.ghost{border-color:transparent;background:transparent}
+.btn.small{padding:4px 9px;font-size:13px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn.start{min-width:84px;justify-content:center}
+.btn.start.running{background:var(--ok);border-color:var(--ok);color:#fff}
+
+/* side rail */
+.rail .card + .card{margin-top:14px}
+.rail h3{font:800 16px/1.2 var(--f-display);font-stretch:90%;margin:0 0 10px}
+.exrow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:2px 10px;align-items:center;padding:8px 0;border-top:1px dashed var(--line)}
+.exrow:first-of-type{border-top:0}
+.exrow .nm{font-weight:700;font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.exrow .dl{font-variant-numeric:tabular-nums;font-weight:800;font-family:var(--f-display);font-stretch:85%;font-size:17px;text-align:right}
+.exrow .info{grid-column:2 / -1;font-size:12px;color:var(--muted)}
+.minibar{grid-column:2 / -1;height:6px;border-radius:999px;background:var(--surface-2);overflow:hidden;border:1px solid var(--line)}
+.minibar i{display:block;height:100%}
+
+/* missed */
+.missed-box{border:1.5px solid color-mix(in srgb,var(--margin) 55%,transparent);border-radius:var(--r);background:var(--surface);overflow:hidden;box-shadow:var(--shadow);margin-bottom:16px}
+.missed-box > header{background:var(--margin-soft);padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.missed-box > header b{color:var(--margin)}
+.missed-box > header .btn{margin-left:auto}
+.empty{color:var(--muted);text-align:center;padding:26px 16px;border:1px dashed var(--line-strong);border-radius:var(--r)}
+.notice{border-radius:var(--r);padding:10px 14px;background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);font-size:14px;margin-bottom:14px}
+.notice.warn{background:var(--warn-soft);border-color:color-mix(in srgb,var(--warn) 40%,transparent)}
+.notice.bad{background:var(--margin-soft);border-color:color-mix(in srgb,var(--margin) 40%,transparent)}
+
+/* ---------- plan view ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.fbtn{appearance:none;border:1px solid var(--line-strong);background:var(--surface);border-radius:999px;padding:4px 12px;font-size:13px;font-weight:700;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.fbtn[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.plansum{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:16px}
+@media (max-width:640px){.plansum{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.day{margin-bottom:10px}
+.day > summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:62px minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px 14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+.day > summary::-webkit-details-marker{display:none}
+.day[open] > summary{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.day.today > summary{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.day.past > summary{opacity:.85}
+.dnum{font:800 13px/1.1 var(--f-display);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.dnum b{display:block;font-size:24px;color:var(--ink);font-stretch:80%}
+.dmid{min-width:0;display:flex;flex-direction:column;gap:5px}
+.dmid .chips{display:flex;flex-wrap:wrap;gap:6px}
+.loadbar{height:8px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);overflow:hidden;display:flex}
+.loadbar i{height:100%}
+.dright{text-align:right;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dright b{color:var(--ink);font-size:15px}
+.dstate{font-size:12px;font-weight:700}
+.dstate.ok{color:var(--ok)}.dstate.miss{color:var(--margin)}
+.day .daybody{border:1px solid var(--line);border-top:0;border-radius:0 0 var(--r) var(--r);background:var(--surface);overflow:hidden}
+.day .daybody .task:first-child{border-top:0}
+.exam-day > summary{background:var(--margin-soft)}
+
+/* ---------- subjects view ---------- */
+.subjects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:780px){.subjects{grid-template-columns:minmax(0,1fr)}}
+.subj{padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.subj-top{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.subj-top h3{font:800 18px/1.2 var(--f-display);font-stretch:90%;margin:4px 0 0;text-wrap:balance}
+.credits{text-align:center;border:2px solid var(--ink);border-radius:8px;padding:4px 8px;min-width:58px}
+.credits b{display:block;font:800 22px/1 var(--f-display);font-stretch:80%}
+.credits span{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;font-size:13.5px}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums}
+.split{display:flex;height:12px;border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+.split i{display:block;height:100%}
+.k-learn{background:var(--accent)}.k-practice{background:var(--ok)}.k-paper{background:var(--margin)}.k-revise{background:var(--warn)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.settings{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.field label{font-size:13px;font-weight:700}
+.field input,.field select{border:1px solid var(--line-strong);border-radius:8px;padding:8px 10px;background:var(--surface);min-width:0;width:100%}
+.howto{font-size:14px}
+.howto table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+.howto th,.howto td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.howto th{background:var(--surface-2)}
+.tbl-scroll{overflow-x:auto}
+
+/* ---------- files view ---------- */
+.fx-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+.crumbs{display:flex;flex-wrap:wrap;gap:4px;align-items:center;font-size:14px;min-width:0;flex:1}
+.crumbs button{appearance:none;border:0;background:none;color:var(--accent);font-weight:700;cursor:pointer;padding:2px 4px;border-radius:5px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.crumbs span.sep{color:var(--faint)}
+.crumbs .cur{font-weight:700;padding:2px 4px;overflow-wrap:anywhere}
+.search{border:1px solid var(--line-strong);border-radius:8px;padding:8px 10px;background:var(--surface);width:min(280px,100%)}
+.fx{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.fx-row{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:10px 14px;border-top:1px solid var(--line)}
+.fx-row:first-child{border-top:0}
+.fx-row.folder{cursor:pointer}
+.fx-row.folder:hover{background:var(--surface-2)}
+.fx-ic{width:28px;height:28px}
+.fx-name{min-width:0;font-weight:700;overflow-wrap:anywhere;line-height:1.3}
+.fx-name small{display:block;font-weight:400;color:var(--muted);font-size:12.5px;margin-top:2px}
+.fx-act{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width:560px){.fx-row{grid-template-columns:28px minmax(0,1fr)}.fx-act{grid-column:2;justify-content:flex-start}}
+.upload{margin-top:14px}
+
+/* ---------- modals ---------- */
+.modal{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:max(12px,env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) max(12px,env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(10,14,22,.55)}
+.modal[hidden]{display:none!important}
+.dialog{background:var(--surface);border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.35);width:min(560px,100%);max-height:100%;overflow:auto;border:1px solid var(--line)}
+.dialog header{display:flex;gap:10px;align-items:flex-start;padding:16px 18px 6px}
+.dialog header h3{margin:0;font:800 19px/1.25 var(--f-display);font-stretch:90%;min-width:0;flex:1;overflow-wrap:anywhere}
+.x{appearance:none;border:0;background:var(--surface-2);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:18px;line-height:1;flex:0 0 auto}
+.dialog .body{padding:6px 18px 18px}
+
+/* timer */
+.timer-face{display:grid;place-items:center;margin:8px auto 4px;position:relative;width:min(260px,70vw);aspect-ratio:1}
+.timer-face svg{width:100%;height:100%;transform:rotate(-90deg)}
+.timer-face .ring-bg{stroke:var(--surface-2)}
+.timer-face .ring{stroke:var(--accent);transition:stroke-dashoffset .5s linear}
+.timer-face .ring.over{stroke:var(--warn)}
+.timer-face .center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.timer-face .clock{font:600 clamp(32px,9vw,46px)/1 var(--f-mono);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.timer-face .cap{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:6px}
+.timer-face .left{font-weight:700;margin-top:6px;font-variant-numeric:tabular-nums}
+.timer-face .left.over{color:var(--warn)}
+.t-controls{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0}
+.t-controls .btn{padding:10px 16px}
+.sessions{margin-top:8px;border-top:1px solid var(--line);padding-top:10px}
+.sessions h4{margin:0 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.sessions ol{list-style:none;margin:0;padding:0;max-height:180px;overflow:auto}
+.sessions li{display:flex;gap:10px;align-items:center;padding:5px 0;border-bottom:1px dashed var(--line);font-size:13.5px;font-variant-numeric:tabular-nums}
+.sessions li span:first-child{flex:1;min-width:0}
+.sessions .x{width:26px;height:26px;font-size:14px}
+.minitimer{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);border-radius:999px;padding:8px 14px 8px 10px;box-shadow:0 10px 30px rgba(0,0,0,.3);cursor:pointer;border:0;max-width:calc(100% - 32px)}
+.minitimer[hidden]{display:none!important}
+.minitimer .pulse{width:10px;height:10px;border-radius:50%;background:#FF5A4F;animation:pulse 1.4s infinite;flex:0 0 auto}
+.minitimer .mt-clock{font:600 16px/1 var(--f-mono);font-variant-numeric:tabular-nums}
+.minitimer .mt-name{font-size:12.5px;opacity:.8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:180px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* viewer */
+.viewer{position:fixed;inset:0;z-index:60;background:var(--bg);display:flex;flex-direction:column}
+.viewer[hidden]{display:none!important}
+.vbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:calc(8px + env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) 8px max(12px,env(safe-area-inset-left,0px));background:var(--surface);border-bottom:1px solid var(--line)}
+.vbar .vtitle{font-weight:700;min-width:0;flex:1 1 220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vbar .pg{font-variant-numeric:tabular-nums;font-size:14px;display:flex;align-items:center;gap:6px}
+.vbar .pg input{width:58px;border:1px solid var(--line-strong);border-radius:6px;padding:4px 6px;background:var(--surface);text-align:center}
+.vscroll{flex:1;overflow:auto;padding:16px max(12px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));-webkit-overflow-scrolling:touch}
+.vpages{display:flex;flex-direction:column;align-items:center;gap:12px}
+.vpage{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.18);position:relative;max-width:none}
+.vpage canvas{display:block;width:100%;height:100%}
+.vpage .pn{position:absolute;right:6px;bottom:4px;font-size:11px;color:#667;background:rgba(255,255,255,.8);padding:0 5px;border-radius:4px}
+.vmsg{max-width:520px;margin:40px auto;text-align:center;color:var(--muted)}
+.reader{max-width:820px;margin:0 auto}
+
+/* notes inside the reader */
+.note{font-size:15px}
+.note .note-head{border-bottom:3px double var(--line);padding-bottom:12px;margin-bottom:16px}
+.note .eyebrow{margin-bottom:6px}
+.note h1{font:800 26px/1.15 var(--f-display);font-stretch:88%;margin:0 0 8px;text-wrap:balance}
+.note .lede{color:var(--muted);margin:0}
+.note h2{font:800 20px/1.2 var(--f-display);font-stretch:90%;margin:30px 0 10px;padding-top:10px;border-top:1px solid var(--line);scroll-margin-top:10px}
+.note h3{font-size:16px;margin:18px 0 6px}
+.note h4{font-size:13px;margin:12px 0 6px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.note ul,.note ol{padding-left:22px}
+.note li{margin:3px 0}
+.note .toc{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:10px 16px;font-size:14px}
+.note .toc ol{columns:2;column-gap:28px;margin:0}
+@media (max-width:640px){.note .toc ol{columns:1}}
+.note .si{background:var(--sta);color:var(--sta-ink);border-left:4px solid var(--sta-strong);padding:8px 12px;margin:12px 0;border-radius:0 8px 8px 0;font-family:var(--f-si);line-height:1.8}
+.note .si-inline{font-family:var(--f-si)}
+.note .ans{background:var(--accent-soft);border-radius:8px;padding:8px 12px;margin:10px 0}
+.note .tip{background:var(--ok-soft);border-left:4px solid var(--ok);padding:8px 12px;border-radius:0 8px 8px 0;margin:10px 0;grid-column:auto}
+.note .exam{font-size:12.5px;color:var(--accent);font-weight:700}
+.note .exam::before{content:"Past papers ▸ "}
+.note .small{font-size:13px;color:var(--muted)}
+.note .formula{font-family:var(--f-mono);background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px}
+.note .formula p{margin:2px 0}
+.note .formula-inline{font-family:var(--f-mono)}
+.note table{border-collapse:collapse;width:100%;margin:8px 0;font-size:13.5px}
+.note th,.note td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}
+.note thead th{background:var(--surface-2)}
+.note table.num td,.note table.num th{text-align:center;font-variant-numeric:tabular-nums}
+.note table.num tfoot td{font-weight:700;background:var(--accent-soft)}
+.note .tbl-wrap,.note table{display:block;overflow-x:auto}
+.note .tbl-wrap table{display:table}
+.note table.lru td.new{background:var(--sta);color:var(--sta-ink);font-weight:700}
+.note table.lru td.fault{color:var(--margin);font-weight:700}
+.note code{font-family:var(--f-mono);font-size:.88em;background:var(--surface-2);border:1px solid var(--line);padding:0 4px;border-radius:4px}
+.note pre{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5}
+.note pre code{background:none;border:0;padding:0}
+.note dl.defs dt{font-weight:700;margin-top:8px}
+.note dl.defs dd{margin:2px 0 6px 16px}
+.note figure.diagram{margin:12px 0;text-align:center;color:var(--ink)}
+.note figure.diagram svg{width:100%;max-width:640px;height:auto}
+.note figcaption{font-size:12.5px;color:var(--muted)}
+.note .gantt-wrap{margin:8px 0;overflow-x:auto}
+.note .gantt{display:flex;border:1.5px solid var(--ink);border-radius:4px;overflow:hidden;min-width:420px}
+.note .gseg{border-right:1.5px solid var(--ink);text-align:center;padding:6px 0;font-weight:700;font-size:13px;min-width:0;background:var(--accent-soft)}
+.note .gseg:last-child{border-right:0}
+.note .gticks{display:flex;font-size:11.5px;font-variant-numeric:tabular-nums;color:var(--muted);min-width:420px}
+.note .gtick{min-width:0;margin-left:-3px}
+.note .gtick.end{flex:0 0 0;margin-left:-6px}
+.note .frame-diagram{display:flex;flex-wrap:wrap;border:1.5px solid var(--ink);border-radius:4px;overflow:hidden;font-size:12px;margin:8px 0}
+.note .frame-diagram span{flex:1 1 auto;padding:6px 8px;border-right:1px solid var(--ink);text-align:center;background:var(--accent-soft)}
+.note .frame-diagram span.wide{flex:3 1 auto;background:var(--surface)}
+.note .frame-diagram span:last-child{border-right:0}
+.note .bits code{font-size:13.5px;letter-spacing:.05em;word-break:break-all}
+.note .bits .lbl{display:block;font-size:12px;color:var(--muted)}
+.note mark{background:var(--sta-strong);color:#111;font-weight:700;padding:0 1px}
+.note .note-foot{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+
+/* toast */
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:80;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.3);font-weight:700;max-width:calc(100% - 32px)}
+.toast[hidden]{display:none!important}
+.confirm-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px;flex-wrap:wrap}
+.foot{color:var(--faint);font-size:12.5px;text-align:center;margin-top:30px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+</style>
+
+<header class="sheet">
+  <div class="wrap">
+    <div class="brand">
+      <p class="eyebrow">Rajarata University · B.Sc. Applied Sciences · Year 3, Semester II</p>
+      <h1 class="title">Semester 3.2 Study Plan</h1>
+      <p class="sub" id="subline">5 examined subjects · 16 credits · 2 subjects a day</p>
+    </div>
+    <div class="count">
+      <div class="lbl" id="cd-label">Exams begin in</div>
+      <div class="digits" id="cd-digits" aria-live="off">
+        <span><b id="cd-d">--</b><small>days</small></span>
+        <span><b id="cd-h">--</b><small>hrs</small></span>
+        <span><b id="cd-m">--</b><small>min</small></span>
+        <span><b id="cd-s">--</b><small>sec</small></span>
+      </div>
+      <div class="when" id="cd-when"></div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="wrap" role="tablist">
+    <button class="tab" role="tab" id="tab-today" data-view="today" aria-controls="view-today" aria-selected="true">Today <span class="badge" id="missed-badge" hidden>0</span></button>
+    <button class="tab" role="tab" id="tab-plan" data-view="plan" aria-controls="view-plan" aria-selected="false">Plan</button>
+    <button class="tab" role="tab" id="tab-subjects" data-view="subjects" aria-controls="view-subjects" aria-selected="false">Subjects</button>
+    <button class="tab" role="tab" id="tab-files" data-view="files" aria-controls="view-files" aria-selected="false">Files</button>
+    <span class="spacer"></span>
+    <span class="sync" id="sync" title="Where your ticks and timer records are kept"><i></i><span id="sync-text">Saved in this browser</span></span>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+  <section id="view-today" class="view" role="tabpanel" aria-labelledby="tab-today"></section>
+  <section id="view-plan" class="view" role="tabpanel" aria-labelledby="tab-plan" hidden></section>
+  <section id="view-subjects" class="view" role="tabpanel" aria-labelledby="tab-subjects" hidden></section>
+  <section id="view-files" class="view" role="tabpanel" aria-labelledby="tab-files" hidden></section>
+  <p class="foot">Plan made from your Semester 3.2 folder · lecture files, past papers and the new gap notes are all in the Files tab.</p>
+</main>
+
+<!-- timer pop-up -->
+<div class="modal" id="timer-modal" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="tm-title">
+    <header>
+      <div style="flex:1;min-width:0">
+        <span class="chip" id="tm-chip"></span>
+        <h3 id="tm-title" style="margin-top:8px"></h3>
+      </div>
+      <button class="x" data-act="tm-min" aria-label="Minimise timer" title="Minimise">–</button>
+    </header>
+    <div class="body">
+      <div class="timer-face">
+        <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-bg" cx="60" cy="60" r="52" fill="none" stroke-width="9"/><circle class="ring" id="tm-ring" cx="60" cy="60" r="52" fill="none" stroke-width="9" stroke-linecap="round" stroke-dasharray="326.73" stroke-dashoffset="326.73"/></svg>
+        <div class="center">
+          <div class="clock" id="tm-clock">00:00:00</div>
+          <div class="cap" id="tm-cap">this sitting</div>
+          <div class="left" id="tm-left"></div>
+        </div>
+      </div>
+      <p class="h-sub" style="text-align:center;margin:0" id="tm-total"></p>
+      <div class="t-controls">
+        <button class="btn primary" data-act="tm-start" id="tm-start">▶ Start</button>
+        <button class="btn" data-act="tm-stop" id="tm-stop">❚❚ Stop &amp; save</button>
+        <button class="btn" data-act="tm-done" id="tm-done">✓ Mark done</button>
+      </div>
+      <div class="mats" id="tm-mats" style="justify-content:center"></div>
+      <div class="sessions">
+        <h4>Saved sittings</h4>
+        <ol id="tm-sessions"></ol>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="minitimer" id="minitimer" hidden data-act="tm-open-running" aria-label="Open the running timer"><span class="pulse"></span><span class="mt-clock" id="mt-clock">00:00:00</span><span class="mt-name" id="mt-name"></span></button>
+
+<!-- file viewer & note reader -->
+<div class="viewer" id="viewer" hidden role="dialog" aria-modal="true" aria-labelledby="v-title">
+  <div class="vbar">
+    <button class="btn small" data-act="v-close">← Back</button>
+    <div class="vtitle" id="v-title"></div>
+    <div class="pg" id="v-pg" hidden><button class="btn small" data-act="v-prev" aria-label="Previous page">‹</button><input id="v-page" inputmode="numeric" aria-label="Page number"><span id="v-pages">/ 0</span><button class="btn small" data-act="v-next" aria-label="Next page">›</button></div>
+    <div id="v-zoom" style="display:flex;gap:4px" hidden><button class="btn small" data-act="v-zout" aria-label="Zoom out">−</button><button class="btn small" data-act="v-fit">Fit</button><button class="btn small" data-act="v-zin" aria-label="Zoom in">+</button></div>
+    <button class="btn small" data-act="v-alt" id="v-alt" hidden></button>
+    <button class="btn small" data-act="v-dl" id="v-dl" hidden>Download</button>
+  </div>
+  <div class="vscroll" id="v-scroll"><div class="vpages" id="v-pages-wrap"></div></div>
+</div>
+
+<!-- confirm -->
+<div class="modal" id="confirm-modal" hidden>
+  <div class="dialog" role="alertdialog" aria-modal="true" aria-labelledby="cf-title" style="width:min(440px,100%)">
+    <header><h3 id="cf-title"></h3></header>
+    <div class="body"><p id="cf-text" style="margin:0"></p>
+      <div class="confirm-actions"><button class="btn" data-act="cf-no">Cancel</button><button class="btn primary" data-act="cf-yes" id="cf-yes">OK</button></div>
+    </div>
+  </div>
+</div>
+<input type="file" id="local-pdf" accept="application/pdf" hidden>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+window.PLAN_DATA = {"subjects":[{"code":"STA3402","name":"Introduction to Neural Networks and Machine Learning","short":"Machine Learning","credits":4,"examHours":3,"hue":"yellow","format":"Answer all 4 · Q1 = 15 MCQs · Q2–Q4 need R code, outputs and interpretation","folder":"STA3402  Introduction to Neural Networks and Machine Learning"},{"code":"COM3401","name":"Data Communication and Networking","short":"Data Comm & Networking","credits":4,"examHours":3,"hue":"green","format":"Answer all 5 questions","folder":"COM3401 Data Communication and Networking"},{"code":"COM3306","name":"Operating Systems","short":"Operating Systems","credits":3,"examHours":3,"hue":"pink","format":"Answer all 5 questions","folder":"COM3306 Operating Systems"},{"code":"COM3307","name":"Embedded Systems","short":"Embedded Systems","credits":3,"examHours":3,"hue":"orange","format":"Q1 and Q2 compulsory · any 2 of Q3–Q5","folder":"COM3307 Embedded systems"},{"code":"MAT3222","name":"Numerical Analysis II","short":"Numerical Analysis II","credits":2,"examHours":2,"hue":"blue","format":"Answer all 4 · calculator allowed · 4 decimal places","folder":"MAT3222 Numerical Analysis II"},{"code":"MAT3130","name":"Seminar","short":"Seminar","credits":1,"examHours":0,"hue":"grey","format":"No written paper in this exam period (seminar course) – not scheduled","folder":"MAT3130 Seminar","noExam":true}],"files":[{"id":"sta-l1","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_Lecture1_Notes_1.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-lecture1-notes-1.pdf","size":1578614,"kind":"pdf","pages":23,"view":"files/sta3402/lessions/sta3402-lecture1-notes-1.pdf"},{"id":"sta-l1-si","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_Lecture1_Notes_Sinhala.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-lecture1-notes-sinhala.pdf","size":1692785,"kind":"pdf","pages":24,"view":"files/sta3402/lessions/sta3402-lecture1-notes-sinhala.pdf"},{"id":"sta-l2","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_Lecture2_PCA_Notes.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-lecture2-pca-notes.pdf","size":4321276,"kind":"pdf","pages":24,"view":"files/sta3402/lessions/sta3402-lecture2-pca-notes.pdf"},{"id":"sta-l2-si","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_Lecture2_PCA_Notes_Sinhala.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-lecture2-pca-notes-sinhala.pdf","size":4436369,"kind":"pdf","pages":25,"view":"files/sta3402/lessions/sta3402-lecture2-pca-notes-sinhala.pdf"},{"id":"sta-l3","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_Lecture3_MCA_FAMD_Notes.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-lecture3-mca-famd-notes.pdf","size":1845990,"kind":"pdf","pages":31,"view":"files/sta3402/lessions/sta3402-lecture3-mca-famd-notes.pdf"},{"id":"sta-l3-si","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_Lecture3_MCA_FAMD_Notes_Sinhala.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-lecture3-mca-famd-notes-sinhala.pdf","size":1960395,"kind":"pdf","pages":32,"view":"files/sta3402/lessions/sta3402-lecture3-mca-famd-notes-sinhala.pdf"},{"id":"sta-l4","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_Lecture4_Clustering_Notes_2.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-lecture4-clustering-notes-2.pdf","size":1559987,"kind":"pdf","pages":24,"view":"files/sta3402/lessions/sta3402-lecture4-clustering-notes-2.pdf"},{"id":"sta-l4-si","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_Lecture4_Clustering_Notes_Sinhala.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-lecture4-clustering-notes-sinhala.pdf","size":1674811,"kind":"pdf","pages":25,"view":"files/sta3402/lessions/sta3402-lecture4-clustering-notes-sinhala.pdf"},{"id":"sta-l5","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_Lecture5_FAMD_Notes_2.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-lecture5-famd-notes-2.pdf","size":1774144,"kind":"pdf","pages":26,"view":"files/sta3402/lessions/sta3402-lecture5-famd-notes-2.pdf"},{"id":"sta-d6","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_Day6_Recommender_Systems_Notes.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-day6-recommender-systems-notes.pdf","size":721736,"kind":"pdf","pages":31,"view":"files/sta3402/lessions/sta3402-day6-recommender-systems-notes.pdf"},{"id":"sta-d6-si","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_Day6_Recommender_Systems_Notes_Sinhala.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-day6-recommender-systems-notes-sinhala.pdf","size":848104,"kind":"pdf","pages":32,"view":"files/sta3402/lessions/sta3402-day6-recommender-systems-notes-sinhala.pdf"},{"id":"sta-d7","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_SVM_SVR_NeuralNets_Notes.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-svm-svr-neuralnets-notes.pdf","size":2084483,"kind":"pdf","pages":32,"view":"files/sta3402/lessions/sta3402-svm-svr-neuralnets-notes.pdf"},{"id":"sta-d7-si","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Lessions"],"name":"STA3402_SVM_SVR_NeuralNets_Notes_Sinhala.pdf","ext":"pdf","url":"files/sta3402/lessions/sta3402-svm-svr-neuralnets-notes-sinhala.pdf","size":2084751,"kind":"pdf","pages":37,"view":"files/sta3402/lessions/sta3402-svm-svr-neuralnets-notes-sinhala.pdf"},{"id":"sta-pp-2026","s":"STA3402","dir":["STA3402  Introduction to Neural Networks and Machine Learning","Past Paper"],"name":"2026 - Mar.pdf","ext":"pdf","url":"files/sta3402/past-paper/2026-mar.pdf","size":3645579,"kind":"pdf","pages":7,"view":"files/sta3402/past-paper/2026-mar.pdf"},{"id":"mat3130-empty","s":"MAT3130","dir":["MAT3130 Seminar"],"name":null,"kind":"folder-marker"},{"id":"mat-pp-2025","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Past Paper"],"name":"2025 Mar.pdf","ext":"pdf","url":"files/mat3222/past-paper/2025-mar.pdf","size":1210344,"kind":"pdf","pages":3,"view":"files/mat3222/past-paper/2025-mar.pdf"},{"id":"mat-tut1","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Assignment"],"name":"Tut 01.pdf","ext":"pdf","url":"files/mat3222/assignment/tut-01.pdf","size":136209,"kind":"pdf","pages":2,"view":"files/mat3222/assignment/tut-01.pdf"},{"id":"mat-tut2","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Assignment"],"name":"Tut 02.pdf","ext":"pdf","url":"files/mat3222/assignment/tut-02.pdf","size":224585,"kind":"pdf","pages":2,"view":"files/mat3222/assignment/tut-02.pdf"},{"id":"mat-tut3","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Assignment"],"name":"Tut 03.pdf","ext":"pdf","url":"files/mat3222/assignment/tut-03.pdf","size":212583,"kind":"pdf","pages":2,"view":"files/mat3222/assignment/tut-03.pdf"},{"id":"mat-c1p1","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Chapters","Chapter 01"],"name":"Chapter 1 Part 1.pdf","ext":"pdf","url":"files/mat3222/chapters/chapter-01/chapter-1-part-1.pdf","size":586586,"kind":"pdf","pages":17,"view":"files/mat3222/chapters/chapter-01/chapter-1-part-1.pdf"},{"id":"mat-c1p2","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Chapters","Chapter 01"],"name":"Chapter 1_2.pdf","ext":"pdf","url":"files/mat3222/chapters/chapter-01/chapter-1-2.pdf","size":532318,"kind":"pdf","pages":31,"view":"files/mat3222/chapters/chapter-01/chapter-1-2.pdf"},{"id":"mat-c1ge","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Chapters","Chapter 01"],"name":"Gaussian Elimination by using MATLAB.pdf","ext":"pdf","url":"files/mat3222/chapters/chapter-01/gaussian-elimination-by-using-matlab.pdf","size":112188,"kind":"pdf","pages":9,"view":"files/mat3222/chapters/chapter-01/gaussian-elimination-by-using-matlab.pdf"},{"id":"mat-c1ml","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Chapters","Chapter 01"],"name":"MATLAB Part.pdf","ext":"pdf","url":"files/mat3222/chapters/chapter-01/matlab-part.pdf","size":202730,"kind":"pdf","pages":5,"view":"files/mat3222/chapters/chapter-01/matlab-part.pdf"},{"id":"mat-c21","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Chapters","Chapter 02"],"name":"Chapter 2_1.pdf","ext":"pdf","url":"files/mat3222/chapters/chapter-02/chapter-2-1.pdf","size":685778,"kind":"pdf","pages":45,"view":"files/mat3222/chapters/chapter-02/chapter-2-1.pdf"},{"id":"mat-c22","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Chapters","Chapter 02"],"name":"Chapter 2_2.pdf","ext":"pdf","url":"files/mat3222/chapters/chapter-02/chapter-2-2.pdf","size":704196,"kind":"pdf","pages":36,"view":"files/mat3222/chapters/chapter-02/chapter-2-2.pdf"},{"id":"mat-c2ni1","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Chapters","Chapter 02"],"name":"Numerical Integration.pdf","ext":"pdf","url":"files/mat3222/chapters/chapter-02/numerical-integration.pdf","size":934042,"kind":"pdf","pages":42,"view":"files/mat3222/chapters/chapter-02/numerical-integration.pdf"},{"id":"mat-c2ni2","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Chapters","Chapter 02"],"name":"Numerical Integration_Part 2.pdf","ext":"pdf","url":"files/mat3222/chapters/chapter-02/numerical-integration-part-2.pdf","size":513800,"kind":"pdf","pages":24,"view":"files/mat3222/chapters/chapter-02/numerical-integration-part-2.pdf"},{"id":"mat-c31","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Chapters","Chapter 03"],"name":"Lecture 1 new.pdf","ext":"pdf","url":"files/mat3222/chapters/chapter-03/lecture-1-new.pdf","size":413852,"kind":"pdf","pages":27,"view":"files/mat3222/chapters/chapter-03/lecture-1-new.pdf"},{"id":"mat-c32","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Chapters","Chapter 03"],"name":"Lecture 2.pdf","ext":"pdf","url":"files/mat3222/chapters/chapter-03/lecture-2.pdf","size":644720,"kind":"pdf","pages":33,"view":"files/mat3222/chapters/chapter-03/lecture-2.pdf"},{"id":"mat-c33","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Chapters","Chapter 03"],"name":"Lecture 3.pdf","ext":"pdf","url":"files/mat3222/chapters/chapter-03/lecture-3.pdf","size":550486,"kind":"pdf","pages":17,"view":"files/mat3222/chapters/chapter-03/lecture-3.pdf"},{"id":"mat-c41","s":"MAT3222","dir":["MAT3222 Numerical Analysis II","Chapters","Chapter 04"],"name":"Lecture 1.pdf","ext":"pdf","url":"files/mat3222/chapters/chapter-04/lecture-1.pdf","size":417588,"kind":"pdf","pages":13,"view":"files/mat3222/chapters/chapter-04/lecture-1.pdf"},{"id":"os-pp-2026","s":"COM3306","dir":["COM3306 Operating Systems","Past Paper"],"name":"2026 Mar.pdf","ext":"pdf","url":"files/com3306/past-paper/2026-mar.pdf","size":1412074,"kind":"pdf","pages":3,"view":"files/com3306/past-paper/2026-mar.pdf"},{"id":"os-pp-2025","s":"COM3306","dir":["COM3306 Operating Systems","Past Paper"],"name":"2025 Feb.pdf","ext":"pdf","url":"files/com3306/past-paper/2025-feb.pdf","size":2263239,"kind":"pdf","pages":3,"view":"files/com3306/past-paper/2025-feb.pdf"},{"id":"os-pp-2023","s":"COM3306","dir":["COM3306 Operating Systems","Past Paper"],"name":"2023 Jan.pdf","ext":"pdf","url":"files/com3306/past-paper/2023-jan.pdf","size":1138715,"kind":"pdf","pages":3,"view":"files/com3306/past-paper/2023-jan.pdf"},{"id":"os-l1","s":"COM3306","dir":["COM3306 Operating Systems","Lessons"],"name":"Lesson 1.pdf","ext":"pdf","url":"files/com3306/lessons/lesson-1.pdf","size":1205648,"kind":"pdf","pages":87,"view":"files/com3306/lessons/lesson-1.pdf"},{"id":"os-l2","s":"COM3306","dir":["COM3306 Operating Systems","Lessons"],"name":"Lesson 2.pdf","ext":"pdf","url":"files/com3306/lessons/lesson-2.pdf","size":934540,"kind":"pdf","pages":60,"view":"files/com3306/lessons/lesson-2.pdf"},{"id":"os-l3","s":"COM3306","dir":["COM3306 Operating Systems","Lessons"],"name":"Lesson 3.pdf","ext":"pdf","url":"files/com3306/lessons/lesson-3.pdf","size":485429,"kind":"pdf","pages":35,"view":"files/com3306/lessons/lesson-3.pdf"},{"id":"os-l4","s":"COM3306","dir":["COM3306 Operating Systems","Lessons"],"name":"Lesson 4.pdf","ext":"pdf","url":"files/com3306/lessons/lesson-4.pdf","size":965573,"kind":"pdf","pages":47,"view":"files/com3306/lessons/lesson-4.pdf"},{"id":"os-l5","s":"COM3306","dir":["COM3306 Operating Systems","Lessons"],"name":"Lesson 5.pdf","ext":"pdf","url":"files/com3306/lessons/lesson-5.pdf","size":1296490,"kind":"pdf","pages":55,"view":"files/com3306/lessons/lesson-5.pdf"},{"id":"os-notes","s":"COM3306","dir":["COM3306 Operating Systems","Study notes (made for you)"],"name":"COM3306 Gap Notes – Files, Banker, I-O.pdf","ext":"pdf","kind":"note","url":"notes/com3306-notes.pdf","html":"notes/com3306.html","size":187509,"pages":12},{"id":"es-pp-2026","s":"COM3307","dir":["COM3307 Embedded systems","Past Paper"],"name":"2026 Mar.pdf","ext":"pdf","url":"files/com3307/past-paper/2026-mar.pdf","size":910775,"kind":"pdf","pages":2,"view":"files/com3307/past-paper/2026-mar.pdf"},{"id":"es-pp-2025","s":"COM3307","dir":["COM3307 Embedded systems","Past Paper"],"name":"2025 Feb.pdf","ext":"pdf","url":"files/com3307/past-paper/2025-feb.pdf","size":1663903,"kind":"pdf","pages":2,"view":"files/com3307/past-paper/2025-feb.pdf"},{"id":"es-pp-2025ict","s":"COM3307","dir":["COM3307 Embedded systems","Past Paper"],"name":"2025 Feb ICT.pdf","ext":"pdf","url":"files/com3307/past-paper/2025-feb-ict.pdf","size":1688755,"kind":"pdf","pages":2,"view":"files/com3307/past-paper/2025-feb-ict.pdf"},{"id":"es-notes","s":"COM3307","dir":["COM3307 Embedded systems","Study notes (made for you)"],"name":"COM3307 Embedded Systems – Exam Notes.pdf","ext":"pdf","kind":"note","url":"notes/com3307-notes.pdf","html":"notes/com3307.html","size":289035,"pages":18},{"id":"net-l01","s":"COM3401","dir":["COM3401 Data Communication and Networking","Lecture Notes"],"name":"01.pptx","ext":"pptx","url":"files/com3401/lecture-notes/01.pdf","size":376743,"kind":"pptx","view":"files/com3401/lecture-notes/01.pdf","dlName":"01.pdf","pages":51,"viewSize":796081},{"id":"net-l02","s":"COM3401","dir":["COM3401 Data Communication and Networking","Lecture Notes"],"name":"02.pptx","ext":"pptx","url":"files/com3401/lecture-notes/02.pdf","size":671889,"kind":"pptx","view":"files/com3401/lecture-notes/02.pdf","dlName":"02.pdf","pages":51,"viewSize":987791},{"id":"net-l03","s":"COM3401","dir":["COM3401 Data Communication and Networking","Lecture Notes"],"name":"03.pptx","ext":"pptx","url":"files/com3401/lecture-notes/03.pdf","size":388720,"kind":"pptx","view":"files/com3401/lecture-notes/03.pdf","dlName":"03.pdf","pages":35,"viewSize":651854},{"id":"net-l05","s":"COM3401","dir":["COM3401 Data Communication and Networking","Lecture Notes"],"name":"5- DATA TRANSMISSION-COM.pdf","ext":"pdf","url":"files/com3401/lecture-notes/5-data-transmission-com.pdf","size":1802612,"kind":"pdf","pages":57,"view":"files/com3401/lecture-notes/5-data-transmission-com.pdf"},{"id":"net-l06","s":"COM3401","dir":["COM3401 Data Communication and Networking","Lecture Notes"],"name":"6- TRANSMISSION MEDIA COM.pdf","ext":"pdf","url":"files/com3401/lecture-notes/6-transmission-media-com.pdf","size":1944870,"kind":"pdf","pages":58,"view":"files/com3401/lecture-notes/6-transmission-media-com.pdf"},{"id":"net-l07","s":"COM3401","dir":["COM3401 Data Communication and Networking","Lecture Notes"],"name":"7- ERROR DETECTION AND CORRECTION -COM.pdf","ext":"pdf","url":"files/com3401/lecture-notes/7-error-detection-and-correction-com.pdf","size":1654159,"kind":"pdf","pages":65,"view":"files/com3401/lecture-notes/7-error-detection-and-correction-com.pdf"},{"id":"net-l08","s":"COM3401","dir":["COM3401 Data Communication and Networking","Lecture Notes"],"name":"8- MULTIPLEXING-COM.pdf","ext":"pdf","url":"files/com3401/lecture-notes/8-multiplexing-com.pdf","size":1264947,"kind":"pdf","pages":42,"view":"files/com3401/lecture-notes/8-multiplexing-com.pdf"},{"id":"net-l09","s":"COM3401","dir":["COM3401 Data Communication and Networking","Lecture Notes"],"name":"9- FRAMING-COM.pdf","ext":"pdf","url":"files/com3401/lecture-notes/9-framing-com.pdf","size":1178340,"kind":"pdf","pages":39,"view":"files/com3401/lecture-notes/9-framing-com.pdf"},{"id":"net-l10","s":"COM3401","dir":["COM3401 Data Communication and Networking","Lecture Notes"],"name":"10- FLOW CONTROL-COM.pdf","ext":"pdf","url":"files/com3401/lecture-notes/10-flow-control-com.pdf","size":1157307,"kind":"pdf","pages":39,"view":"files/com3401/lecture-notes/10-flow-control-com.pdf"},{"id":"net-p1","s":"COM3401","dir":["COM3401 Data Communication and Networking","Practical"],"name":"Practical 1-com.pdf","ext":"pdf","url":"files/com3401/practical/practical-1-com.pdf","size":148858,"kind":"pdf","pages":4,"view":"files/com3401/practical/practical-1-com.pdf"},{"id":"net-p2","s":"COM3401","dir":["COM3401 Data Communication and Networking","Practical"],"name":"Practical 2-com.pdf","ext":"pdf","url":"files/com3401/practical/practical-2-com.pdf","size":171985,"kind":"pdf","pages":3,"view":"files/com3401/practical/practical-2-com.pdf"},{"id":"net-p3","s":"COM3401","dir":["COM3401 Data Communication and Networking","Practical"],"name":"Practical 3-com.pdf","ext":"pdf","url":"files/com3401/practical/practical-3-com.pdf","size":147980,"kind":"pdf","pages":3,"view":"files/com3401/practical/practical-3-com.pdf"},{"id":"net-p4","s":"COM3401","dir":["COM3401 Data Communication and Networking","Practical"],"name":"Practical 4-com.pdf","ext":"pdf","url":"files/com3401/practical/practical-4-com.pdf","size":145014,"kind":"pdf","pages":3,"view":"files/com3401/practical/practical-4-com.pdf"},{"id":"net-p5","s":"COM3401","dir":["COM3401 Data Communication and Networking","Practical"],"name":"Practical 5-com.pdf","ext":"pdf","url":"files/com3401/practical/practical-5-com.pdf","size":148793,"kind":"pdf","pages":3,"view":"files/com3401/practical/practical-5-com.pdf"},{"id":"net-pp-2026","s":"COM3401","dir":["COM3401 Data Communication and Networking","Past Paper"],"name":"2026 Mar.pdf","ext":"pdf","url":"files/com3401/past-paper/2026-mar.pdf","size":1209211,"kind":"pdf","pages":3,"view":"files/com3401/past-paper/2026-mar.pdf"},{"id":"net-pp-2025","s":"COM3401","dir":["COM3401 Data Communication and Networking","Past Paper"],"name":"2025 Feb.pdf","ext":"pdf","url":"files/com3401/past-paper/2025-feb.pdf","size":2355016,"kind":"pdf","pages":3,"view":"files/com3401/past-paper/2025-feb.pdf"},{"id":"net-pp-2023","s":"COM3401","dir":["COM3401 Data Communication and Networking","Past Paper"],"name":"2023 Jan.pdf","ext":"pdf","url":"files/com3401/past-paper/2023-jan.pdf","size":632336,"kind":"pdf","pages":3,"view":"files/com3401/past-paper/2023-jan.pdf"},{"id":"net-pp-2013","s":"COM3401","dir":["COM3401 Data Communication and Networking","Past Paper"],"name":"2013 oct.pdf","ext":"pdf","url":"files/com3401/past-paper/2013-oct.pdf","size":231647,"kind":"pdf","pages":3,"view":"files/com3401/past-paper/2013-oct.pdf"},{"id":"net-book-kurose","s":"COM3401","dir":["COM3401 Data Communication and Networking","Reference books"],"name":"Computer Networking_ A Top-Down Approach 6th Edition.pdf","ext":"pdf","kind":"local","size":9028772,"pages":889},{"id":"net-book-tanen","s":"COM3401","dir":["COM3401 Data Communication and Networking","Reference books"],"name":"Andrew S. Tanenbaum - Computer Networks.pdf","ext":"pdf","kind":"local","size":6897431,"pages":962},{"id":"net-book-stall","s":"COM3401","dir":["COM3401 Data Communication and Networking","Reference books"],"name":"Data and Computer Communications by William Stallings.pdf","ext":"pdf","kind":"local","size":5326037,"pages":901},{"id":"net-notes","s":"COM3401","dir":["COM3401 Data Communication and Networking","Study notes (made for you)"],"name":"COM3401 Lecture 4 Gap Notes + Worked Answers.pdf","ext":"pdf","kind":"note","url":"notes/com3401-notes.pdf","html":"notes/com3401.html","size":169388,"pages":10}],"tasks":[{"id":"sta-l1-1","s":"STA3402","t":"Lecture 1 – Course intro & statistical learning review (part 1/2: pages 1–12)","k":"learn","m":70,"seq":1,"mats":[{"f":"sta-l1","l":"English","p":1,"to":12},{"f":"sta-l1-si","l":"සිංහල","p":1,"to":13}],"tip":"Supervised vs unsupervised, regression vs classification, train/test split, overfitting – MCQ (Q1) වලට කෙලින්ම එනවා. Definitions ටික notebook එකේ ලියාගන්න.","est":"23 A4 pages · 5,168 words · difficulty ×1.0 (introduction) + 30m running the R code → 2h 20m total, split into 2 sittings"},{"id":"sta-l1-2","s":"STA3402","t":"Lecture 1 – Course intro & statistical learning review (part 2/2: pages 13–23)","k":"learn","m":70,"seq":2,"mats":[{"f":"sta-l1","l":"English","p":13,"to":23},{"f":"sta-l1-si","l":"සිංහල","p":14,"to":24}],"tip":"Supervised vs unsupervised, regression vs classification, train/test split, overfitting – MCQ (Q1) වලට කෙලින්ම එනවා. Definitions ටික notebook එකේ ලියාගන්න.","est":"23 A4 pages · 5,168 words · difficulty ×1.0 (introduction) + 30m running the R code → 2h 20m total, split into 2 sittings"},{"id":"sta-l2-1","s":"STA3402","t":"Lecture 2 – PCA (part 1/2: pages 1–12)","k":"learn","m":85,"seq":3,"mats":[{"f":"sta-l2","l":"English","p":1,"to":12},{"f":"sta-l2-si","l":"සිංහල","p":1,"to":12}],"tip":"PCA steps (scale → eigenvalues → PCs), scree plot, % variance explained. R: prcomp(scale.=TRUE). 2026 Q2(b)(i): categorical data වලට PCA හරියන්නේ නෑ ඇයි කියලා කියන්න පුළුවන් වෙන්න.","est":"24 A4 pages · 5,704 words · difficulty ×1.2 (new maths ideas) + 30m running the R code → 2h 50m total, split into 2 sittings"},{"id":"sta-l2-2","s":"STA3402","t":"Lecture 2 – PCA (part 2/2: pages 13–24)","k":"learn","m":85,"seq":4,"mats":[{"f":"sta-l2","l":"English","p":13,"to":24},{"f":"sta-l2-si","l":"සිංහල","p":13,"to":25}],"tip":"PCA steps (scale → eigenvalues → PCs), scree plot, % variance explained. R: prcomp(scale.=TRUE). 2026 Q2(b)(i): categorical data වලට PCA හරියන්නේ නෑ ඇයි කියලා කියන්න පුළුවන් වෙන්න.","est":"24 A4 pages · 5,704 words · difficulty ×1.2 (new maths ideas) + 30m running the R code → 2h 50m total, split into 2 sittings"},{"id":"sta-l3-1","s":"STA3402","t":"Lecture 3 – MCA & FAMD (part 1/3: pages 1–10)","k":"learn","m":70,"seq":5,"mats":[{"f":"sta-l3","l":"English","p":1,"to":10},{"f":"sta-l3-si","l":"සිංහල","p":1,"to":10}],"tip":"Data type → method: numeric = PCA, categorical = MCA, mixed = FAMD. FactoMineR::FAMD(), fviz_screeplot(), dimdesc(). Past paper Q2(b) කෙලින්ම මේකයි.","est":"31 A4 pages · 6,599 words · difficulty ×1.25 (hard – categorical & mixed data) + 30m running the R code → 3h 25m total, split into 3 sittings"},{"id":"sta-l3-2","s":"STA3402","t":"Lecture 3 – MCA & FAMD (part 2/3: pages 11–21)","k":"learn","m":70,"seq":6,"mats":[{"f":"sta-l3","l":"English","p":11,"to":21},{"f":"sta-l3-si","l":"සිංහල","p":11,"to":22}],"tip":"Data type → method: numeric = PCA, categorical = MCA, mixed = FAMD. FactoMineR::FAMD(), fviz_screeplot(), dimdesc(). Past paper Q2(b) කෙලින්ම මේකයි.","est":"31 A4 pages · 6,599 words · difficulty ×1.25 (hard – categorical & mixed data) + 30m running the R code → 3h 25m total, split into 3 sittings"},{"id":"sta-l3-3","s":"STA3402","t":"Lecture 3 – MCA & FAMD (part 3/3: pages 22–31)","k":"learn","m":70,"seq":7,"mats":[{"f":"sta-l3","l":"English","p":22,"to":31},{"f":"sta-l3-si","l":"සිංහල","p":23,"to":32}],"tip":"Data type → method: numeric = PCA, categorical = MCA, mixed = FAMD. FactoMineR::FAMD(), fviz_screeplot(), dimdesc(). Past paper Q2(b) කෙලින්ම මේකයි.","est":"31 A4 pages · 6,599 words · difficulty ×1.25 (hard – categorical & mixed data) + 30m running the R code → 3h 25m total, split into 3 sittings"},{"id":"sta-l4-1","s":"STA3402","t":"Lecture 4 – Clustering: k-means & hierarchical (part 1/2: pages 1–12)","k":"learn","m":80,"seq":8,"mats":[{"f":"sta-l4","l":"English","p":1,"to":12},{"f":"sta-l4-si","l":"සිංහල","p":1,"to":12}],"tip":"Euclidean distance අතින් ගණනය (2026 Q2(a)(i)), scaling ඇයි ඕනේ (Q2(a)(ii)), Ward linkage, dendrogram එකෙන් k තෝරන හැටි.","est":"24 A4 pages · 5,825 words · difficulty ×1.1 (clustering) + 30m running the R code → 2h 40m total, split into 2 sittings"},{"id":"sta-l4-2","s":"STA3402","t":"Lecture 4 – Clustering: k-means & hierarchical (part 2/2: pages 13–24)","k":"learn","m":80,"seq":9,"mats":[{"f":"sta-l4","l":"English","p":13,"to":24},{"f":"sta-l4-si","l":"සිංහල","p":13,"to":25}],"tip":"Euclidean distance අතින් ගණනය (2026 Q2(a)(i)), scaling ඇයි ඕනේ (Q2(a)(ii)), Ward linkage, dendrogram එකෙන් k තෝරන හැටි.","est":"24 A4 pages · 5,825 words · difficulty ×1.1 (clustering) + 30m running the R code → 2h 40m total, split into 2 sittings"},{"id":"sta-l5-1","s":"STA3402","t":"Lecture 5 – FAMD, HCPC customer segmentation, Tutorials 1 & 2 (part 1/2: pages 1–13)","k":"learn","m":90,"seq":10,"mats":[{"f":"sta-l5","l":"English","p":1,"to":13}],"tip":"FAMD → factor scores → HCPC/hclust(ward.D2) → cluster labels. 2026 Q2(b)(ii)–(iv) වල R steps හරියටම මේවා. Code එක ඔයාගේ R එකේ run කරලා බලන්න.","est":"26 A4 pages · 6,068 words · difficulty ×1.2 (FAMD + HCPC lab) + 30m running the R code → 3h 00m total, split into 2 sittings"},{"id":"sta-l5-2","s":"STA3402","t":"Lecture 5 – FAMD, HCPC customer segmentation, Tutorials 1 & 2 (part 2/2: pages 14–26)","k":"learn","m":90,"seq":11,"mats":[{"f":"sta-l5","l":"English","p":14,"to":26}],"tip":"FAMD → factor scores → HCPC/hclust(ward.D2) → cluster labels. 2026 Q2(b)(ii)–(iv) වල R steps හරියටම මේවා. Code එක ඔයාගේ R එකේ run කරලා බලන්න.","est":"26 A4 pages · 6,068 words · difficulty ×1.2 (FAMD + HCPC lab) + 30m running the R code → 3h 00m total, split into 2 sittings"},{"id":"sta-d6-1","s":"STA3402","t":"Day 6 – Recommender systems (collaborative filtering) (part 1/3: pages 1–10)","k":"learn","m":80,"seq":12,"mats":[{"f":"sta-d6","l":"English","p":1,"to":10},{"f":"sta-d6-si","l":"සිංහල","p":1,"to":10}],"tip":"Jaccard distance සහ cosine similarity අතින් ගණනය – 2026 MCQ (i) සහ (j) කෙලින්ම මේවා. Formula දෙක කටපාඩම් කරන්න.","est":"31 A4 pages · 10,319 words · difficulty ×1.05 (recommender systems) + 30m running the R code → 3h 55m total, split into 3 sittings"},{"id":"sta-d6-2","s":"STA3402","t":"Day 6 – Recommender systems (collaborative filtering) (part 2/3: pages 11–21)","k":"learn","m":80,"seq":13,"mats":[{"f":"sta-d6","l":"English","p":11,"to":21},{"f":"sta-d6-si","l":"සිංහල","p":11,"to":22}],"tip":"Jaccard distance සහ cosine similarity අතින් ගණනය – 2026 MCQ (i) සහ (j) කෙලින්ම මේවා. Formula දෙක කටපාඩම් කරන්න.","est":"31 A4 pages · 10,319 words · difficulty ×1.05 (recommender systems) + 30m running the R code → 3h 55m total, split into 3 sittings"},{"id":"sta-d6-3","s":"STA3402","t":"Day 6 – Recommender systems (collaborative filtering) (part 3/3: pages 22–31)","k":"learn","m":80,"seq":14,"mats":[{"f":"sta-d6","l":"English","p":22,"to":31},{"f":"sta-d6-si","l":"සිංහල","p":23,"to":32}],"tip":"Jaccard distance සහ cosine similarity අතින් ගණනය – 2026 MCQ (i) සහ (j) කෙලින්ම මේවා. Formula දෙක කටපාඩම් කරන්න.","est":"31 A4 pages · 10,319 words · difficulty ×1.05 (recommender systems) + 30m running the R code → 3h 55m total, split into 3 sittings"},{"id":"sta-d7-1","s":"STA3402","t":"Day 7 – SVM, SVR & intro to neural networks (part 1/3: pages 1–11)","k":"learn","m":85,"seq":15,"mats":[{"f":"sta-d7","l":"English","p":1,"to":11},{"f":"sta-d7-si","l":"සිංහල","p":1,"to":13}],"tip":"Maximum margin, support vectors, kernels (linear vs RBF), e1071::svm() + tune(). Confusion matrix, precision, recall, F1 – 2026 Q4 සම්පූර්ණයෙන්ම මේකයි.","est":"32 A4 pages · 8,815 words · difficulty ×1.3 (hard – SVM maths + neural nets) + 30m running the R code → 4h 15m total, split into 3 sittings"},{"id":"sta-d7-2","s":"STA3402","t":"Day 7 – SVM, SVR & intro to neural networks (part 2/3: pages 12–21)","k":"learn","m":85,"seq":16,"mats":[{"f":"sta-d7","l":"English","p":12,"to":21},{"f":"sta-d7-si","l":"සිංහල","p":14,"to":24}],"tip":"Maximum margin, support vectors, kernels (linear vs RBF), e1071::svm() + tune(). Confusion matrix, precision, recall, F1 – 2026 Q4 සම්පූර්ණයෙන්ම මේකයි.","est":"32 A4 pages · 8,815 words · difficulty ×1.3 (hard – SVM maths + neural nets) + 30m running the R code → 4h 15m total, split into 3 sittings"},{"id":"sta-d7-3","s":"STA3402","t":"Day 7 – SVM, SVR & intro to neural networks (part 3/3: pages 22–32)","k":"learn","m":85,"seq":17,"mats":[{"f":"sta-d7","l":"English","p":22,"to":32},{"f":"sta-d7-si","l":"සිංහල","p":25,"to":37}],"tip":"Maximum margin, support vectors, kernels (linear vs RBF), e1071::svm() + tune(). Confusion matrix, precision, recall, F1 – 2026 Q4 සම්පූර්ණයෙන්ම මේකයි.","est":"32 A4 pages · 8,815 words · difficulty ×1.3 (hard – SVM maths + neural nets) + 30m running the R code → 4h 15m total, split into 3 sittings"},{"id":"sta-nn","s":"STA3402","t":"Practice – neural network forward pass & backpropagation by hand","k":"practice","m":120,"seq":18,"mats":[{"f":"sta-pp-2026","p":2,"to":6,"l":"Past paper Q1(f)–(o), Q3"},{"f":"sta-d7","p":27,"l":"NN intro (part 16)"}],"tip":"Sigmoid σ(z)=1/(1+e^-z), σ'(z)=σ(1−σ), ReLU, binary cross-entropy. Q3 එකේ forward pass → loss → ∂L/∂w ගණනය පියවරෙන් පියවර calculator එකෙන් කරන්න.","est":"past paper Q3 (100 marks) + 7 calculation MCQs → 2h 00m"},{"id":"sta-r-1","s":"STA3402","t":"Practice – R exam drill: FAMD + clustering + SVM workflow – FAMD + clustering script","k":"practice","m":75,"seq":19,"mats":[{"f":"sta-l5","l":"FAMD + HCPC lab"},{"f":"sta-d7","l":"SVM R demo"}],"tip":"Exam එකේ Q2 සහ Q4 R code ඉල්ලනවා. Lab datasets එකකින් set.seed(123), 80/20 split, svm(kernel=\"linear\") සහ \"radial\", confusionMatrix() – script එකක් ලියලා save කරගන්න; exam එකේදී ඒකම පාවිච්චි කරන්න පුළුවන්.","est":"one full R workflow for each exam question type → 2h 30m total, split into 2 sittings"},{"id":"sta-r-2","s":"STA3402","t":"Practice – R exam drill: FAMD + clustering + SVM workflow – SVM + evaluation script","k":"practice","m":75,"seq":20,"mats":[{"f":"sta-l5","l":"FAMD + HCPC lab"},{"f":"sta-d7","l":"SVM R demo"}],"tip":"Exam එකේ Q2 සහ Q4 R code ඉල්ලනවා. Lab datasets එකකින් set.seed(123), 80/20 split, svm(kernel=\"linear\") සහ \"radial\", confusionMatrix() – script එකක් ලියලා save කරගන්න; exam එකේදී ඒකම පාවිච්චි කරන්න පුළුවන්.","est":"one full R workflow for each exam question type → 2h 30m total, split into 2 sittings"},{"id":"sta-pp26","s":"STA3402","t":"Past paper 2026 Mar – timed attempt","k":"paper","m":180,"seq":21,"mats":[{"f":"sta-pp-2026"}],"tip":"Timer එක on කරලා පැය 3ක් exam එකක් වගේම කරන්න. Datasets නැති නිසා R ප්‍රශ්නවලට code + ඔබ බලාපොරොත්තු වෙන output එක ලියන්න.","est":"real exam time (3 h), closed book → 3h 00m"},{"id":"sta-pp26r","s":"STA3402","t":"Past paper 2026 Mar – check answers & fix weak areas","k":"review","m":60,"seq":22,"mats":[{"f":"sta-pp-2026"},{"f":"sta-d7","p":27,"l":"NN intro"}],"tip":"වැරදුණු MCQ ටික notes වල හොයලා හරි උත්තරය ලියන්න. Weak topic එකක් තියෙනවා නම් final revision එකේදී ඒකට මුල් තැන දෙන්න.","est":"marking your answers against notes + re-learning mistakes → 1h 00m"},{"id":"sta-rev-1","s":"STA3402","t":"Final revision – formulas, R functions, MCQ concepts – part 1/3","k":"revise","m":60,"seq":23,"mats":[{"f":"sta-d7","l":"SVM notes"},{"f":"sta-l3","l":"MCA/FAMD"},{"f":"sta-pp-2026","l":"Past paper"}],"tip":"One-page formula sheet: distances, cosine, Jaccard, sigmoid, cross-entropy, precision/recall/F1. R cheat-sheet: prcomp, FAMD, hclust, kmeans, svm, tune.","est":"30m + 30m × 4 credits → 2h 30m total, split into 3 sittings"},{"id":"sta-rev-2","s":"STA3402","t":"Final revision – formulas, R functions, MCQ concepts – part 2/3","k":"revise","m":60,"seq":24,"mats":[{"f":"sta-d7","l":"SVM notes"},{"f":"sta-l3","l":"MCA/FAMD"},{"f":"sta-pp-2026","l":"Past paper"}],"tip":"One-page formula sheet: distances, cosine, Jaccard, sigmoid, cross-entropy, precision/recall/F1. R cheat-sheet: prcomp, FAMD, hclust, kmeans, svm, tune.","est":"30m + 30m × 4 credits → 2h 30m total, split into 3 sittings"},{"id":"sta-rev-3","s":"STA3402","t":"Final revision – formulas, R functions, MCQ concepts – part 3/3","k":"revise","m":30,"seq":25,"mats":[{"f":"sta-d7","l":"SVM notes"},{"f":"sta-l3","l":"MCA/FAMD"},{"f":"sta-pp-2026","l":"Past paper"}],"tip":"One-page formula sheet: distances, cosine, Jaccard, sigmoid, cross-entropy, precision/recall/F1. R cheat-sheet: prcomp, FAMD, hclust, kmeans, svm, tune.","est":"30m + 30m × 4 credits → 2h 30m total, split into 3 sittings"},{"id":"mat-c1p1","s":"MAT3222","t":"Ch 1 – Systems of linear equations: intro & substitution","k":"learn","m":40,"seq":1,"mats":[{"f":"mat-c1p1"}],"tip":"Unique / no / infinite solutions හඳුනාගන්න හැටි (Tut 01 Q1). පහසුයි – ඉක්මනට ඉවර කරන්න.","est":"17 maths slides × 3 min · difficulty ×0.8 (basic algebra) → 40m"},{"id":"mat-c1p2-1","s":"MAT3222","t":"Ch 1 – Gaussian elimination & back substitution (part 1/2: pages 1–16)","k":"learn","m":50,"seq":2,"mats":[{"f":"mat-c1p2","p":1,"to":16}],"tip":"Pivot, multiplier m = a_ik / a_kk, row operations, back substitution. Partial pivoting = column එකේ ලොකුම |value| එක pivot කරනවා (2025 Q1(a) 10 marks). දශමස්ථාන 4ට ගණනය කරන්න පුරුදු වෙන්න.","est":"31 maths slides × 3 min · difficulty ×1.15 (core method) → 1h 45m total, split into 2 sittings"},{"id":"mat-c1p2-2","s":"MAT3222","t":"Ch 1 – Gaussian elimination & back substitution (part 2/2: pages 17–31)","k":"learn","m":50,"seq":3,"mats":[{"f":"mat-c1p2","p":17,"to":31}],"tip":"Pivot, multiplier m = a_ik / a_kk, row operations, back substitution. Partial pivoting = column එකේ ලොකුම |value| එක pivot කරනවා (2025 Q1(a) 10 marks). දශමස්ථාන 4ට ගණනය කරන්න පුරුදු වෙන්න.","est":"31 maths slides × 3 min · difficulty ×1.15 (core method) → 1h 45m total, split into 2 sittings"},{"id":"mat-c1ml","s":"MAT3222","t":"Ch 1 – MATLAB parts (skim)","k":"learn","m":25,"seq":4,"mats":[{"f":"mat-c1ml"},{"f":"mat-c1ge"}],"tip":"Written exam එකේ MATLAB code ලියන්න අහන්නේ නැති තරම්. Steps තේරුම් ගන්න විතරක් ඇති – Gaussian elimination steps ටික code එකෙන් බලන්න.","est":"14 code slides, skim only → 25m"},{"id":"mat-tut1-1","s":"MAT3222","t":"Tutorial 01 – Gaussian elimination problems – first half of the questions","k":"tut","m":75,"seq":5,"mats":[{"f":"mat-tut1"},{"f":"mat-c1p2","l":"Method slides"}],"tip":"Q3 systems තුනම (3×3, 4×4, 5×5) calculator එකෙන් සම්පූර්ණයෙන් විසඳන්න. උත්තරය original equations වලට ආදේශ කරලා check කරන්න.","est":"3 questions, 8 systems, ~18 min each for a beginner → 2h 30m total, split into 2 sittings"},{"id":"mat-tut1-2","s":"MAT3222","t":"Tutorial 01 – Gaussian elimination problems – second half of the questions","k":"tut","m":75,"seq":6,"mats":[{"f":"mat-tut1"},{"f":"mat-c1p2","l":"Method slides"}],"tip":"Q3 systems තුනම (3×3, 4×4, 5×5) calculator එකෙන් සම්පූර්ණයෙන් විසඳන්න. උත්තරය original equations වලට ආදේශ කරලා check කරන්න.","est":"3 questions, 8 systems, ~18 min each for a beginner → 2h 30m total, split into 2 sittings"},{"id":"mat-c21-1","s":"MAT3222","t":"Ch 2 – Numerical differentiation: forward differences (part 1/2: pages 1–22)","k":"learn","m":80,"seq":7,"mats":[{"f":"mat-c21","p":1,"to":22}],"tip":"Forward difference f'(x) ≈ [f(x+h) − f(x)]/h, second derivative formulas, truncation error. Difference table එක හදන්න පුරුදු වෙන්න.","est":"45 maths slides × 3 min · difficulty ×1.15 (new formulas) → 2h 35m total, split into 2 sittings"},{"id":"mat-c21-2","s":"MAT3222","t":"Ch 2 – Numerical differentiation: forward differences (part 2/2: pages 23–45)","k":"learn","m":80,"seq":8,"mats":[{"f":"mat-c21","p":23,"to":45}],"tip":"Forward difference f'(x) ≈ [f(x+h) − f(x)]/h, second derivative formulas, truncation error. Difference table එක හදන්න පුරුදු වෙන්න.","est":"45 maths slides × 3 min · difficulty ×1.15 (new formulas) → 2h 35m total, split into 2 sittings"},{"id":"mat-c22-1","s":"MAT3222","t":"Ch 2 – Backward difference formulas (part 1/2: pages 1–18)","k":"learn","m":60,"seq":9,"mats":[{"f":"mat-c22","p":1,"to":18}],"tip":"Backward vs forward formulas වෙනස (table එකේ අගට ළඟ points වලට backward). Taylor series වලින් derive කරන හැටි බලන්න.","est":"36 maths slides × 3 min · difficulty ×1.15 (new formulas) → 2h 05m total, split into 2 sittings"},{"id":"mat-c22-2","s":"MAT3222","t":"Ch 2 – Backward difference formulas (part 2/2: pages 19–36)","k":"learn","m":60,"seq":10,"mats":[{"f":"mat-c22","p":19,"to":36}],"tip":"Backward vs forward formulas වෙනස (table එකේ අගට ළඟ points වලට backward). Taylor series වලින් derive කරන හැටි බලන්න.","est":"36 maths slides × 3 min · difficulty ×1.15 (new formulas) → 2h 05m total, split into 2 sittings"},{"id":"mat-tut2-1","s":"MAT3222","t":"Tutorial 02 – Numerical differentiation problems – first half of the questions","k":"tut","m":60,"seq":11,"mats":[{"f":"mat-tut2"},{"f":"mat-c21","l":"Forward"},{"f":"mat-c22","l":"Backward"}],"tip":"හැම ප්‍රශ්නෙකම exact value එකත් calculus වලින් හොයලා absolute error එක ගණනය කරන්න – marks එතනත් තියෙනවා.","est":"numerical + exact answers, ~6 parts → 2h 00m total, split into 2 sittings"},{"id":"mat-tut2-2","s":"MAT3222","t":"Tutorial 02 – Numerical differentiation problems – second half of the questions","k":"tut","m":60,"seq":12,"mats":[{"f":"mat-tut2"},{"f":"mat-c21","l":"Forward"},{"f":"mat-c22","l":"Backward"}],"tip":"හැම ප්‍රශ්නෙකම exact value එකත් calculus වලින් හොයලා absolute error එක ගණනය කරන්න – marks එතනත් තියෙනවා.","est":"numerical + exact answers, ~6 parts → 2h 00m total, split into 2 sittings"},{"id":"mat-c2ni1-1","s":"MAT3222","t":"Ch 2 – Numerical integration: trapezoidal rule (part 1/2: pages 1–21)","k":"learn","m":70,"seq":13,"mats":[{"f":"mat-c2ni1","p":1,"to":21}],"tip":"Composite trapezoidal rule: (h/2)[f0 + 2(f1+…+fn−1) + fn]. Table එකක් හදලා f values ලියලා ගණනය කරන්න පුරුදු වෙන්න.","est":"42 maths slides × 3 min · difficulty ×1.1 (formulas + examples) → 2h 20m total, split into 2 sittings"},{"id":"mat-c2ni1-2","s":"MAT3222","t":"Ch 2 – Numerical integration: trapezoidal rule (part 2/2: pages 22–42)","k":"learn","m":70,"seq":14,"mats":[{"f":"mat-c2ni1","p":22,"to":42}],"tip":"Composite trapezoidal rule: (h/2)[f0 + 2(f1+…+fn−1) + fn]. Table එකක් හදලා f values ලියලා ගණනය කරන්න පුරුදු වෙන්න.","est":"42 maths slides × 3 min · difficulty ×1.1 (formulas + examples) → 2h 20m total, split into 2 sittings"},{"id":"mat-c2ni2","s":"MAT3222","t":"Ch 2 – Simpson's rules","k":"learn","m":85,"seq":15,"mats":[{"f":"mat-c2ni2"}],"tip":"Simpson 1/3: (h/3)[f0 + 4(odd) + 2(even) + fn] – n even වෙන්න ඕනේ. Simpson 3/8 rule එකත් බලන්න. Trapezoidal එක්ක accuracy සසඳන්න.","est":"24 maths slides × 3 min · difficulty ×1.15 (formulas + examples) → 1h 25m"},{"id":"mat-c31","s":"MAT3222","t":"Ch 3 – Initial value problems: Euler & trapezium methods","k":"learn","m":95,"seq":16,"mats":[{"f":"mat-c31"}],"tip":"Euler: y(n+1) = y(n) + h f(t(n), y(n)). Steps 2–3ක් අතින් කරලා table එකක ලියන්න (Tut 03 Q1, Q2).","est":"27 maths slides × 3 min · difficulty ×1.15 (ODE methods) → 1h 35m"},{"id":"mat-c32-1","s":"MAT3222","t":"Ch 3 – Linear multistep methods (part 1/2: pages 1–16)","k":"learn","m":60,"seq":17,"mats":[{"f":"mat-c32","p":1,"to":16}],"tip":"Euler සහ trapezium යනු multistep methods වල special cases. Adams-Bashforth formulas හඳුනාගන්න. Theory කොටස් වලට definition එක ලියන්න පුළුවන් වෙන්න.","est":"33 maths slides × 3 min · difficulty ×1.25 (harder theory) → 2h 05m total, split into 2 sittings"},{"id":"mat-c32-2","s":"MAT3222","t":"Ch 3 – Linear multistep methods (part 2/2: pages 17–33)","k":"learn","m":60,"seq":18,"mats":[{"f":"mat-c32","p":17,"to":33}],"tip":"Euler සහ trapezium යනු multistep methods වල special cases. Adams-Bashforth formulas හඳුනාගන්න. Theory කොටස් වලට definition එක ලියන්න පුළුවන් වෙන්න.","est":"33 maths slides × 3 min · difficulty ×1.25 (harder theory) → 2h 05m total, split into 2 sittings"},{"id":"mat-c33","s":"MAT3222","t":"Ch 3 – Runge-Kutta (RK4) & predictor-corrector","k":"learn","m":65,"seq":19,"mats":[{"f":"mat-c33"}],"tip":"RK4: K1…K4 සහ y(n+1) = y(n) + h/6 (K1 + 2K2 + 2K3 + K4) කටපාඩම්. 2025 Q3(a) – 40 marks! h = 0.25 එක්ක steps 2ක් කරන්න පුරුදු වෙන්න.","est":"17 maths slides × 3 min · difficulty ×1.3 (RK4 + predictor-corrector) → 1h 05m"},{"id":"mat-tut3-1","s":"MAT3222","t":"Tutorial 03 – Euler / IVP problems – first half of the questions","k":"tut","m":75,"seq":20,"mats":[{"f":"mat-tut3"},{"f":"mat-c31","l":"Euler"},{"f":"mat-c33","l":"RK4"}],"tip":"දශමස්ථාන 5ට ගණනය කරන්න කියලා තියෙනවා. හැම step එකම table එකක ලියන්න (t, y, f(t,y)).","est":"several multi-step IVP calculations → 2h 30m total, split into 2 sittings"},{"id":"mat-tut3-2","s":"MAT3222","t":"Tutorial 03 – Euler / IVP problems – second half of the questions","k":"tut","m":75,"seq":21,"mats":[{"f":"mat-tut3"},{"f":"mat-c31","l":"Euler"},{"f":"mat-c33","l":"RK4"}],"tip":"දශමස්ථාන 5ට ගණනය කරන්න කියලා තියෙනවා. හැම step එකම table එකක ලියන්න (t, y, f(t,y)).","est":"several multi-step IVP calculations → 2h 30m total, split into 2 sittings"},{"id":"mat-c41","s":"MAT3222","t":"Ch 4 – Boundary value problems (shooting & finite difference)","k":"learn","m":50,"seq":22,"mats":[{"f":"mat-c41"},{"f":"mat-pp-2025","p":2,"to":3,"l":"Past paper Q4"}],"tip":"Past paper Q4 (100 marks) සම්පූර්ණයෙන්ම BVP: linear shooting y = y1 + C y2, finite difference වලින් equations system එක හදන හැටි. Slides 13යි, ඒත් හොඳට තේරුම් ගන්න.","est":"13 maths slides × 3 min · difficulty ×1.3 (hard – boundary value problems) → 50m"},{"id":"mat-pp25","s":"MAT3222","t":"Past paper 2025 Mar – timed attempt","k":"paper","m":120,"seq":23,"mats":[{"f":"mat-pp-2025"}],"tip":"පැය 2යි. Q1(c)(d) fixed-point සහ Q2 Newton/Broyden මේ අවුරුද්දේ slides වල නැති නිසා ඒවාට වෙලාව අඩුවෙන් දෙන්න; Q1(a)(b), Q3, Q4 අනිවාර්යයෙන් කරන්න.","est":"real exam time (2 h), closed book → 2h 00m"},{"id":"mat-pp25r","s":"MAT3222","t":"Past paper 2025 Mar – check answers & fix weak areas","k":"review","m":60,"seq":24,"mats":[{"f":"mat-pp-2025"},{"f":"mat-c33","l":"RK4"},{"f":"mat-c41","l":"BVP"}],"tip":"ගණනය වැරදුණු තැන හොයන්න – formula එකද, arithmetic ද? Formula එක වැරදි නම් formula sheet එකට එකතු කරන්න.","est":"marking your answers against notes + re-learning mistakes → 1h 00m"},{"id":"mat-rev-1","s":"MAT3222","t":"Final revision – formula sheet & one problem per method – part 1/2","k":"revise","m":60,"seq":25,"mats":[{"f":"mat-c1p2","l":"Gaussian"},{"f":"mat-c21","l":"Differences"},{"f":"mat-c2ni2","l":"Simpson"},{"f":"mat-c33","l":"RK4"}],"tip":"Formula sheet එක (differences, trapezoidal, Simpson, Euler, RK4, multistep) එක පිටුවකට ලියලා, හැම method එකටම එක ප්‍රශ්නයක් ඉක්මනින් කරන්න.","est":"30m + 30m × 2 credits → 1h 30m total, split into 2 sittings"},{"id":"mat-rev-2","s":"MAT3222","t":"Final revision – formula sheet & one problem per method – part 2/2","k":"revise","m":30,"seq":26,"mats":[{"f":"mat-c1p2","l":"Gaussian"},{"f":"mat-c21","l":"Differences"},{"f":"mat-c2ni2","l":"Simpson"},{"f":"mat-c33","l":"RK4"}],"tip":"Formula sheet එක (differences, trapezoidal, Simpson, Euler, RK4, multistep) එක පිටුවකට ලියලා, හැම method එකටම එක ප්‍රශ්නයක් ඉක්මනින් කරන්න.","est":"30m + 30m × 2 credits → 1h 30m total, split into 2 sittings"},{"id":"os-l1-1","s":"COM3306","t":"Lesson 1 – Introduction to operating systems (part 1/2: pages 1–44)","k":"learn","m":90,"seq":1,"mats":[{"f":"os-l1","p":1,"to":44}],"tip":"OS functions, user vs kernel mode, multiprogramming vs time-sharing, monolithic/layered/hybrid kernels – Q1 හැම අවුරුද්දෙම මේකෙන්.","est":"87 slides · 5,018 words · difficulty ×0.9 (introduction) → 3h 05m total, split into 2 sittings"},{"id":"os-l1-2","s":"COM3306","t":"Lesson 1 – Introduction to operating systems (part 2/2: pages 45–87)","k":"learn","m":90,"seq":2,"mats":[{"f":"os-l1","p":45,"to":87}],"tip":"OS functions, user vs kernel mode, multiprogramming vs time-sharing, monolithic/layered/hybrid kernels – Q1 හැම අවුරුද්දෙම මේකෙන්.","est":"87 slides · 5,018 words · difficulty ×0.9 (introduction) → 3h 05m total, split into 2 sittings"},{"id":"os-l2-1","s":"COM3306","t":"Lesson 2 – Process management & CPU scheduling (part 1/2: pages 1–30)","k":"learn","m":90,"seq":3,"mats":[{"f":"os-l2","p":1,"to":30}],"tip":"Process states, PCB, schedulers (long/short/medium), context switch, FCFS/SJF/RR. Page 30 වල scheduling algorithms හොඳට බලන්න.","est":"60 slides · 3,606 words · difficulty ×1.2 (scheduling calculations) → 2h 55m total, split into 2 sittings"},{"id":"os-l2-2","s":"COM3306","t":"Lesson 2 – Process management & CPU scheduling (part 2/2: pages 31–60)","k":"learn","m":90,"seq":4,"mats":[{"f":"os-l2","p":31,"to":60}],"tip":"Process states, PCB, schedulers (long/short/medium), context switch, FCFS/SJF/RR. Page 30 වල scheduling algorithms හොඳට බලන්න.","est":"60 slides · 3,606 words · difficulty ×1.2 (scheduling calculations) → 2h 55m total, split into 2 sittings"},{"id":"os-gantt","s":"COM3306","t":"Practice – Gantt charts: FCFS, SJF, RR (2025 & 2026 Q2(d))","k":"practice","m":75,"seq":5,"mats":[{"f":"os-notes","p":7,"a":"os-sched","l":"Worked answers §7"},{"f":"os-pp-2026","p":1,"to":2,"l":"Past paper 2026"},{"f":"os-pp-2025","p":2,"l":"Past paper 2025"}],"tip":"මුලින් ඔයාම Gantt chart එක ඇඳලා CT, TAT, WT ගණනය කරන්න; ඊට පස්සේ notes වල worked answer එකත් එක්ක check කරන්න. හැම අවුරුද්දෙම 8–12 marks.","est":"two past-paper scheduling questions → 1h 15m"},{"id":"os-l3-1","s":"COM3306","t":"Lesson 3 – Deadlock (part 1/2: pages 1–18)","k":"learn","m":50,"seq":6,"mats":[{"f":"os-l3","p":1,"to":18}],"tip":"Deadlock conditions 4 (mutual exclusion, hold & wait, no preemption, circular wait), prevention vs avoidance, RAG. හැම paper එකකම Q4.","est":"35 slides · 2,216 words · difficulty ×1.2 (deadlock) → 1h 45m total, split into 2 sittings"},{"id":"os-l3-2","s":"COM3306","t":"Lesson 3 – Deadlock (part 2/2: pages 19–35)","k":"learn","m":50,"seq":7,"mats":[{"f":"os-l3","p":19,"to":35}],"tip":"Deadlock conditions 4 (mutual exclusion, hold & wait, no preemption, circular wait), prevention vs avoidance, RAG. හැම paper එකකම Q4.","est":"35 slides · 2,216 words · difficulty ×1.2 (deadlock) → 1h 45m total, split into 2 sittings"},{"id":"os-banker","s":"COM3306","t":"Gap notes – Banker's algorithm (worked 2026 & 2025)","k":"learn","m":60,"seq":8,"mats":[{"f":"os-notes","p":5,"a":"os-banker","l":"Notes §6"},{"f":"os-pp-2026","p":2,"to":3,"l":"Past paper 2026 Q4"}],"tip":"Need = Max − Allocation → Work = Available → safety check. 2026 safe sequence ⟨P1, P3, P4, P0, P2⟩. Lesson 3 එකේ Banker's steps නැති නිසා මේක අනිවාර්යයි (8 marks).","est":"notes §6 with two worked examples → 1h 00m"},{"id":"os-l4-1","s":"COM3306","t":"Lesson 4 – IPC & synchronisation (part 1/2: pages 1–24)","k":"learn","m":70,"seq":9,"mats":[{"f":"os-l4","p":1,"to":24}],"tip":"Race condition, critical section, Peterson's solution, semaphores (producer-consumer), message passing direct vs indirect. Q3 හැමදාම මේකෙන්.","est":"47 slides · 2,936 words · difficulty ×1.2 (synchronisation) → 2h 20m total, split into 2 sittings"},{"id":"os-l4-2","s":"COM3306","t":"Lesson 4 – IPC & synchronisation (part 2/2: pages 25–47)","k":"learn","m":70,"seq":10,"mats":[{"f":"os-l4","p":25,"to":47}],"tip":"Race condition, critical section, Peterson's solution, semaphores (producer-consumer), message passing direct vs indirect. Q3 හැමදාම මේකෙන්.","est":"47 slides · 2,936 words · difficulty ×1.2 (synchronisation) → 2h 20m total, split into 2 sittings"},{"id":"os-l5-1","s":"COM3306","t":"Lesson 5 – Memory management (part 1/2: pages 1–28)","k":"learn","m":80,"seq":11,"mats":[{"f":"os-l5","p":1,"to":28}],"tip":"Fixed vs dynamic partitioning, fragmentation, paging vs segmentation, virtual memory, demand paging, page replacement (page 54).","est":"55 slides · 3,371 words · difficulty ×1.2 (memory calculations) → 2h 40m total, split into 2 sittings"},{"id":"os-l5-2","s":"COM3306","t":"Lesson 5 – Memory management (part 2/2: pages 29–55)","k":"learn","m":80,"seq":12,"mats":[{"f":"os-l5","p":29,"to":55}],"tip":"Fixed vs dynamic partitioning, fragmentation, paging vs segmentation, virtual memory, demand paging, page replacement (page 54).","est":"55 slides · 3,371 words · difficulty ×1.2 (memory calculations) → 2h 40m total, split into 2 sittings"},{"id":"os-lru","s":"COM3306","t":"Gap notes – LRU page replacement & bitmaps vs linked lists","k":"learn","m":45,"seq":13,"mats":[{"f":"os-notes","p":4,"a":"os-free","l":"Notes §4"},{"f":"os-notes","p":10,"a":"os-lru","l":"Notes §8"}],"tip":"2023 Q5(d): 4 frames → page faults 6. FIFO සහ Optimal වලටත් එකම string එක ඔයාම කරලා බලන්න.","est":"notes §4 + §8 → 45m"},{"id":"os-files","s":"COM3306","t":"Gap notes – File management (files, directories, i-nodes, permissions)","k":"learn","m":75,"seq":14,"mats":[{"f":"os-notes","p":1,"a":"os-files","l":"Notes §1–§5"}],"tip":"Lessons වල file management නෑ – ඒත් හැම paper එකකම Q5(c)(d). Directory structures table එක (single, two-level, tree, DAG) හොඳට කරන්න.","est":"notes §1–§5, about 1,400 words + tables → 1h 15m"},{"id":"os-io","s":"COM3306","t":"Gap notes – BIOS, DMA, I/O addressing, interrupts","k":"learn","m":45,"seq":15,"mats":[{"f":"os-notes","p":11,"a":"os-io","l":"Notes §9"}],"tip":"BIOS, DMA, precise vs imprecise interrupts – කෙටි ප්‍රශ්න (4–5 marks) විදිහට එනවා. Points 3–4ක් ලියන්න පුළුවන් වෙන්න.","est":"notes §9 → 45m"},{"id":"os-pp23-1","s":"COM3306","t":"Past paper 2023 Jan – answer outlines – Q1–Q2","k":"paper","m":50,"seq":16,"mats":[{"f":"os-pp-2023"},{"f":"os-notes","l":"Gap notes"}],"tip":"හැම ප්‍රශ්නයකටම points ටික විතරක් ලියන්න (full essay නෑ). දන්නේ නැති ඒවා notes වල හොයලා ලකුණු කරගන්න.","est":"answer outlines for every question, then check with notes → 2h 00m total, split into 2 sittings"},{"id":"os-pp23-2","s":"COM3306","t":"Past paper 2023 Jan – answer outlines – Q3–Q5","k":"paper","m":70,"seq":17,"mats":[{"f":"os-pp-2023"},{"f":"os-notes","l":"Gap notes"}],"tip":"හැම ප්‍රශ්නයකටම points ටික විතරක් ලියන්න (full essay නෑ). දන්නේ නැති ඒවා notes වල හොයලා ලකුණු කරගන්න.","est":"answer outlines for every question, then check with notes → 2h 00m total, split into 2 sittings"},{"id":"os-pp25-1","s":"COM3306","t":"Past paper 2025 Feb – answer outlines – Q1–Q2","k":"paper","m":50,"seq":18,"mats":[{"f":"os-pp-2025"},{"f":"os-notes","l":"Gap notes"}],"tip":"Q2(d) Gantt charts සහ Q4(c) Banker's – සම්පූර්ණයෙන්ම ගණනය කරන්න. අනිත් ඒවාට outlines.","est":"answer outlines for every question, then check with notes → 2h 00m total, split into 2 sittings"},{"id":"os-pp25-2","s":"COM3306","t":"Past paper 2025 Feb – answer outlines – Q3–Q5","k":"paper","m":70,"seq":19,"mats":[{"f":"os-pp-2025"},{"f":"os-notes","l":"Gap notes"}],"tip":"Q2(d) Gantt charts සහ Q4(c) Banker's – සම්පූර්ණයෙන්ම ගණනය කරන්න. අනිත් ඒවාට outlines.","est":"answer outlines for every question, then check with notes → 2h 00m total, split into 2 sittings"},{"id":"os-pp26","s":"COM3306","t":"Past paper 2026 Mar – timed attempt","k":"paper","m":180,"seq":20,"mats":[{"f":"os-pp-2026"}],"tip":"පැය 3ක්, ප්‍රශ්න 5ම. ප්‍රශ්නයකට විනාඩි 35 ගානේ, අන්තිම විනාඩි 5 check කරන්න.","est":"real exam time (3 h), closed book → 3h 00m"},{"id":"os-pp26r","s":"COM3306","t":"Past paper 2026 Mar – check answers & fix weak areas","k":"review","m":60,"seq":21,"mats":[{"f":"os-pp-2026"},{"f":"os-notes","p":5,"a":"os-banker","l":"Banker worked answer"}],"tip":"Banker's (Q4(d)) සහ Gantt (Q2(d)) උත්තර notes එක්ක සසඳන්න. Marks අඩු වුණ topic එක ලියාගන්න.","est":"marking your answers against notes + re-learning mistakes → 1h 00m"},{"id":"os-rev-1","s":"COM3306","t":"Final revision – definitions, comparisons & calculations – part 1/2","k":"revise","m":60,"seq":22,"mats":[{"f":"os-notes","l":"Gap notes"},{"f":"os-l2","p":30,"l":"Scheduling"},{"f":"os-l5","l":"Memory"}],"tip":"Comparison tables (paging vs segmentation, prevention vs avoidance, single vs two-level dirs) සහ calculations 3 (Gantt, Banker, LRU) එක පාරක් ඉක්මනින් කරන්න.","est":"30m + 30m × 3 credits → 2h 00m total, split into 2 sittings"},{"id":"os-rev-2","s":"COM3306","t":"Final revision – definitions, comparisons & calculations – part 2/2","k":"revise","m":60,"seq":23,"mats":[{"f":"os-notes","l":"Gap notes"},{"f":"os-l2","p":30,"l":"Scheduling"},{"f":"os-l5","l":"Memory"}],"tip":"Comparison tables (paging vs segmentation, prevention vs avoidance, single vs two-level dirs) සහ calculations 3 (Gantt, Banker, LRU) එක පාරක් ඉක්මනින් කරන්න.","est":"30m + 30m × 3 credits → 2h 00m total, split into 2 sittings"},{"id":"es-1","s":"COM3307","t":"Notes §0–§2 How the paper works, embedded basics, applications, MCU vs MPU","k":"learn","m":90,"seq":1,"mats":[{"f":"es-notes","p":1,"a":"es-guide","l":"Embedded notes"},{"f":"es-pp-2026","l":"Past paper 2026"},{"f":"es-pp-2025","l":"Past paper 2025"}],"tip":"Definition + characteristics 3ක් + applications 3ක් + MCU vs MPU table එක – Q1 සම්පූර්ණයෙන්ම. Definition එක වචනයෙන් වචනය මතක තියාගන්න.","est":"section of the new notes (no lecture slides) · reading + writing answers → 1h 30m"},{"id":"es-2","s":"COM3307","t":"Notes §3 Functional vs non-functional requirements, hard vs soft real-time","k":"learn","m":50,"seq":2,"mats":[{"f":"es-notes","p":4,"a":"es-req","l":"Embedded notes"},{"f":"es-pp-2026","l":"Past paper 2026"},{"f":"es-pp-2025","l":"Past paper 2025"}],"tip":"Example එකක් එක්කම ලියන්න (temperature monitor). Hard real-time = airbag, soft = video streaming.","est":"section of the new notes (no lecture slides) · reading + writing answers → 50m"},{"id":"es-3","s":"COM3307","t":"Notes §4–§5 Hardware components, UART / SPI / I2C, sync vs async","k":"learn","m":110,"seq":3,"mats":[{"f":"es-notes","p":5,"a":"es-components","l":"Embedded notes"},{"f":"es-pp-2026","l":"Past paper 2026"},{"f":"es-pp-2025","l":"Past paper 2025"}],"tip":"Block diagram එක ඇඳලා පුරුදු වෙන්න – design ප්‍රශ්න හැම එකකටම ඕනේ. UART/SPI/I2C table එක (wires, speed, use).","est":"section of the new notes (no lecture slides) · reading + writing answers → 1h 50m"},{"id":"es-4","s":"COM3307","t":"Notes §6 Polling vs interrupts, ISR","k":"learn","m":70,"seq":4,"mats":[{"f":"es-notes","p":8,"a":"es-interrupts","l":"Embedded notes"},{"f":"es-pp-2026","l":"Past paper 2026"},{"f":"es-pp-2025","l":"Past paper 2025"}],"tip":"ISR definition + purpose + interrupt එකක් ආවම වෙන පියවර 6. Interrupt හොඳ scenario එකක් (emergency stop) ලියන්න පුළුවන් වෙන්න.","est":"section of the new notes (no lecture slides) · reading + writing answers → 1h 10m"},{"id":"es-5","s":"COM3307","t":"Notes §7 Embedded C – functions, DDRx/PORTx/PINx, LED + button","k":"learn","m":90,"seq":5,"mats":[{"f":"es-notes","p":9,"a":"es-c","l":"Embedded notes"},{"f":"es-pp-2026","l":"Past paper 2026"},{"f":"es-pp-2025","l":"Past paper 2025"}],"tip":"LED + button program එක code, pseudocode, flow diagram තුනෙන්ම ලියන්න පුළුවන් වෙන්න. Assumptions මුලින් ලියන්න.","est":"section of the new notes (no lecture slides) · reading + writing answers → 1h 30m"},{"id":"es-6","s":"COM3307","t":"Notes §8 Hardware timers & the 1-second delay calculation","k":"learn","m":100,"seq":6,"mats":[{"f":"es-notes","p":11,"a":"es-timers","l":"Embedded notes"},{"f":"es-pp-2026","l":"Past paper 2026"},{"f":"es-pp-2025","l":"Past paper 2025"}],"tip":"Tick = prescaler ÷ f; 8 µs × 125 = 1 ms; 1000 interrupts = 1 s. Calculation එක ඔයාම නැවත කරන්න – 10 marks.","est":"section of the new notes (no lecture slides) · reading + writing answers → 1h 40m"},{"id":"es-7","s":"COM3307","t":"Notes §9 AVR assembly – instructions, SREG flags, 2026 worked answers","k":"learn","m":130,"seq":7,"mats":[{"f":"es-notes","p":13,"a":"es-asm","l":"Embedded notes"},{"f":"es-pp-2026","l":"Past paper 2026"},{"f":"es-pp-2025","l":"Past paper 2025"}],"tip":"LDI/SUB/DEC/BRNE/OUT/SBIS. 0x05 − 0x03 = 0x02, flags ඔක්කොම 0. Loop එක 3 පාරයි. 2026 Q3 + Q4 = 50 marks!","est":"section of the new notes (no lecture slides) · reading + writing answers → 2h 10m"},{"id":"es-8","s":"COM3307","t":"Notes §10 Microcontroller architecture & fetch–decode–execute","k":"learn","m":70,"seq":8,"mats":[{"f":"es-notes","p":15,"a":"es-arch","l":"Embedded notes"},{"f":"es-pp-2026","l":"Past paper 2026"},{"f":"es-pp-2025","l":"Past paper 2025"}],"tip":"Block diagram එකේ boxes 5 (CPU, program memory, data memory, registers, I/O) + data flow පියවර 3. ADD R16, R17 example එක.","est":"section of the new notes (no lecture slides) · reading + writing answers → 1h 10m"},{"id":"es-9","s":"COM3307","t":"Notes §11 Design scenarios – smart bin, street lights, temperature monitor","k":"learn","m":110,"seq":9,"mats":[{"f":"es-notes","p":16,"a":"es-design","l":"Embedded notes"},{"f":"es-pp-2026","l":"Past paper 2026"},{"f":"es-pp-2025","l":"Past paper 2025"}],"tip":"Headings 8 template එක පාවිච්චි කරලා ඔයාම අලුත් scenario එකක් (smart parking / irrigation) ලියලා බලන්න.","est":"section of the new notes (no lecture slides) · reading + writing answers → 1h 50m"},{"id":"es-pp25-1","s":"COM3307","t":"Past paper 2025 Feb – answer outlines (ICT paper is the same) – Q1–Q2","k":"paper","m":50,"seq":10,"mats":[{"f":"es-pp-2025"},{"f":"es-pp-2025ict","l":"ICT copy"},{"f":"es-notes","l":"Notes"}],"tip":"Q1, Q2 සම්පූර්ණයෙන්; Q3–Q5 න් දෙකක් තෝරලා outlines. 2025 ICT paper එකේ ප්‍රශ්න හරියටම මේවමයි – වෙනම කරන්න ඕනේ නෑ.","est":"answer outlines for every question, then check with notes → 2h 00m total, split into 2 sittings"},{"id":"es-pp25-2","s":"COM3307","t":"Past paper 2025 Feb – answer outlines (ICT paper is the same) – Q3–Q5","k":"paper","m":70,"seq":11,"mats":[{"f":"es-pp-2025"},{"f":"es-pp-2025ict","l":"ICT copy"},{"f":"es-notes","l":"Notes"}],"tip":"Q1, Q2 සම්පූර්ණයෙන්; Q3–Q5 න් දෙකක් තෝරලා outlines. 2025 ICT paper එකේ ප්‍රශ්න හරියටම මේවමයි – වෙනම කරන්න ඕනේ නෑ.","est":"answer outlines for every question, then check with notes → 2h 00m total, split into 2 sittings"},{"id":"es-pp26","s":"COM3307","t":"Past paper 2026 Mar – timed attempt","k":"paper","m":180,"seq":12,"mats":[{"f":"es-pp-2026"}],"tip":"පැය 3. Q1 + Q2 අනිවාර්යයි; Q3–Q5 න් ඔයාට ශක්තිමත්ම දෙක (assembly ද architecture ද) කලින්ම තීරණය කරන්න.","est":"real exam time (3 h), closed book → 3h 00m"},{"id":"es-pp26r","s":"COM3307","t":"Past paper 2026 Mar – check answers & fix weak areas","k":"review","m":60,"seq":13,"mats":[{"f":"es-pp-2026"},{"f":"es-notes","p":13,"a":"es-asm","l":"Assembly answers"}],"tip":"Assembly ප්‍රශ්නවලට notes වල worked answers එක්ක පේළියෙන් පේළිය සසඳන්න.","est":"marking your answers against notes + re-learning mistakes → 1h 00m"},{"id":"es-rev-1","s":"COM3307","t":"Final revision – definitions, diagrams, code & the design template – part 1/2","k":"revise","m":60,"seq":14,"mats":[{"f":"es-notes","l":"Embedded notes"},{"f":"es-pp-2026","l":"2026 paper"}],"tip":"Block diagrams 2 ඇඳලා, LED+button code එක, timer calculation එක, design template එක මතකයෙන් ලියන්න.","est":"30m + 30m × 3 credits → 2h 00m total, split into 2 sittings"},{"id":"es-rev-2","s":"COM3307","t":"Final revision – definitions, diagrams, code & the design template – part 2/2","k":"revise","m":60,"seq":15,"mats":[{"f":"es-notes","l":"Embedded notes"},{"f":"es-pp-2026","l":"2026 paper"}],"tip":"Block diagrams 2 ඇඳලා, LED+button code එක, timer calculation එක, design template එක මතකයෙන් ලියන්න.","est":"30m + 30m × 3 credits → 2h 00m total, split into 2 sittings"},{"id":"net-l01-1","s":"COM3401","t":"Lecture 1 – Introduction to computer networks (part 1/2: pages 1–26)","k":"learn","m":80,"seq":1,"mats":[{"f":"net-l01","p":1,"to":26}],"tip":"Network එකක කොටස් 3 (nodes, links, protocols), uses/applications, advantages vs disadvantages. 2026 Q3(a) \"scientific uses\" එකට points මෙතනින්.","est":"51 slides · 5,949 words · difficulty ×0.9 (introduction) → 2h 40m total, split into 2 sittings"},{"id":"net-l01-2","s":"COM3401","t":"Lecture 1 – Introduction to computer networks (part 2/2: pages 27–51)","k":"learn","m":80,"seq":2,"mats":[{"f":"net-l01","p":27,"to":51}],"tip":"Network එකක කොටස් 3 (nodes, links, protocols), uses/applications, advantages vs disadvantages. 2026 Q3(a) \"scientific uses\" එකට points මෙතනින්.","est":"51 slides · 5,949 words · difficulty ×0.9 (introduction) → 2h 40m total, split into 2 sittings"},{"id":"net-l02-1","s":"COM3401","t":"Lecture 2 – Network devices, IP addressing, topology (part 1/3: pages 1–17)","k":"learn","m":75,"seq":3,"mats":[{"f":"net-l02","p":1,"to":17}],"tip":"Hub vs switch vs router, modem, IPv4 classes, private/public, subnetting example (page 20+), topologies. IP addressing = හැම paper එකකම Q5.","est":"51 slides · 6,513 words · difficulty ×1.2 (IP addressing is hard) → 3h 50m total, split into 3 sittings"},{"id":"net-l02-2","s":"COM3401","t":"Lecture 2 – Network devices, IP addressing, topology (part 2/3: pages 18–34)","k":"learn","m":75,"seq":4,"mats":[{"f":"net-l02","p":18,"to":34}],"tip":"Hub vs switch vs router, modem, IPv4 classes, private/public, subnetting example (page 20+), topologies. IP addressing = හැම paper එකකම Q5.","est":"51 slides · 6,513 words · difficulty ×1.2 (IP addressing is hard) → 3h 50m total, split into 3 sittings"},{"id":"net-l02-3","s":"COM3401","t":"Lecture 2 – Network devices, IP addressing, topology (part 3/3: pages 35–51)","k":"learn","m":75,"seq":5,"mats":[{"f":"net-l02","p":35,"to":51}],"tip":"Hub vs switch vs router, modem, IPv4 classes, private/public, subnetting example (page 20+), topologies. IP addressing = හැම paper එකකම Q5.","est":"51 slides · 6,513 words · difficulty ×1.2 (IP addressing is hard) → 3h 50m total, split into 3 sittings"},{"id":"net-p1","s":"COM3401","t":"Practical 1 – Packet Tracer basics & designing a LAN","k":"lab","m":45,"seq":6,"mats":[{"f":"net-p1"}],"tip":"Packet Tracer තියෙනවා නම් topology එක හදලා ping කරලා බලන්න; නැත්නම් steps කියවලා diagram එක තේරුම් ගන්න.","est":"2-hour lab sheet, read + key steps → 45m"},{"id":"net-p3","s":"COM3401","t":"Practical 3 – IPv4 addressing & subnetting","k":"lab","m":90,"seq":7,"mats":[{"f":"net-p3"},{"f":"net-notes","p":5,"a":"net-ip","l":"Worked IP answers"}],"tip":"Network/host portions, subnet mask, subnets හදන හැටි – exam Q5(c)(d) වල 12 marks. ප්‍රශ්න ඔක්කොම අතින් කරන්න.","est":"subnetting needs practice → 1h 30m"},{"id":"net-p2","s":"COM3401","t":"Practical 2 – Ethernet, switching & ARP","k":"lab","m":45,"seq":8,"mats":[{"f":"net-p2"}],"tip":"MAC address, switch MAC table, ARP request/reply. Bridge vs router ප්‍රශ්නයට background එක.","est":"2-hour lab sheet, read + key steps → 45m"},{"id":"net-l03-1","s":"COM3401","t":"Lecture 3 – Network types (PAN, LAN, MAN, WAN, VPN, SAN) (part 1/2: pages 1–18)","k":"learn","m":50,"seq":9,"mats":[{"f":"net-l03","p":1,"to":18}],"tip":"Networks classify කරන ක්‍රම (size, ownership, purpose). VPN, client-server short notes (2023 Q3(d)).","est":"35 slides · 3,667 words · difficulty ×0.9 (introduction) → 1h 45m total, split into 2 sittings"},{"id":"net-l03-2","s":"COM3401","t":"Lecture 3 – Network types (PAN, LAN, MAN, WAN, VPN, SAN) (part 2/2: pages 19–35)","k":"learn","m":50,"seq":10,"mats":[{"f":"net-l03","p":19,"to":35}],"tip":"Networks classify කරන ක්‍රම (size, ownership, purpose). VPN, client-server short notes (2023 Q3(d)).","est":"35 slides · 3,667 words · difficulty ×0.9 (introduction) → 1h 45m total, split into 2 sittings"},{"id":"net-osi","s":"COM3401","t":"Gap notes – Layers, OSI model & TCP/IP (missing Lecture 4)","k":"learn","m":90,"seq":11,"mats":[{"f":"net-notes","p":1,"a":"net-layers","l":"Notes §1–§3"}],"tip":"Peers, interfaces, protocol stack; OSI 7 layers + PDU names; router එකේ layers 3; application protocols 4. Layers 7 පිළිවෙළට කටපාඩම් (Please Do Not Throw Sausage Pizza Away).","est":"notes §1–§3, about 1,300 words + tables → 1h 30m"},{"id":"net-transport","s":"COM3401","t":"Gap notes – Transport layer: TCP vs UDP, error control","k":"learn","m":45,"seq":12,"mats":[{"f":"net-notes","p":4,"a":"net-transport","l":"Notes §4"}],"tip":"Connection-oriented vs connectionless, error control functions 4, text messaging වලට TCP ඇයි – 2025/2026 Q5(a)(b).","est":"notes §4 → 45m"},{"id":"net-ipw","s":"COM3401","t":"Gap notes – IPv4 classful, CIDR & subnetting (worked)","k":"learn","m":75,"seq":13,"mats":[{"f":"net-notes","p":5,"a":"net-ip","l":"Notes §5"}],"tip":"20.16.4.18/28 → 16 addresses, 20.16.4.16 – 20.16.4.31. 34.17.4.128/25 subnetting – ලොකුම subnet එක මුලින්. ඔයාම නැවත ගණනය කරන්න.","est":"notes §5 with 3 worked questions → 1h 15m"},{"id":"net-p4","s":"COM3401","t":"Practical 4 – Routers & static routing","k":"lab","m":45,"seq":14,"mats":[{"f":"net-p4"}],"tip":"Default gateway, routing table, static routes – router එක network layer එකේ වැඩ කරන හැටි.","est":"2-hour lab sheet, read + key steps → 45m"},{"id":"net-p5","s":"COM3401","t":"Practical 5 – DHCP, DNS & application services","k":"lab","m":45,"seq":15,"mats":[{"f":"net-p5"}],"tip":"DHCP (auto IP), DNS (name → IP) – application layer protocols ප්‍රශ්නයට examples.","est":"2-hour lab sheet, read + key steps → 45m"},{"id":"net-l05-1","s":"COM3401","t":"Lecture 5 – Data transmission (part 1/2: pages 1–28)","k":"learn","m":75,"seq":16,"mats":[{"f":"net-l05","p":1,"to":28}],"tip":"Data comm model block diagram, simplex/half/full duplex, bandwidth (absolute vs effective), ASK/FSK/PSK, impairments 3 (attenuation, distortion, noise). Q1 + Q2 හැමදාම.","est":"57 slides · 2,770 words · difficulty ×1.2 (signals & modulation) → 2h 30m total, split into 2 sittings"},{"id":"net-l05-2","s":"COM3401","t":"Lecture 5 – Data transmission (part 2/2: pages 29–57)","k":"learn","m":75,"seq":17,"mats":[{"f":"net-l05","p":29,"to":57}],"tip":"Data comm model block diagram, simplex/half/full duplex, bandwidth (absolute vs effective), ASK/FSK/PSK, impairments 3 (attenuation, distortion, noise). Q1 + Q2 හැමදාම.","est":"57 slides · 2,770 words · difficulty ×1.2 (signals & modulation) → 2h 30m total, split into 2 sittings"},{"id":"net-l06-1","s":"COM3401","t":"Lecture 6 – Transmission media (part 1/2: pages 1–29)","k":"learn","m":60,"seq":18,"mats":[{"f":"net-l06","p":1,"to":29}],"tip":"Twisted pair (twisting ඇයි, shielded ඇයි), coax, fibre, radio vs microwave, sky vs ground wave propagation.","est":"58 slides · 2,565 words · difficulty ×1.0 (descriptive) → 2h 00m total, split into 2 sittings"},{"id":"net-l06-2","s":"COM3401","t":"Lecture 6 – Transmission media (part 2/2: pages 30–58)","k":"learn","m":60,"seq":19,"mats":[{"f":"net-l06","p":30,"to":58}],"tip":"Twisted pair (twisting ඇයි, shielded ඇයි), coax, fibre, radio vs microwave, sky vs ground wave propagation.","est":"58 slides · 2,565 words · difficulty ×1.0 (descriptive) → 2h 00m total, split into 2 sittings"},{"id":"net-l07-1","s":"COM3401","t":"Lecture 7 – Error detection & correction (part 1/2: pages 1–32)","k":"learn","m":85,"seq":20,"mats":[{"f":"net-l07","p":1,"to":32}],"tip":"Parity, checksum, CRC division (dataword + zeros ÷ divisor), Hamming. 2025 Q4(b) CRC sizes: zeros = FCS = n − k, divisor = n − k + 1.","est":"65 slides · 2,651 words · difficulty ×1.3 (CRC calculations) → 2h 50m total, split into 2 sittings"},{"id":"net-l07-2","s":"COM3401","t":"Lecture 7 – Error detection & correction (part 2/2: pages 33–65)","k":"learn","m":85,"seq":21,"mats":[{"f":"net-l07","p":33,"to":65}],"tip":"Parity, checksum, CRC division (dataword + zeros ÷ divisor), Hamming. 2025 Q4(b) CRC sizes: zeros = FCS = n − k, divisor = n − k + 1.","est":"65 slides · 2,651 words · difficulty ×1.3 (CRC calculations) → 2h 50m total, split into 2 sittings"},{"id":"net-l08","s":"COM3401","t":"Lecture 8 – Multiplexing (FDM, TDM, WDM)","k":"learn","m":100,"seq":22,"mats":[{"f":"net-l08"}],"tip":"Synchronous vs statistical TDM, FDM bandwidth with guard bands (guard bands = channels − 1), TDM frame size & efficiency.","est":"42 slides · 1,723 words · difficulty ×1.2 (calculations) → 1h 40m"},{"id":"net-l09","s":"COM3401","t":"Lecture 9 – Framing","k":"learn","m":95,"seq":23,"mats":[{"f":"net-l09"}],"tip":"Character count, byte stuffing, bit stuffing (1 පහකට පස්සේ 0). 2025 Q4(a) bit stream එක notes වල worked answer එක්ක check කරන්න.","est":"39 slides · 1,907 words · difficulty ×1.1 (bit patterns) → 1h 35m"},{"id":"net-l10","s":"COM3401","t":"Lecture 10 – Flow control","k":"learn","m":90,"seq":24,"mats":[{"f":"net-l10"}],"tip":"Stop-and-wait vs sliding window, efficiency, ACKs. Flow control vs error control වෙනස.","est":"39 slides · 1,856 words · difficulty ×1.1 (protocols) → 1h 30m"},{"id":"net-calc","s":"COM3401","t":"Gap notes – Worked calculations + quick answers","k":"practice","m":75,"seq":25,"mats":[{"f":"net-notes","p":7,"a":"net-calc","l":"Notes §6–§7"}],"tip":"TDM 320 kbps, FDM 52 kHz, TDM efficiency 20/21, CRC sizes, bit stuffing. මුලින් ඔයාම කරලා ඊට පස්සේ answer එක බලන්න.","est":"notes §6–§7: 7 worked past-paper calculations → 1h 15m"},{"id":"net-pp23-1","s":"COM3401","t":"Past paper 2023 Jan – answer outlines – Q1–Q2","k":"paper","m":50,"seq":26,"mats":[{"f":"net-pp-2023"},{"f":"net-notes","l":"Gap notes"}],"tip":"Q5(b) TDM frame/efficiency සහ Q2(d) constellation diagram සම්පූර්ණයෙන් කරන්න. අනිත් ඒවාට points.","est":"answer outlines for every question, then check with notes → 2h 00m total, split into 2 sittings"},{"id":"net-pp23-2","s":"COM3401","t":"Past paper 2023 Jan – answer outlines – Q3–Q5","k":"paper","m":70,"seq":27,"mats":[{"f":"net-pp-2023"},{"f":"net-notes","l":"Gap notes"}],"tip":"Q5(b) TDM frame/efficiency සහ Q2(d) constellation diagram සම්පූර්ණයෙන් කරන්න. අනිත් ඒවාට points.","est":"answer outlines for every question, then check with notes → 2h 00m total, split into 2 sittings"},{"id":"net-pp25-1","s":"COM3401","t":"Past paper 2025 Feb – answer outlines – Q1–Q2","k":"paper","m":50,"seq":28,"mats":[{"f":"net-pp-2025"},{"f":"net-notes","p":5,"a":"net-ip","l":"IP worked answers"}],"tip":"Q4 (bit stuffing, CRC, FDM) සහ Q5 (classful, CIDR, subnetting) ගණනය සම්පූර්ණයෙන්ම කරන්න.","est":"answer outlines for every question, then check with notes → 2h 00m total, split into 2 sittings"},{"id":"net-pp25-2","s":"COM3401","t":"Past paper 2025 Feb – answer outlines – Q3–Q5","k":"paper","m":70,"seq":29,"mats":[{"f":"net-pp-2025"},{"f":"net-notes","p":5,"a":"net-ip","l":"IP worked answers"}],"tip":"Q4 (bit stuffing, CRC, FDM) සහ Q5 (classful, CIDR, subnetting) ගණනය සම්පූර්ණයෙන්ම කරන්න.","est":"answer outlines for every question, then check with notes → 2h 00m total, split into 2 sittings"},{"id":"net-pp26","s":"COM3401","t":"Past paper 2026 Mar – timed attempt","k":"paper","m":180,"seq":30,"mats":[{"f":"net-pp-2026"}],"tip":"පැය 3, ප්‍රශ්න 5ම. Diagrams ඇඳීමට වෙලාව තියාගන්න (Q1(a) block diagram).","est":"real exam time (3 h), closed book → 3h 00m"},{"id":"net-pp26r","s":"COM3401","t":"Past paper 2026 Mar – check answers & fix weak areas","k":"review","m":60,"seq":31,"mats":[{"f":"net-pp-2026"},{"f":"net-notes","p":5,"a":"net-ip","l":"IP worked answer"}],"tip":"Q5(e) binary IP ප්‍රශ්නය notes වල answer එක එක්ක check කරන්න. වැරදුණු definitions ටික ලියාගන්න.","est":"marking your answers against notes + re-learning mistakes → 1h 00m"},{"id":"net-rev-1","s":"COM3401","t":"Final revision – diagrams, definitions & calculations – part 1/3","k":"revise","m":60,"seq":32,"mats":[{"f":"net-notes","l":"Gap notes"},{"f":"net-l05","l":"Data transmission"},{"f":"net-l08","l":"Multiplexing"}],"tip":"Data comm model diagram, OSI table, TCP vs UDP, modulation diagrams, IP/subnet ගණනය, TDM/FDM/CRC formulas – එක පාරක් මතකයෙන් ලියන්න.","est":"30m + 30m × 4 credits → 2h 30m total, split into 3 sittings"},{"id":"net-rev-2","s":"COM3401","t":"Final revision – diagrams, definitions & calculations – part 2/3","k":"revise","m":60,"seq":33,"mats":[{"f":"net-notes","l":"Gap notes"},{"f":"net-l05","l":"Data transmission"},{"f":"net-l08","l":"Multiplexing"}],"tip":"Data comm model diagram, OSI table, TCP vs UDP, modulation diagrams, IP/subnet ගණනය, TDM/FDM/CRC formulas – එක පාරක් මතකයෙන් ලියන්න.","est":"30m + 30m × 4 credits → 2h 30m total, split into 3 sittings"},{"id":"net-rev-3","s":"COM3401","t":"Final revision – diagrams, definitions & calculations – part 3/3","k":"revise","m":30,"seq":34,"mats":[{"f":"net-notes","l":"Gap notes"},{"f":"net-l05","l":"Data transmission"},{"f":"net-l08","l":"Multiplexing"}],"tip":"Data comm model diagram, OSI table, TCP vs UDP, modulation diagrams, IP/subnet ගණනය, TDM/FDM/CRC formulas – එක පාරක් මතකයෙන් ලියන්න.","est":"30m + 30m × 4 credits → 2h 30m total, split into 3 sittings"}]};
+</script>
+<script>
+/* Study scheduler: at most two subjects per day, tasks kept in order within each subject,
+   each subject finished before its exam. Pure functions – shared by the page and the tests. */
+(function (root) {
+  const DAY = 86400000;
+  function isoToUTC(iso) { const [y, m, d] = iso.split('-').map(Number); return Date.UTC(y, m - 1, d); }
+  function utcToISO(t) { return new Date(t).toISOString().slice(0, 10); }
+  function addDays(iso, n) { return utcToISO(isoToUTC(iso) + n * DAY); }
+  function daysBetween(a, b) { return Math.round((isoToUTC(b) - isoToUTC(a)) / DAY); }
+
+  function lastStudyDays(subjects, exams, start, maxSubj) {
+    // At most `maxSubj` subjects may finish on the same day (only two fit in a day), so walk from
+    // the latest exam backwards and stagger the rest; higher-credit subjects keep the later day.
+    const active = subjects.filter((s) => !s.noExam && exams[s.code]);
+    const order = active.slice().sort((a, b) =>
+      (exams[b.code] < exams[a.code] ? -1 : exams[b.code] > exams[a.code] ? 1 : 0) || b.credits - a.credits || (a.code < b.code ? -1 : 1));
+    const finishing = {}, last = {};
+    for (const s of order) {
+      let d = addDays(exams[s.code], -1);
+      while ((finishing[d] || 0) >= maxSubj && d > start) d = addDays(d, -1);
+      finishing[d] = (finishing[d] || 0) + 1;
+      last[s.code] = d;
+    }
+    return last;
+  }
+
+  function run(opts, safety) {
+    const maxSubj = opts.maxSubjects || 2;
+    const tol = opts.tolerance == null ? 15 : opts.tolerance;
+    const skip = opts.skip || new Set();
+    const lastDay = lastStudyDays(opts.subjects, opts.exams, opts.start, maxSubj);
+    const queues = {}, rem = {}, credits = {};
+    for (const s of opts.subjects) if (lastDay[s.code]) { queues[s.code] = []; rem[s.code] = 0; credits[s.code] = s.credits; }
+    const sorted = opts.tasks.slice().sort((a, b) => (a.s === b.s ? a.seq - b.seq : a.s < b.s ? -1 : 1));
+    for (const t of sorted) {
+      if (skip.has(t.id) || !queues[t.s]) continue;
+      queues[t.s].push(t); rem[t.s] += t.m;
+    }
+    const examDays = new Set(Object.values(opts.exams));
+    const end = Object.values(lastDay).reduce((a, b) => (a > b ? a : b), opts.start);
+    const assign = {}, load = {}, days = [];
+    for (let d = opts.start; d <= end; d = addDays(d, 1)) {
+      days.push(d); load[d] = 0;
+      let full = opts.daily;
+      if (examDays.has(d)) full = Math.round(opts.daily * 0.5 / 5) * 5;
+      if (d === opts.start && opts.firstDayUsed) full = Math.max(0, full - opts.firstDayUsed);
+      const live = Object.keys(queues).filter((s) => queues[s].length && lastDay[s] >= d);
+      if (!live.length || full <= 0) continue;
+      const left = (s) => Math.max(1, daysBetween(d, lastDay[s]) + 1);
+      const urgency = (s) => rem[s] / left(s);
+      const must = (s) => (lastDay[s] === d ? 1 : 0);
+      // steady pace that meets every deadline (× safety); lighter days when exams are spread out
+      let pace = 0;
+      for (const X of [...new Set(live.map((s) => lastDay[s]))]) {
+        let due = 0;
+        for (const s of live) if (lastDay[s] <= X) due += rem[s];
+        pace = Math.max(pace, due / (daysBetween(d, X) + 1));
+      }
+      let cap = Math.min(full, Math.max(60, Math.ceil(pace * safety / 5) * 5));
+      const mustRem = live.filter(must).reduce((a, s) => a + rem[s], 0);
+      if (mustRem) cap = Math.min(full, Math.max(cap, mustRem));
+      live.sort((a, b) => must(b) - must(a) || urgency(b) - urgency(a) || credits[b] - credits[a] || (a < b ? -1 : 1));
+
+      const fill = (pair, c0, commit) => {
+        let c = c0, used = 0;
+        const idx = Object.fromEntries(pair.map((s) => [s, 0]));
+        const next = (s) => queues[s][idx[s]];
+        const take = (s) => {
+          const t = next(s); idx[s]++; c -= t.m; used += t.m;
+          if (commit) { assign[t.id] = d; rem[s] -= t.m; load[d] += t.m; }
+          return t.m;
+        };
+        if (pair.length === 1) {
+          while (next(pair[0]) && next(pair[0]).m <= c + tol) take(pair[0]);
+        } else {
+          const [a, b] = pair;
+          let share;
+          if (must(a) && !must(b)) share = Math.min(1, rem[a] / c0);
+          else if (must(b) && !must(a)) share = 1 - Math.min(1, rem[b] / c0);
+          else share = Math.min(0.65, Math.max(0.35, urgency(a) / (urgency(a) + urgency(b) || 1)));
+          const quota = { [a]: c0 * share, [b]: c0 * (1 - share) };
+          for (const s of pair) while (next(s) && next(s).m <= quota[s] + tol && next(s).m <= c + tol) quota[s] -= take(s);
+          for (;;) {
+            const cs = pair.filter((s) => next(s) && next(s).m <= c + tol);
+            if (!cs.length) break;
+            cs.sort((x, y) => must(y) - must(x) || urgency(y) - urgency(x));
+            take(cs[0]);
+          }
+        }
+        if (commit) for (const s of pair) queues[s].splice(0, idx[s]);
+        return used;
+      };
+      let pair = live.slice(0, maxSubj);
+      if (maxSubj === 2 && live.length > 2 && !must(live[1])) {
+        const alt = [live[0], live[2]];
+        if (fill(alt, cap, false) >= fill(pair, cap, false) + 45) pair = alt;
+      }
+      fill(pair, cap, true);
+    }
+    const unscheduled = [];
+    for (const s of Object.keys(queues)) for (const t of queues[s]) if (!assign[t.id]) unscheduled.push(t.id);
+    return { assign, unscheduled, days, load, lastDay, safety };
+  }
+
+  /** opts: {tasks, subjects, exams {code: iso}, daily (min), start (iso), skip (Set), firstDayUsed (min)} */
+  function schedule(opts) {
+    let best = null;
+    for (const f of [1.1, 1.25, 1.5, 2, 100]) {
+      const r = run(opts, f);
+      if (!r.unscheduled.length) return r;
+      if (!best || r.unscheduled.length < best.unscheduled.length) best = r;
+    }
+    return best;
+  }
+
+  const api = { schedule, lastStudyDays, addDays, daysBetween, isoToUTC, utcToISO };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  else root.Scheduler = api;
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script>
+<script>
+(() => {
+  'use strict';
+  const DATA = window.PLAN_DATA;
+  const PLAN_START = '2026-10-17';
+  const DEFAULT_EXAM = '2026-11-02';
+  const SUBJ = Object.fromEntries(DATA.subjects.map((s) => [s.code, s]));
+  const TASK = Object.fromEntries(DATA.tasks.map((t) => [t.id, t]));
+  const FILE = Object.fromEntries(DATA.files.filter((f) => f.id).map((f) => [f.id, f]));
+  const EXAMINED = DATA.subjects.filter((s) => !s.noExam);
+  const TOTAL_CREDITS = EXAMINED.reduce((a, s) => a + s.credits, 0);
+  const KIND = { learn: 'Learn', practice: 'Practice', tut: 'Tutorial', lab: 'Practical', paper: 'Past paper', review: 'Check answers', revise: 'Revision' };
+  const KIND_GROUP = { learn: 'learn', practice: 'practice', tut: 'practice', lab: 'practice', paper: 'paper', review: 'paper', revise: 'revise' };
+
+  // ------------------------------------------------------------------ helpers
+  const $ = (sel, el = document) => el.querySelector(sel);
+  const $$ = (sel, el = document) => Array.from(el.querySelectorAll(sel));
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const pad = (n) => String(n).padStart(2, '0');
+  const isoOf = (ms) => { const d = new Date(ms); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); };
+  const todayISO = () => isoOf(Date.now());
+  const D = window.Scheduler;
+  const fmtMin = (m) => { m = Math.round(m); const h = Math.floor(m / 60), mm = m % 60; return h ? (mm ? `${h}h ${pad(mm)}m` : `${h}h`) : `${mm}m`; };
+  const fmtHours = (m) => (m / 60).toFixed(m % 60 === 0 ? 0 : 1) + ' h';
+  const fmtClock = (sec) => { sec = Math.max(0, Math.floor(sec)); return pad(Math.floor(sec / 3600)) + ':' + pad(Math.floor(sec / 60) % 60) + ':' + pad(sec % 60); };
+  const dateObj = (iso) => { const [y, m, d] = iso.split('-').map(Number); return new Date(y, m - 1, d); };
+  const fmtDate = (iso, o = { weekday: 'short', day: 'numeric', month: 'short' }) => dateObj(iso).toLocaleDateString('en-GB', o);
+  const fmtTime = (ms) => new Date(ms).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+  const bytes = (n) => (n >= 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(n / 1024)) + ' KB');
+  const dayNo = (iso) => D.daysBetween(PLAN_START, iso) + 1;
+
+  // ------------------------------------------------------------------ state
+  const defaultSettings = () => ({ daily: 600, examTime: '09:00', exams: Object.fromEntries(EXAMINED.map((s) => [s.code, DEFAULT_EXAM])) });
+  const state = {
+    settings: defaultSettings(), plan: null, done: {}, sessions: {}, timer: null, library: [],
+    view: 'today', filter: 'all', fxPath: [], fxQuery: '', openDays: new Set(),
+  };
+  const LS = 'sp32:';
+  const lsGet = (k) => { try { const v = localStorage.getItem(LS + k); return v ? JSON.parse(v) : null; } catch (e) { return null; } };
+  const lsSet = (k, v) => { try { localStorage.setItem(LS + k, JSON.stringify(v)); } catch (e) { /* storage blocked */ } };
+
+  function applyDoc(name, data) {
+    if (!data) return;
+    if (name === 'settings') {
+      const d = defaultSettings();
+      state.settings = { daily: +data.daily || d.daily, examTime: data.examTime || d.examTime, exams: Object.assign(d.exams, data.exams || {}) };
+    } else if (name === 'plan') state.plan = data.assign ? data : null;
+    else if (name === 'progress') state.done = data.done || {};
+    else if (name === 'sessions') state.sessions = data.log || {};
+    else if (name === 'timer') state.timer = data.task ? { task: data.task, start: data.start } : null;
+  }
+  const docOf = (name) => ({
+    settings: () => state.settings,
+    plan: () => state.plan || {},
+    progress: () => ({ done: state.done }),
+    sessions: () => ({ log: state.sessions }),
+    timer: () => (state.timer ? { task: state.timer.task, start: state.timer.start } : { task: null, start: null }),
+  }[name])();
+
+  const store = {
+    mode: 'local', db: null, uid: null, pending: {}, inflight: {},
+    ref(name) { return this.db.doc('data/users/' + this.uid + '/' + name); },
+    save(name) {
+      const data = docOf(name);
+      lsSet(name, data);
+      if (this.mode !== 'db') return;
+      this.pending[name] = data;
+      this.flush(name);
+    },
+    async flush(name) {
+      if (this.inflight[name]) return;
+      this.inflight[name] = true;
+      try {
+        while (this.pending[name] !== undefined) {
+          const data = this.pending[name];
+          delete this.pending[name];
+          try {
+            await this.ref(name).set(JSON.parse(JSON.stringify(data)));
+            setSync('cloud');
+          } catch (e) {
+            const code = e && e.code;
+            if (code === 'unavailable' || code === 'resource_exhausted') {
+              await new Promise((r) => setTimeout(r, 1200 + Math.random() * 800));
+              try { await this.ref(name).set(JSON.parse(JSON.stringify(data))); setSync('cloud'); continue; } catch (e2) { /* fall through */ }
+            }
+            if (code === 'invalid_argument' || code === 'revoked' || code === 'not_granted') { this.mode = 'local'; setSync('local'); toast('Saving to this browser only – your account can’t save here.'); }
+            else if (code === 'quota_exceeded') toast('Storage is full – progress is kept in this browser.');
+            else console.warn('save failed', name, e);
+          }
+        }
+      } finally { this.inflight[name] = false; }
+    },
+  };
+  for (const n of ['settings', 'plan', 'progress', 'sessions', 'timer']) applyDoc(n, lsGet(n));
+
+  function setSync(mode) {
+    const el = $('#sync');
+    el.classList.toggle('on', mode === 'cloud');
+    $('#sync-text').textContent = mode === 'cloud' ? 'Saved to your account' : 'Saved in this browser';
+  }
+
+  // ------------------------------------------------------------------ plan
+  let defaultCache = null;
+  function scheduleFrom(start, skip, firstDayUsed) {
+    return D.schedule({ tasks: DATA.tasks, subjects: DATA.subjects, exams: state.settings.exams, daily: state.settings.daily, start, skip, firstDayUsed });
+  }
+  function plan() {
+    if (state.plan && state.plan.assign) return state.plan;
+    const key = JSON.stringify([state.settings.daily, state.settings.exams]);
+    if (!defaultCache || defaultCache.key !== key) {
+      const r = scheduleFrom(PLAN_START, new Set(), 0);
+      defaultCache = { key, assign: r.assign, unscheduled: r.unscheduled, start: PLAN_START, lastDay: r.lastDay };
+    }
+    return defaultCache;
+  }
+  function replan(reason) {
+    const today = todayISO();
+    const start = today > PLAN_START ? today : PLAN_START;
+    const doneIds = new Set(Object.keys(state.done));
+    const usedToday = start === today ? DATA.tasks.filter((t) => state.done[t.id] && isoOf(Date.parse(state.done[t.id])) === today).reduce((a, t) => a + t.m, 0) : 0;
+    const old = plan().assign;
+    const r = scheduleFrom(start, doneIds, usedToday);
+    const assign = {};
+    for (const id of doneIds) if (TASK[id]) assign[id] = old[id] || isoOf(Date.parse(state.done[id]));
+    Object.assign(assign, r.assign);
+    state.plan = { assign, unscheduled: r.unscheduled, start, made: new Date().toISOString(), lastDay: r.lastDay, reason: reason || '' };
+    store.save('plan');
+    return r;
+  }
+  const assignedDay = (id) => plan().assign[id] || null;
+  const tasksOn = (iso) => DATA.tasks.filter((t) => assignedDay(t.id) === iso);
+  const isDone = (id) => !!state.done[id];
+  function missedTasks() {
+    const today = todayISO();
+    return DATA.tasks.filter((t) => { const d = assignedDay(t.id); return d && d < today && !isDone(t.id); })
+      .sort((a, b) => (assignedDay(a.id) < assignedDay(b.id) ? -1 : assignedDay(a.id) > assignedDay(b.id) ? 1 : a.seq - b.seq));
+  }
+  function planDays() {
+    const p = plan();
+    const ds = Object.values(p.assign);
+    let end = ds.reduce((a, b) => (a > b ? a : b), PLAN_START);
+    const firstExam = Object.values(state.settings.exams).reduce((a, b) => (a < b ? a : b));
+    const lastExam = Object.values(state.settings.exams).reduce((a, b) => (a > b ? a : b));
+    if (lastExam > end) end = lastExam;
+    const out = [];
+    for (let d = PLAN_START; d <= end; d = D.addDays(d, 1)) out.push(d);
+    return { days: out, firstExam, lastExam };
+  }
+  const firstExamISO = () => Object.values(state.settings.exams).reduce((a, b) => (a < b ? a : b));
+  function examMoment(iso) { const [h, m] = (state.settings.examTime || '09:00').split(':').map(Number); const d = dateObj(iso); d.setHours(h || 0, m || 0, 0, 0); return d.getTime(); }
+
+  // time tracking
+  function spentSec(id, now = Date.now()) {
+    let s = 0;
+    for (const [a, b] of state.sessions[id] || []) s += (b - a) / 1000;
+    if (state.timer && state.timer.task === id) s += (now - state.timer.start) / 1000;
+    return s;
+  }
+  function trackedOn(iso, now = Date.now()) {
+    const a0 = dateObj(iso).getTime(), a1 = a0 + 86400000;
+    let s = 0;
+    const add = (a, b) => { const x = Math.max(a, a0), y = Math.min(b, a1); if (y > x) s += (y - x) / 1000; };
+    for (const id of Object.keys(state.sessions)) for (const [a, b] of state.sessions[id]) add(a, b);
+    if (state.timer) add(state.timer.start, now);
+    return s;
+  }
+  const totalTracked = () => Object.keys(state.sessions).reduce((a, id) => a + spentSec(id), 0) + (state.timer && !state.sessions[state.timer.task] ? spentSec(state.timer.task) : 0);
+
+  // ------------------------------------------------------------------ small UI bits
+  let toastT = 0;
+  function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => { t.hidden = true; }, 3200); }
+  let confirmResolve = null;
+  function confirmBox(title, text, ok = 'OK') {
+    $('#cf-title').textContent = title; $('#cf-text').textContent = text; $('#cf-yes').textContent = ok;
+    $('#confirm-modal').hidden = false; $('#cf-yes').focus();
+    return new Promise((r) => { confirmResolve = r; });
+  }
+  const chip = (code, long) => `<span class="chip s-${code}">${esc(code)}${long ? ' · ' + esc(SUBJ[code].short) : ''}</span>`;
+  const ICON = {
+    pdf: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="#D93A2B" d="M6 2h9l5 5v15H6z"/><path fill="#fff" opacity=".85" d="M15 2v5h5z"/><text x="13" y="18" font-size="6.5" font-family="Arial" font-weight="700" fill="#fff" text-anchor="middle">PDF</text></svg>',
+    pptx: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="#D86A2B" d="M6 2h9l5 5v15H6z"/><path fill="#fff" opacity=".85" d="M15 2v5h5z"/><text x="13" y="18" font-size="6" font-family="Arial" font-weight="700" fill="#fff" text-anchor="middle">PPT</text></svg>',
+    note: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="#2347B8" d="M6 2h9l5 5v15H6z"/><path fill="#fff" opacity=".85" d="M15 2v5h5z"/><path fill="#FFE873" d="M13 9.5l1.4 2.9 3.1.4-2.3 2.2.6 3.1-2.8-1.5-2.8 1.5.6-3.1-2.3-2.2 3.1-.4z"/></svg>',
+    book: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="#7A8494" d="M5 3h11a3 3 0 013 3v15H8a3 3 0 01-3-3z"/><path fill="#fff" opacity=".7" d="M8 6h8v2H8z"/></svg>',
+    img: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="#2B7BD6"/><circle cx="9" cy="10" r="2" fill="#fff"/><path d="M5 18l5-5 3 3 2-2 4 4z" fill="#fff"/></svg>',
+    folder: '<svg class="fx-ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="#E8B730" d="M2 6a2 2 0 012-2h5l2 2h9a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z"/><path fill="#F5CE55" d="M2 9h20v9a2 2 0 01-2 2H4a2 2 0 01-2-2z"/></svg>',
+  };
+  const fileIcon = (f, big) => { const i = f.kind === 'note' ? ICON.note : f.kind === 'pptx' ? ICON.pptx : f.kind === 'local' ? ICON.book : f.kind === 'img' ? ICON.img : ICON.pdf; return big ? i.replace('class="ic"', 'class="fx-ic"') : i; };
+
+  // ------------------------------------------------------------------ task row
+  function matChips(t) {
+    return t.mats.map((m, i) => {
+      const f = FILE[m.f]; if (!f) return '';
+      const pages = m.p ? (m.to && m.to !== m.p ? ` · p.${m.p}–${m.to}` : ` · p.${m.p}`) : '';
+      const label = (m.l || f.name.replace(/\.(pdf|pptx)$/i, '')) + pages;
+      const act = f.kind === 'note' ? 'Read' : 'Open';
+      return `<button class="mat" data-act="mat" data-task="${t.id}" data-i="${i}" title="${esc(act + ': ' + f.name)}">${fileIcon(f)}<span class="lbl">${esc(label)}</span></button>`;
+    }).join('');
+  }
+  function taskRow(t, opts = {}) {
+    const done = isDone(t.id);
+    const day = assignedDay(t.id);
+    const missed = !done && day && day < todayISO();
+    const spent = spentSec(t.id);
+    const running = state.timer && state.timer.task === t.id;
+    const spentTxt = spent > 30 ? `<span class="spent ${spent / 60 > t.m ? 'over' : ''}">${fmtMin(spent / 60)} tracked</span>` : '';
+    const whenTxt = opts.showDate && day ? `<span class="${missed ? 'when' : ''}">${missed ? 'Missed · ' : ''}${fmtDate(day)}</span>` : '';
+    return `<div class="task ${done ? 'done' : ''} ${missed && opts.markMissed ? 'missed' : ''}" data-task="${t.id}">
+      <input type="checkbox" class="tick" data-act="tick" data-task="${t.id}" ${done ? 'checked' : ''} aria-label="${esc((done ? 'Done: ' : 'Mark done: ') + t.t)}">
+      <div class="t-body">
+        <div class="t-title">${opts.showSubject ? chip(t.s) + ' ' : ''}${esc(t.t)}</div>
+        <div class="t-meta"><span class="kind ${t.k}">${KIND[t.k] || t.k}</span><span>${fmtMin(t.m)} planned</span>${spentTxt}${whenTxt}</div>
+      </div>
+      <div class="t-actions"><button class="btn small start ${running ? 'running' : ''}" data-act="timer" data-task="${t.id}">${running ? '● Running' : '▶ Start'}</button></div>
+      <div class="mats">${matChips(t)}</div>
+      <details class="tip"><summary>Tip · why this time</summary><p lang="si">${esc(t.tip)}</p><span class="est">⏱ ${esc(t.est)}</span></details>
+    </div>`;
+  }
+  function groupBySubject(list) {
+    const g = {};
+    for (const t of list) (g[t.s] = g[t.s] || []).push(t);
+    return Object.entries(g).map(([s, ts]) => [s, ts.sort((a, b) => a.seq - b.seq)])
+      .sort((a, b) => b[1].reduce((x, t) => x + t.m, 0) - a[1].reduce((x, t) => x + t.m, 0));
+  }
+  function subjectGroups(list, opts = {}) {
+    return groupBySubject(list).map(([s, ts]) => {
+      const tot = ts.reduce((a, t) => a + t.m, 0), dn = ts.filter((t) => isDone(t.id)).length;
+      return `<div class="sgroup s-${s}"><header>${chip(s)}<span class="name">${esc(SUBJ[s].name)}</span><span class="tot">${dn}/${ts.length} done · ${fmtMin(tot)}</span></header>${ts.map((t) => taskRow(t, opts)).join('')}</div>`;
+    }).join('');
+  }
+
+  // ------------------------------------------------------------------ header
+  function renderCountdown() {
+    const target = examMoment(firstExamISO());
+    let s = Math.max(0, Math.floor((target - Date.now()) / 1000));
+    const d = Math.floor(s / 86400); s -= d * 86400;
+    const h = Math.floor(s / 3600); s -= h * 3600;
+    const m = Math.floor(s / 60); s -= m * 60;
+    $('#cd-d').textContent = d; $('#cd-h').textContent = pad(h); $('#cd-m').textContent = pad(m); $('#cd-s').textContent = pad(s);
+    const allSame = new Set(Object.values(state.settings.exams)).size === 1;
+    $('#cd-label').textContent = target <= Date.now() ? 'Exams have started' : allSame ? 'Exams begin in' : 'First exam in';
+    $('#cd-when').textContent = fmtDate(firstExamISO(), { weekday: 'long', day: 'numeric', month: 'long' }) + ' · ' + (state.settings.examTime || '09:00');
+  }
+  function renderHeader() {
+    const n = missedTasks().length;
+    const b = $('#missed-badge'); b.hidden = !n; b.textContent = n;
+    $('#subline').textContent = `${EXAMINED.length} examined subjects · ${TOTAL_CREDITS} credits · ${fmtHours(state.settings.daily)} a day · max 2 subjects a day`;
+    renderCountdown();
+  }
+
+  // ------------------------------------------------------------------ TODAY
+  function renderToday() {
+    const today = todayISO();
+    const before = today < PLAN_START;
+    const day = before ? PLAN_START : today;
+    const list = tasksOn(day);
+    const pd = planDays();
+    const totalDays = pd.days.filter((d) => d < pd.firstExam).length || pd.days.length;
+    const planned = list.reduce((a, t) => a + t.m, 0);
+    const doneMin = list.filter((t) => isDone(t.id)).reduce((a, t) => a + t.m, 0);
+    const doneN = list.filter((t) => isDone(t.id)).length;
+    const missed = missedTasks();
+    const subjects = [...new Set(list.map((t) => t.s))];
+    let h = '<div class="grid-today"><div>';
+    if (before) h += `<div class="notice">Your plan starts tomorrow, <b>${fmtDate(PLAN_START, { weekday: 'long', day: 'numeric', month: 'long' })}</b>. Here is Day 1 – you can start early if you like.</div>`;
+    if (plan().unscheduled && plan().unscheduled.length) h += `<div class="notice bad"><b>${plan().unscheduled.length} tasks don’t fit before the exams</b> (${fmtMin(plan().unscheduled.reduce((a, id) => a + (TASK[id] ? TASK[id].m : 0), 0))}). Add study hours per day in <a href="#subjects" data-act="go" data-view="subjects">Subjects</a>.</div>`;
+    h += `<div class="dayhead"><span class="big">${fmtDate(day, { weekday: 'long', day: 'numeric', month: 'long' })}</span><span class="meta">${day >= PLAN_START && day < pd.firstExam ? `Day ${dayNo(day)} of ${totalDays}` : ''}${subjects.length ? ' · ' + subjects.map((s) => chip(s)).join(' ') : ''}</span></div>`;
+    if (list.length) {
+      h += `<div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="${planned}" aria-valuenow="${doneMin}" aria-label="Today’s progress"><i style="width:${planned ? (100 * doneMin / planned).toFixed(1) : 0}%"></i></div>
+        <div class="stats"><div class="stat"><b>${doneN}/${list.length}</b><span>tasks done</span></div><div class="stat"><b>${fmtMin(planned)}</b><span>planned today</span></div><div class="stat"><b id="today-tracked">${fmtMin(trackedOn(today) / 60)}</b><span>timer today</span></div></div>`;
+    }
+    if (missed.length) {
+      h += `<div class="section-title">Missed work</div><div class="missed-box"><header><b>${missed.length} task${missed.length > 1 ? 's' : ''} from earlier days</b><span class="h-sub" style="margin:0">${fmtMin(missed.reduce((a, t) => a + t.m, 0))} · tick them when you finish</span><button class="btn small" data-act="replan">Move them to the coming days</button></header>${missed.map((t) => taskRow(t, { showDate: true, showSubject: true, markMissed: true })).join('')}</div>`;
+    }
+    h += `<div class="section-title">${before ? 'Day 1 tasks' : 'Today’s tasks'}</div>`;
+    h += list.length ? subjectGroups(list) : `<div class="empty">${day > pd.days[pd.days.length - 1] ? 'The plan is finished – good luck in your exams!' : 'Nothing planned for this day. Use it to catch up on missed work or rest.'}</div>`;
+    const tmr = D.addDays(day, 1), tl = tasksOn(tmr);
+    if (tl.length) h += `<details class="day" style="margin-top:18px"><summary><span class="dnum">${fmtDate(tmr, { weekday: 'short' })}<b>${dateObj(tmr).getDate()}</b></span><span class="dmid"><b>Tomorrow</b><span class="chips">${[...new Set(tl.map((t) => t.s))].map((s) => chip(s)).join('')}</span></span><span class="dright"><b>${fmtMin(tl.reduce((a, t) => a + t.m, 0))}</b><br>${tl.length} tasks</span></summary><div class="daybody">${tl.sort((a, b) => (a.s < b.s ? -1 : a.s > b.s ? 1 : a.seq - b.seq)).map((t) => taskRow(t, { showSubject: true })).join('')}</div></details>`;
+    h += '</div><aside class="rail">' + railHTML() + '</aside></div>';
+    $('#view-today').innerHTML = h;
+  }
+  function railHTML() {
+    const rows = EXAMINED.slice().sort((a, b) => (state.settings.exams[a.code] < state.settings.exams[b.code] ? -1 : state.settings.exams[a.code] > state.settings.exams[b.code] ? 1 : b.credits - a.credits)).map((s) => {
+      const ts = DATA.tasks.filter((t) => t.s === s.code);
+      const tot = ts.reduce((a, t) => a + t.m, 0), dn = ts.filter((t) => isDone(t.id)).reduce((a, t) => a + t.m, 0);
+      const days = Math.ceil((examMoment(state.settings.exams[s.code]) - Date.now()) / 86400000);
+      return `<div class="exrow"><span class="dot d-${s.code}"></span><span class="nm">${esc(s.code)} · ${esc(s.short)}</span><span class="dl">${days > 0 ? days + 'd' : 'now'}</span><span class="info">${fmtDate(state.settings.exams[s.code])} · ${s.credits} credits · ${Math.round(100 * dn / tot)}% done</span><span class="minibar"><i class="d-${s.code}" style="width:${(100 * dn / tot).toFixed(1)}%"></i></span></div>`;
+    }).join('');
+    const all = DATA.tasks.reduce((a, t) => a + t.m, 0), dn = DATA.tasks.filter((t) => isDone(t.id)).reduce((a, t) => a + t.m, 0);
+    const nDone = DATA.tasks.filter((t) => isDone(t.id)).length;
+    return `<div class="card pad"><h3>Exam countdown</h3>${rows}</div>
+      <div class="card pad"><h3>Whole plan</h3><div class="progress" aria-hidden="true"><i style="width:${(100 * dn / all).toFixed(1)}%"></i></div>
+        <div class="stats" style="grid-template-columns:repeat(2,minmax(0,1fr))"><div class="stat"><b>${nDone}/${DATA.tasks.length}</b><span>tasks done</span></div><div class="stat"><b>${fmtHours(dn)}</b><span>of ${fmtHours(all)}</span></div></div>
+        <p class="h-sub" style="margin:4px 0 0">Timer total: <b id="tracked-total">${fmtMin(totalTracked() / 60)}</b></p></div>
+      <div class="card pad"><h3>How to use</h3><ol lang="si" style="margin:0;padding-left:20px;font-size:14px">
+        <li><b>▶ Start</b> ඔබලා timer එක පටන් ගන්න. නවත්තද්දී <b>Stop &amp; save</b> – ඒ වෙලාව save වෙනවා; ආයෙත් Start කළාම එකතු වෙනවා.</li>
+        <li>Material buttons වලින් PDF එක හරියටම ඕනේ පිටුවෙන් open වෙනවා.</li>
+        <li>වැඩේ ඉවර වුණාම ✓ tick කරන්න. කරන්න බැරි වුණොත් ඒක <b>Missed</b> වලට එනවා – පස්සේ කරලා tick කරන්නත් පුළුවන්.</li>
+        <li>Exam timetable එක ආවම <b>Subjects</b> tab එකේ දින දාලා re-plan කරන්න.</li></ol></div>`;
+  }
+
+  // ------------------------------------------------------------------ PLAN
+  function renderPlan() {
+    const { days, firstExam } = planDays();
+    const today = todayISO();
+    const p = plan();
+    const all = DATA.tasks.reduce((a, t) => a + t.m, 0);
+    const doneMin = DATA.tasks.filter((t) => isDone(t.id)).reduce((a, t) => a + t.m, 0);
+    const missed = missedTasks();
+    const studyDays = days.filter((d) => tasksOn(d).length).length;
+    let h = `<h2 class="h">Full plan</h2><p class="h-sub">Every study day until the exams. Two subjects a day at most; each lesson is split into sittings with page numbers.</p>
+      <div class="plansum"><div class="stat"><b>${studyDays}</b><span>study days</span></div><div class="stat"><b>${fmtHours(all)}</b><span>planned work</span></div><div class="stat"><b>${fmtHours(doneMin)}</b><span>done so far</span></div><div class="stat"><b style="color:${missed.length ? 'var(--margin)' : 'inherit'}">${missed.length}</b><span>missed tasks</span></div></div>`;
+    if (p.unscheduled && p.unscheduled.length) h += `<div class="notice bad"><b>Not enough time for ${p.unscheduled.length} tasks:</b> ${p.unscheduled.map((id) => TASK[id] ? esc(TASK[id].s + ' – ' + TASK[id].t) : '').join('; ')}. Raise the daily hours or check the exam dates in Subjects &amp; settings.</div>`;
+    if (missed.length) h += `<div class="notice warn">You have ${missed.length} missed task${missed.length > 1 ? 's' : ''}. <button class="btn small" data-act="replan">Move missed tasks to the coming days</button></div>`;
+    h += `<div class="filters" role="group" aria-label="Show subject"><button class="fbtn" data-act="filter" data-f="all" aria-pressed="${state.filter === 'all'}">All subjects</button>${EXAMINED.map((s) => `<button class="fbtn" data-act="filter" data-f="${s.code}" aria-pressed="${state.filter === s.code}"><span class="dot d-${s.code}"></span>${esc(s.code)}</button>`).join('')}</div>`;
+    const exByDay = {};
+    for (const s of EXAMINED) (exByDay[state.settings.exams[s.code]] = exByDay[state.settings.exams[s.code]] || []).push(s);
+    for (const d of days) {
+      let list = tasksOn(d);
+      const ex = exByDay[d] || [];
+      if (state.filter !== 'all') list = list.filter((t) => t.s === state.filter);
+      if (!list.length && !ex.length) continue;
+      const tot = list.reduce((a, t) => a + t.m, 0);
+      const done = list.filter((t) => isDone(t.id)).length;
+      const miss = d < today ? list.length - done : 0;
+      const subs = [...new Set(list.map((t) => t.s))];
+      const bar = subs.map((s) => `<i class="d-${s}" style="width:${(100 * list.filter((t) => t.s === s).reduce((a, t) => a + t.m, 0) / Math.max(state.settings.daily, tot)).toFixed(1)}%"></i>`).join('');
+      const open = state.openDays.has(d) || d === today || (today < PLAN_START && d === PLAN_START);
+      const cls = ['day', d === today ? 'today' : '', d < today ? 'past' : '', ex.length ? 'exam-day' : ''].join(' ');
+      const exTxt = ex.length ? `<span style="color:var(--margin);font-weight:700">EXAM: ${ex.map((s) => esc(s.code + ' ' + s.short)).join(', ')}</span>` : '';
+      const stateTxt = list.length ? (done === list.length ? '<span class="dstate ok">✓ all done</span>' : miss ? `<span class="dstate miss">${miss} missed</span>` : `${done}/${list.length} done`) : '';
+      h += `<details class="${cls}" data-day="${d}" ${open ? 'open' : ''}><summary><span class="dnum">${fmtDate(d, { weekday: 'short' })}<b>${dateObj(d).getDate()}</b>${fmtDate(d, { month: 'short' })}</span>
+        <span class="dmid">${d < firstExam && d >= PLAN_START ? `<span class="h-sub" style="margin:0">Day ${dayNo(d)}</span>` : ''}${exTxt}<span class="chips">${subs.map((s) => chip(s, true)).join('')}</span>${list.length ? `<span class="loadbar" aria-hidden="true">${bar}</span>` : ''}</span>
+        <span class="dright">${list.length ? `<b>${fmtMin(tot)}</b><br>` : ''}${stateTxt}</span></summary>
+        ${list.length ? `<div class="daybody">${list.sort((a, b) => (a.s < b.s ? -1 : a.s > b.s ? 1 : a.seq - b.seq)).map((t) => taskRow(t, { showSubject: true, markMissed: true })).join('')}</div>` : ''}</details>`;
+    }
+    $('#view-plan').innerHTML = h;
+  }
+
+  // ------------------------------------------------------------------ SUBJECTS
+  function renderSubjects() {
+    const st = state.settings;
+    const all = DATA.tasks.reduce((a, t) => a + t.m, 0);
+    const p = plan();
+    const today = todayISO();
+    const from = today > PLAN_START ? today : PLAN_START;
+    const avail = Math.max(0, D.daysBetween(from, firstExamISO())) * st.daily;
+    const remaining = DATA.tasks.filter((t) => !isDone(t.id)).reduce((a, t) => a + t.m, 0);
+    let h = `<h2 class="h">Subjects &amp; settings</h2><p class="h-sub">Credits, exam dates, past-paper hours and how every number in the plan was worked out.</p>
+      <div class="card pad" style="margin-bottom:16px"><h3 style="margin:0 0 4px;font:800 17px/1.2 var(--f-display)">Exam dates and study hours</h3>
+      <p class="h-sub" lang="si" style="margin:0 0 12px">Timetable එක confirm වුණාම මෙතන subject එකෙන් subject එකට exam date එක දාලා <b>Save &amp; re-plan</b> ඔබන්න. ඉවර කරපු tasks එහෙමම තියෙනවා; ඉතුරු ටික අද ඉඳන් ආයෙත් බෙදනවා.</p>
+      <form id="settings-form" class="settings">
+        <div class="field"><label for="set-daily">Study hours per day</label><input id="set-daily" type="number" min="2" max="16" step="0.5" value="${st.daily / 60}"></div>
+        <div class="field"><label for="set-time">Exam start time</label><input id="set-time" type="time" value="${esc(st.examTime)}"></div>
+        ${EXAMINED.map((s) => `<div class="field"><label for="ex-${s.code}"><span class="dot d-${s.code}"></span> ${esc(s.code)} exam date</label><input id="ex-${s.code}" type="date" min="2026-10-17" max="2027-03-31" value="${esc(st.exams[s.code])}"></div>`).join('')}
+        <div class="field" style="justify-content:flex-end"><button class="btn primary" type="submit">Save &amp; re-plan</button></div>
+      </form>
+      <p class="h-sub" style="margin:12px 0 0">Work left: <b>${fmtHours(remaining)}</b> · study time until the first exam at ${fmtHours(st.daily)}/day: <b>${fmtHours(avail)}</b>${p.unscheduled && p.unscheduled.length ? ` · <span style="color:var(--margin);font-weight:700">${p.unscheduled.length} tasks don’t fit</span>` : ''}${state.plan ? ` · last re-plan ${new Date(state.plan.made).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}` : ''}</p></div>`;
+    h += '<div class="subjects">';
+    for (const s of DATA.subjects) {
+      if (s.noExam) {
+        h += `<article class="card subj"><div class="subj-top"><div>${chip(s.code)}<h3>${esc(s.name)}</h3></div><div class="credits"><b>${s.credits}</b><span>credit</span></div></div><p class="h-sub" style="margin:0">${esc(s.format)}. The folder in your zip was empty, so nothing is scheduled.</p></article>`;
+        continue;
+      }
+      const ts = DATA.tasks.filter((t) => t.s === s.code);
+      const tot = ts.reduce((a, t) => a + t.m, 0);
+      const by = { learn: 0, practice: 0, paper: 0, revise: 0 };
+      for (const t of ts) by[KIND_GROUP[t.k]] += t.m;
+      const papers = ts.filter((t) => t.k === 'paper' || t.k === 'review');
+      const paperFiles = DATA.files.filter((f) => f.s === s.code && f.dir.includes('Past Paper'));
+      const dn = ts.filter((t) => isDone(t.id));
+      const dnMin = dn.reduce((a, t) => a + t.m, 0);
+      const tracked = ts.reduce((a, t) => a + spentSec(t.id), 0);
+      const days = Math.ceil((examMoment(st.exams[s.code]) - Date.now()) / 86400000);
+      const lastDay = (p.lastDay || {})[s.code];
+      h += `<article class="card subj"><div class="subj-top"><div>${chip(s.code)}<h3>${esc(s.name)}</h3></div><div class="credits"><b>${s.credits}</b><span>credits</span></div></div>
+        <dl class="kv"><dt>Exam</dt><dd>${fmtDate(st.exams[s.code], { weekday: 'short', day: 'numeric', month: 'long' })} · ${days > 0 ? days + ' days left' : 'today / done'}</dd>
+        <dt>Paper</dt><dd style="font-weight:400">${s.examHours} hours · ${esc(s.format)}</dd>
+        <dt>GPA weight</dt><dd>${Math.round(100 * s.credits / TOTAL_CREDITS)}% of this semester’s exam credits</dd>
+        <dt>Planned</dt><dd>${fmtHours(tot)} · ${(tot / 60 / s.credits).toFixed(1)} h per credit${lastDay ? ` · finishes ${fmtDate(lastDay)}` : ''}</dd>
+        <dt>Past papers</dt><dd>${paperFiles.length} in folder · <span style="color:var(--margin)">${fmtHours(papers.reduce((a, t) => a + t.m, 0))}</span> planned for doing &amp; checking them</dd>
+        <dt>Progress</dt><dd>${dn.length}/${ts.length} tasks · ${fmtHours(dnMin)} done · timer ${fmtMin(tracked / 60)}</dd></dl>
+        <div class="split" aria-label="Time split">${['learn', 'practice', 'paper', 'revise'].map((k) => `<i class="k-${k}" style="width:${(100 * by[k] / tot).toFixed(1)}%" title="${k}"></i>`).join('')}</div>
+        <div class="legend"><span><i class="k-learn"></i>Learn ${fmtHours(by.learn)}</span><span><i class="k-practice"></i>Practice ${fmtHours(by.practice)}</span><span><i class="k-paper"></i>Past papers ${fmtHours(by.paper)}</span><span><i class="k-revise"></i>Revision ${fmtHours(by.revise)}</span></div>
+        <details class="tip" style="margin:0"><summary>All ${ts.length} tasks</summary><div style="margin-top:8px;border:1px solid var(--line);border-radius:8px;overflow:hidden">${ts.map((t) => taskRow(t, { showDate: true, markMissed: true })).join('')}</div></details></article>`;
+    }
+    h += '</div>';
+    h += howToHTML(all);
+    $('#view-subjects').innerHTML = h;
+  }
+  function howToHTML(all) {
+    const ex = (id) => TASK[id] ? fmtMin(TASK[id].m) : '';
+    return `<div class="card pad howto" style="margin-top:16px"><h3 style="margin:0 0 6px;font:800 17px/1.2 var(--f-display)">How the time was calculated</h3>
+      <p style="margin:0 0 6px">Every number comes from your actual files – slide counts, page counts and word counts – and assumes you are starting from the basics.</p>
+      <div class="tbl-scroll"><table><thead><tr><th>Material</th><th>Rule</th><th>Example</th></tr></thead><tbody>
+      <tr><td>Lecture slides (COM3306, COM3401)</td><td>(slides × 1.2 min + words ÷ 50 per min) × difficulty</td><td>OS Lesson 1: 87 slides, 4,708 words, ×0.9 → 3h 00m (2 sittings)</td></tr>
+      <tr><td>Full A4 notes (STA3402)</td><td>(words ÷ 70 per min + pages × 1.5 min) × difficulty + 30 min running the R code</td><td>PCA: 24 pages, 5,527 words, ×1.2 → 2h 50m</td></tr>
+      <tr><td>Maths slides (MAT3222)</td><td>slides × 3 min × difficulty</td><td>Chapter 2_1: 45 slides × 1.15 → 2h 35m</td></tr>
+      <tr><td>Tutorials, practicals</td><td>by number of questions / lab tasks</td><td>Tutorial 01: 8 systems to solve → 2h 30m</td></tr>
+      <tr><td>New gap notes</td><td>reading + writing the answers once</td><td>AVR assembly section → ${ex('es-7')}</td></tr>
+      <tr><td>Past papers</td><td>latest paper = real exam time (3 h, MAT 2 h) + 1 h checking; older papers = 2 h answer outlines</td><td>OS: 2 outlines + 1 timed + check = 9 h</td></tr>
+      <tr><td>Final revision</td><td>30 min + 30 min × credits</td><td>4 credits → 2h 30m</td></tr></tbody></table></div>
+      <p style="margin:6px 0">Difficulty: ×0.8–0.9 introductions, ×1.0 normal, ×1.1–1.3 calculations and new maths. Reading speeds of 50–70 words a minute are deliberately slow – they include understanding, re-reading and writing short notes. Lessons longer than 100 minutes are split into sittings with page ranges. Total: <b>${fmtHours(all)}</b> of work.</p>
+      <p style="margin:6px 0"><b>Scheduling rules:</b> at most two subjects a day; up to your daily hours; each subject finishes the day before its exam, and when many exams fall on the same day at most two subjects finish on the same day (the others a day earlier, higher credits last). If the exams are spread out, days get lighter instead of finishing everything early.</p>
+      <div class="note"><div class="si" lang="si">මේ ගණනය කළේ ඔයාගේ files වල ඇත්ත slides ගණන, පිටු ගණන සහ වචන ගණනෙන්. ඔයා මුල ඉඳන් ඉගෙන ගන්නවා කියලා හිතලා කියවන වේගය අඩුවෙන් (විනාඩියට වචන 50–70) ගත්තා – ඒකට තේරුම් ගන්න, නැවත කියවන්න, කෙටි notes ලියන්න යන වෙලාවත් ඇතුළත්. ගණනය තියෙන ප්‍රශ්න (Gantt chart, subnetting, RK4 වගේ) තියෙන පාඩම් වලට ×1.2–1.3ක් වැඩිපුර වෙලාවක් දුන්නා. Credits වැඩි subjects වලට (STA3402, COM3401 – 4 බැගින්) revision සහ past papers වලට වැඩිපුර පැය ලැබෙනවා. Past paper එකක් exam එකේ වගේම පැය 3කින් (MAT 2) කරලා, ඊට පස්සේ පැයක් check කරන්න වෙලාව තියෙනවා.</div></div></div>`;
+  }
+
+  // ------------------------------------------------------------------ FILES
+  const extraFiles = () => state.library.map((x) => ({ id: 'lib:' + x.id, libId: x.id, s: x.s, dir: [SUBJ[x.s] ? SUBJ[x.s].folder : 'Added files', 'Added by you'], name: x.name, kind: /^image\//.test(x.type) ? 'img' : 'pdf', asset: x.asset, size: x.size, ext: (x.name.split('.').pop() || '').toLowerCase(), url: '/_blob/' + x.asset, view: '/_blob/' + x.asset }));
+  const allFiles = () => DATA.files.filter((f) => f.name).concat(extraFiles());
+  function folderMarkers() { return DATA.files.filter((f) => f.kind === 'folder-marker').map((f) => f.dir); }
+  function listFolder(path) {
+    const files = allFiles();
+    const folders = new Map(), here = [];
+    const add = (dir, f) => {
+      if (dir.length < path.length) return;
+      for (let i = 0; i < path.length; i++) if (dir[i] !== path[i]) return;
+      if (dir.length === path.length) { if (f) here.push(f); return; }
+      const name = dir[path.length];
+      const e = folders.get(name) || { name, count: 0, size: 0 };
+      if (f) { e.count++; if (f.kind !== 'local') e.size += f.size || 0; }
+      folders.set(name, e);
+    };
+    for (const f of files) add(f.dir, f);
+    for (const d of folderMarkers()) add(d, null);
+    const order = (n) => (n.startsWith('Study notes') ? 0 : n === 'Added by you' ? 9 : 1);
+    return { folders: [...folders.values()].sort((a, b) => order(a.name) - order(b.name) || a.name.localeCompare(b.name, undefined, { numeric: true })), files: here.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true })) };
+  }
+  function fileRow(f, showPath) {
+    const meta = [f.kind === 'pptx' ? 'PowerPoint slides (shown as PDF)' : f.kind === 'note' ? 'Notes made for you' : f.kind === 'local' ? 'Reference book' : f.kind === 'img' ? 'Image' : 'PDF', f.pages ? f.pages + (f.kind === 'pptx' ? ' slides' : ' pages') : '', f.size ? bytes(f.size) : ''].filter(Boolean).join(' · ');
+    let act = '';
+    if (f.kind === 'local') act = `<button class="btn small" data-act="local-open" data-file="${esc(f.id)}">Open from your computer</button>`;
+    else {
+      if (f.kind === 'note') act += `<button class="btn small primary" data-act="read" data-file="${esc(f.id)}">Read</button><button class="btn small" data-act="view" data-file="${esc(f.id)}">PDF</button>`;
+      else act += `<button class="btn small primary" data-act="view" data-file="${esc(f.id)}">View</button>`;
+      act += `<button class="btn small" data-act="dl" data-file="${esc(f.id)}">Download${f.kind === 'pptx' ? ' as PDF' : ''}</button>`;
+      if (f.libId && assetsNS) act += `<button class="btn small danger" data-act="lib-del" data-file="${esc(f.id)}">Delete</button>`;
+    }
+    return `<div class="fx-row">${fileIcon(f, true)}<div class="fx-name">${esc(f.name)}<small>${esc(meta)}${showPath ? ' · ' + esc(f.dir.join(' › ')) : ''}${f.kind === 'local' ? ' · not uploaded (copyrighted book) – kept on your computer' : ''}</small></div><div class="fx-act">${act}</div></div>`;
+  }
+  function renderFiles() {
+    const path = state.fxPath;
+    const crumbs = [`<button data-act="fx-go" data-depth="0">Semester 3.2</button>`].concat(path.map((p, i) => i === path.length - 1 ? `<span class="cur">${esc(p)}</span>` : `<button data-act="fx-go" data-depth="${i + 1}">${esc(p)}</button>`)).join('<span class="sep">›</span>');
+    let h = `<h2 class="h">Files</h2><p class="h-sub">All your lecture materials, past papers and the new notes – view them here or download them.</p>
+      <div class="fx-bar"><nav class="crumbs" aria-label="Folder path">${crumbs}</nav><input class="search" id="fx-search" type="search" placeholder="Search all files" value="${esc(state.fxQuery)}" aria-label="Search all files"></div>`;
+    const q = state.fxQuery.trim().toLowerCase();
+    if (q) {
+      const hits = allFiles().filter((f) => (f.name + ' ' + f.dir.join(' ')).toLowerCase().includes(q));
+      h += `<div class="fx">${hits.length ? hits.map((f) => fileRow(f, true)).join('') : '<div class="fx-row"><span></span><div class="fx-name">No files match.</div></div>'}</div>`;
+    } else {
+      const { folders, files } = listFolder(path);
+      const dlCount = allFiles().filter((f) => f.kind !== 'local' && path.every((p, i) => f.dir[i] === p)).length;
+      if (path.length && dlCount) h += `<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px"><button class="btn small" data-act="zip">Download this folder (.zip, ${dlCount} file${dlCount > 1 ? 's' : ''})</button></div>`;
+      h += '<div class="fx">';
+      if (path.length) h += `<div class="fx-row folder" data-act="fx-up" role="button" tabindex="0">${ICON.folder.replace('#E8B730', '#B7C0CC').replace('#F5CE55', '#D4DAE2')}<div class="fx-name">.. <small>Up one folder</small></div></div>`;
+      for (const fo of folders) h += `<div class="fx-row folder" data-act="fx-open" data-name="${esc(fo.name)}" role="button" tabindex="0">${ICON.folder}<div class="fx-name">${esc(fo.name)}<small>${fo.count ? fo.count + ' file' + (fo.count > 1 ? 's' : '') + (fo.size ? ' · ' + bytes(fo.size) : '') : 'empty folder'}</small></div><div class="fx-act"><span class="h-sub" style="margin:0">Open ›</span></div></div>`;
+      h += files.map((f) => fileRow(f)).join('');
+      if (!folders.length && !files.length) h += '<div class="fx-row"><span></span><div class="fx-name">This folder is empty.<small>Nothing was in this folder in your zip.</small></div></div>';
+      h += '</div>';
+    }
+    if (assetsNS) {
+      h += `<div class="card pad upload"><h3 style="margin:0 0 6px;font:800 16px/1.2 var(--f-display)">Add a file</h3><p class="h-sub" style="margin:0 0 10px">Add missing lecture notes (PDF or a photo, up to 20 MB). It appears in the subject’s “Added by you” folder.</p>
+        <div class="settings"><div class="field"><label for="up-subj">Subject</label><select id="up-subj">${DATA.subjects.map((s) => `<option value="${s.code}" ${path[0] === s.folder ? 'selected' : ''}>${esc(s.code + ' ' + s.short)}</option>`).join('')}</select></div>
+        <div class="field"><label for="up-file">File</label><input id="up-file" type="file" accept="application/pdf,image/png,image/jpeg,image/webp"></div></div><p class="h-sub" id="up-status" style="margin:8px 0 0"></p></div>`;
+    }
+    $('#view-files').innerHTML = h;
+  }
+
+  // ------------------------------------------------------------------ render dispatch
+  function render() {
+    renderHeader();
+    if (state.view === 'today') renderToday();
+    else if (state.view === 'plan') renderPlan();
+    else if (state.view === 'subjects') renderSubjects();
+    else if (state.view === 'files') { if (document.activeElement && document.activeElement.id === 'fx-search') return; renderFiles(); }
+    renderTimerUI();
+  }
+  function show(view, push = true) {
+    state.view = view;
+    for (const b of $$('.tab')) b.setAttribute('aria-selected', String(b.dataset.view === view));
+    for (const s of $$('.view')) s.hidden = s.id !== 'view-' + view;
+    try { localStorage.setItem(LS + 'view', view); } catch (e) { /* ignore */ }
+    if (push) { try { history.replaceState(null, '', '#' + view); } catch (e) { /* ignore */ } }
+    render();
+    window.scrollTo({ top: 0 });
+  }
+
+  // ------------------------------------------------------------------ ticking
+  function setDone(id, on) {
+    if (on) state.done[id] = new Date().toISOString(); else delete state.done[id];
+    store.save('progress');
+    if (on && state.timer && state.timer.task === id) stopTimer();
+    render();
+    if (on) toast('Done ✓ ' + TASK[id].t.slice(0, 48));
+  }
+
+  // ------------------------------------------------------------------ timer
+  let tmTask = null; const chimed = new Set();
+  function startTimer(id) {
+    if (state.timer && state.timer.task !== id) { const other = state.timer.task; stopTimer(); toast('Saved the timer for ' + TASK[other].t.slice(0, 40)); }
+    if (state.timer) return;
+    state.timer = { task: id, start: Date.now() };
+    store.save('timer');
+    ensureAudio();
+    render();
+  }
+  function stopTimer() {
+    if (!state.timer) return;
+    const { task, start } = state.timer;
+    const end = Date.now();
+    if (end - start >= 5000) { (state.sessions[task] = state.sessions[task] || []).push([start, end]); store.save('sessions'); }
+    state.timer = null;
+    store.save('timer');
+    render();
+  }
+  function openTimer(id) {
+    tmTask = id;
+    const t = TASK[id];
+    $('#tm-chip').className = 'chip s-' + t.s; $('#tm-chip').textContent = t.s + ' · ' + SUBJ[t.s].short;
+    $('#tm-title').textContent = t.t;
+    $('#tm-mats').innerHTML = matChips(t);
+    $('#timer-modal').hidden = false;
+    renderTimerUI();
+    $('#tm-start').focus();
+  }
+  function renderTimerUI() {
+    const now = Date.now();
+    const mt = $('#minitimer');
+    if (state.timer && TASK[state.timer.task]) {
+      mt.hidden = !$('#timer-modal').hidden;
+      $('#mt-clock').textContent = fmtClock((now - state.timer.start) / 1000);
+      $('#mt-name').textContent = TASK[state.timer.task].t;
+    } else mt.hidden = true;
+    if (!tmTask || $('#timer-modal').hidden) return;
+    const t = TASK[tmTask];
+    const running = state.timer && state.timer.task === tmTask;
+    const cur = running ? (now - state.timer.start) / 1000 : 0;
+    const total = spentSec(tmTask, now);
+    const plannedSec = t.m * 60;
+    $('#tm-clock').textContent = fmtClock(running ? cur : total);
+    $('#tm-cap').textContent = running ? 'this sitting' : total ? 'total so far' : 'not started';
+    const left = plannedSec - total;
+    const le = $('#tm-left');
+    le.textContent = left >= 0 ? fmtClock(left) + ' left of ' + fmtMin(t.m) : fmtClock(-left) + ' over ' + fmtMin(t.m);
+    le.classList.toggle('over', left < 0);
+    const ring = $('#tm-ring');
+    const frac = Math.min(1, total / plannedSec);
+    ring.setAttribute('stroke-dashoffset', (326.73 * (1 - frac)).toFixed(2));
+    ring.classList.toggle('over', left < 0);
+    $('#tm-total').textContent = `Total on this task: ${fmtMin(total / 60)} of ${fmtMin(t.m)} planned` + (isDone(tmTask) ? ' · marked done' : '');
+    $('#tm-start').textContent = running ? '● Running' : total ? '▶ Resume' : '▶ Start';
+    $('#tm-start').disabled = !!running;
+    $('#tm-stop').disabled = !running;
+    $('#tm-done').textContent = isDone(tmTask) ? '↺ Mark not done' : '✓ Mark done';
+    const ses = (state.sessions[tmTask] || []).map(([a, b], i) => `<li><span>${fmtDate(isoOf(a))} · ${fmtTime(a)}–${fmtTime(b)}</span><b>${fmtMin((b - a) / 60000)}</b><button class="x" data-act="ses-del" data-i="${i}" aria-label="Delete this sitting">×</button></li>`);
+    if (running) ses.push(`<li><span>${fmtDate(isoOf(state.timer.start))} · ${fmtTime(state.timer.start)}–now</span><b>${fmtMin(cur / 60)}</b><span style="width:26px"></span></li>`);
+    const ol = $('#tm-sessions');
+    const html = ses.length ? ses.join('') : '<li><span class="h-sub" style="margin:0">No sittings yet. Press Start – when you stop, the time is saved here.</span></li>';
+    if (ol.dataset.h !== html) { ol.innerHTML = html; ol.dataset.h = html; }
+    if (running && left <= 0 && !chimed.has(tmTask + ':' + state.timer.start)) { chimed.add(tmTask + ':' + state.timer.start); chime(); toast('Planned time is up – take a short break or keep going.'); }
+  }
+  let audioCtx = null;
+  function ensureAudio() { try { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); if (audioCtx.state === 'suspended') audioCtx.resume(); } catch (e) { audioCtx = null; } }
+  function chime() {
+    if (!audioCtx) return;
+    try {
+      const t0 = audioCtx.currentTime;
+      [880, 1175, 1568].forEach((f, i) => { const o = audioCtx.createOscillator(), g = audioCtx.createGain(); o.frequency.value = f; o.type = 'sine'; g.gain.setValueAtTime(0.0001, t0 + i * 0.18); g.gain.exponentialRampToValueAtTime(0.25, t0 + i * 0.18 + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, t0 + i * 0.18 + 0.5); o.connect(g).connect(audioCtx.destination); o.start(t0 + i * 0.18); o.stop(t0 + i * 0.18 + 0.55); });
+    } catch (e) { /* no sound */ }
+  }
+
+  // ------------------------------------------------------------------ viewer (pdf.js) + reader
+  const V = { doc: null, scale: 1, fit: true, pages: [], obs: null, file: null, alt: null, token: 0, current: 1 };
+  if (window.pdfjsLib) window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'lib/pdf.worker.min.js';
+  function closeViewer() {
+    V.token++;
+    if (V.obs) V.obs.disconnect();
+    if (V.doc) { try { V.doc.destroy(); } catch (e) { /* ignore */ } }
+    V.doc = null; V.pages = [];
+    $('#v-pages-wrap').innerHTML = '';
+    $('#viewer').hidden = true;
+    document.body.style.overflow = '';
+  }
+  function openShell(title) {
+    $('#viewer').hidden = false;
+    document.body.style.overflow = 'hidden';
+    $('#v-title').textContent = title;
+    $('#v-pages-wrap').innerHTML = '<p class="vmsg">Loading…</p>';
+    $('#v-pg').hidden = true; $('#v-zoom').hidden = true; $('#v-alt').hidden = true;
+    $('#v-dl').hidden = !downloadsNS;
+    $('#v-scroll').scrollTop = 0;
+  }
+  async function openPDF({ url, data, title, page, file }) {
+    openShell(title);
+    V.file = file || null;
+    const tok = ++V.token;
+    if (!window.pdfjsLib) { $('#v-pages-wrap').innerHTML = '<p class="vmsg">The PDF viewer could not load. Use Download instead.</p>'; return; }
+    if (file && file.kind === 'note') { $('#v-alt').hidden = false; $('#v-alt').textContent = 'Read as page'; V.alt = () => openNote(file); }
+    if (file && file.kind === 'local') $('#v-dl').hidden = true;
+    try {
+      const src = data ? { data } : { url: new URL(url, location.href).href };
+      const doc = await window.pdfjsLib.getDocument(Object.assign(src, { isEvalSupported: false })).promise;
+      if (tok !== V.token) { doc.destroy(); return; }
+      V.doc = doc;
+      const p1 = await doc.getPage(1);
+      const vp = p1.getViewport({ scale: 1 });
+      V.base = { w: vp.width, h: vp.height };
+      V.fit = true; V.scale = fitScale();
+      const wrap = $('#v-pages-wrap'); wrap.innerHTML = '';
+      V.pages = [];
+      for (let i = 1; i <= doc.numPages; i++) {
+        const el = document.createElement('div');
+        el.className = 'vpage'; el.dataset.n = i;
+        el.innerHTML = `<span class="pn">${i}</span>`;
+        wrap.appendChild(el);
+        V.pages.push({ el, rendered: 0, w: vp.width, h: vp.height });
+      }
+      sizePages();
+      $('#v-pages').textContent = '/ ' + doc.numPages;
+      $('#v-pg').hidden = false; $('#v-zoom').hidden = false;
+      if (V.obs) V.obs.disconnect();
+      V.obs = new IntersectionObserver((ents) => {
+        for (const e of ents) if (e.isIntersecting) renderPage(+e.target.dataset.n);
+        updateCurrent();
+      }, { root: $('#v-scroll'), rootMargin: '900px 0px' });
+      V.pages.forEach((p) => V.obs.observe(p.el));
+      goPage(page || 1, true);
+    } catch (e) {
+      console.warn(e);
+      $('#v-pages-wrap').innerHTML = '<p class="vmsg">This file could not be shown here. Try Download.</p>';
+    }
+  }
+  const fitScale = () => Math.max(0.3, Math.min(3, ($('#v-scroll').clientWidth - 28) / V.base.w));
+  function sizePages() { for (const p of V.pages) { p.el.style.width = Math.floor(p.w * V.scale) + 'px'; p.el.style.height = Math.floor(p.h * V.scale) + 'px'; } }
+  async function renderPage(n) {
+    const p = V.pages[n - 1]; if (!p || !V.doc) return;
+    if (p.rendered === V.scale || p.busy) return;
+    p.busy = true; const tok = V.token, scale = V.scale;
+    try {
+      const page = await V.doc.getPage(n);
+      if (tok !== V.token) return;
+      const vp1 = page.getViewport({ scale: 1 });
+      p.w = vp1.width; p.h = vp1.height;
+      p.el.style.width = Math.floor(p.w * scale) + 'px'; p.el.style.height = Math.floor(p.h * scale) + 'px';
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const vp = page.getViewport({ scale: scale * dpr });
+      const c = document.createElement('canvas');
+      c.width = Math.floor(vp.width); c.height = Math.floor(vp.height);
+      await page.render({ canvasContext: c.getContext('2d'), viewport: vp }).promise;
+      if (tok !== V.token) return;
+      const old = p.el.querySelector('canvas'); if (old) old.remove();
+      p.el.prepend(c);
+      p.rendered = scale;
+    } catch (e) { /* page failed */ } finally { p.busy = false; }
+  }
+  function updateCurrent() {
+    const sc = $('#v-scroll'); const mid = sc.scrollTop + sc.clientHeight * 0.35;
+    let cur = 1;
+    for (const p of V.pages) { if (p.el.offsetTop <= mid) cur = +p.el.dataset.n; else break; }
+    V.current = cur;
+    if (document.activeElement !== $('#v-page')) $('#v-page').value = cur;
+  }
+  function goPage(n, instant) {
+    n = Math.max(1, Math.min(V.pages.length, n | 0));
+    const p = V.pages[n - 1]; if (!p) return;
+    $('#v-scroll').scrollTo({ top: p.el.offsetTop - 12, behavior: instant ? 'auto' : 'smooth' });
+    renderPage(n);
+    $('#v-page').value = n; V.current = n;
+  }
+  function zoom(f) {
+    if (!V.doc) return;
+    const keep = V.current;
+    V.scale = f === 'fit' ? fitScale() : Math.max(0.4, Math.min(4, V.scale * f));
+    sizePages();
+    goPage(keep, true);
+    V.pages.forEach((p, i) => { if (Math.abs(i + 1 - keep) < 3) renderPage(i + 1); });
+  }
+  async function openNote(f, anchor) {
+    openShell(f.name.replace(/\.pdf$/, ''));
+    V.file = f; const tok = ++V.token;
+    $('#v-alt').hidden = false; $('#v-alt').textContent = 'PDF version'; V.alt = () => openPDF({ url: f.url, title: f.name, file: Object.assign({}, f, { kind: 'note' }) });
+    try {
+      const html = await (await fetch(f.html)).text();
+      if (tok !== V.token) return;
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const main = doc.querySelector('main.note');
+      const box = document.createElement('article'); box.className = 'reader note';
+      box.innerHTML = main ? main.innerHTML : '<p>Notes not found.</p>';
+      for (const a of box.querySelectorAll('a[href^="#"]')) a.addEventListener('click', (e) => { e.preventDefault(); const t = box.querySelector(a.getAttribute('href')); if (t) $('#v-scroll').scrollTo({ top: t.offsetTop - 10, behavior: 'smooth' }); });
+      const wrap = $('#v-pages-wrap'); wrap.innerHTML = ''; wrap.appendChild(box);
+      if (anchor) { const t = box.querySelector('#' + CSS.escape(anchor)); if (t) requestAnimationFrame(() => { $('#v-scroll').scrollTop = t.offsetTop - 10; }); }
+    } catch (e) { $('#v-pages-wrap').innerHTML = '<p class="vmsg">These notes could not load. Use the PDF version.</p>'; }
+  }
+  function openImage(f) {
+    openShell(f.name); V.file = f;
+    $('#v-pages-wrap').innerHTML = `<img src="${esc(f.view)}" alt="${esc(f.name)}" style="max-width:100%;height:auto;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.18)">`;
+  }
+  function openFile(f, page, anchor) {
+    if (!f) return;
+    if (f.kind === 'local') { pendingLocal = { f, page }; $('#local-pdf').click(); return; }
+    if (f.kind === 'note' && anchor !== undefined) return openNote(f, anchor);
+    if (f.kind === 'img') return openImage(f);
+    return openPDF({ url: f.view || f.url, title: f.name, page, file: f });
+  }
+  let pendingLocal = null;
+
+  // ------------------------------------------------------------------ downloads
+  let downloadsNS = null, assetsNS = null, dbNS = null;
+  async function downloadFile(f) {
+    if (!downloadsNS) { toast('Downloads are not available in this view.'); return; }
+    try {
+      toast('Preparing ' + f.name + '…');
+      const res = await fetch(f.url); if (!res.ok) throw new Error('fetch ' + res.status);
+      const blob = await res.blob();
+      await downloadsNS.save({ filename: f.dlName || f.name, data: blob });
+    } catch (e) {
+      if (e && e.code === 'declined') return;
+      toast(e && e.code === 'rate_limited' ? 'Another download is waiting for your answer.' : 'Download didn’t work – try again.');
+    }
+  }
+  async function downloadZip() {
+    if (!downloadsNS) { toast('Downloads are not available in this view.'); return; }
+    if (!window.JSZip) { toast('ZIP tool did not load – download files one by one.'); return; }
+    const path = state.fxPath.slice();
+    const files = allFiles().filter((f) => f.kind !== 'local' && path.every((p, i) => f.dir[i] === p));
+    const zip = new window.JSZip();
+    let n = 0;
+    try {
+      for (const f of files) {
+        toast(`Adding ${++n}/${files.length}: ${f.name}`);
+        const blob = await (await fetch(f.url)).blob();
+        zip.file(f.dir.slice(path.length).concat(f.dlName || f.name).join('/'), blob, { binary: true });
+      }
+      toast('Making the ZIP…');
+      const out = await zip.generateAsync({ type: 'blob', compression: 'STORE' });
+      await downloadsNS.save({ filename: (path[path.length - 1] || 'Semester 3.2') + '.zip', data: out });
+    } catch (e) { if (!(e && e.code === 'declined')) toast('ZIP download didn’t work – try single files.'); }
+  }
+
+  // ------------------------------------------------------------------ uploads (assets + shared library)
+  async function uploadFile(file, subj) {
+    const st = $('#up-status');
+    if (!assetsNS || !dbNS) return;
+    if (file.size > 20 * 1048576) { st.textContent = 'That file is bigger than 20 MB.'; return; }
+    const type = file.type || (/\.pdf$/i.test(file.name) ? 'application/pdf' : '');
+    if (!/^(application\/pdf|image\/(png|jpeg|webp))$/.test(type)) { st.textContent = 'Please choose a PDF or a PNG/JPG/WebP image.'; return; }
+    st.textContent = 'Uploading ' + file.name + '…';
+    try {
+      const r = await assetsNS.upload(file, { type });
+      await dbNS.collection('library').doc(r.id).set({ name: file.name, s: subj, size: r.sizeBytes, type, asset: r.id, at: new Date().toISOString() });
+      st.textContent = 'Added ' + file.name + '.';
+      toast('Added to ' + subj + ' › Added by you');
+    } catch (e) { st.textContent = 'Upload failed' + (e && e.code === 'too_large' ? ': file too large.' : e && e.code === 'unsupported_type' ? ': unsupported file type.' : '. Try again.'); }
+  }
+
+  // ------------------------------------------------------------------ events
+  document.addEventListener('click', async (e) => {
+    const el = e.target.closest('[data-act]');
+    if (!el) return;
+    const act = el.dataset.act;
+    const id = el.dataset.task;
+    if (act === 'tick') return; // handled on change
+    if (act === 'go') { e.preventDefault(); show(el.dataset.view); return; }
+    if (act === 'timer') { openTimer(id); return; }
+    if (act === 'mat') { const t = TASK[id], m = t.mats[+el.dataset.i]; openFile(FILE[m.f], m.p, m.a); return; }
+    if (act === 'tm-start') { startTimer(tmTask); return; }
+    if (act === 'tm-stop') { stopTimer(); toast('Sitting saved.'); return; }
+    if (act === 'tm-done') { const on = !isDone(tmTask); if (on && state.timer && state.timer.task === tmTask) stopTimer(); setDone(tmTask, on); if (on) $('#timer-modal').hidden = true; renderTimerUI(); return; }
+    if (act === 'tm-min') { $('#timer-modal').hidden = true; renderTimerUI(); return; }
+    if (act === 'tm-open-running') { if (state.timer) openTimer(state.timer.task); return; }
+    if (act === 'ses-del') {
+      const i = +el.dataset.i;
+      const ok = await confirmBox('Delete this sitting?', 'The time from this sitting will be removed from the task.', 'Delete');
+      if (ok) { state.sessions[tmTask].splice(i, 1); store.save('sessions'); render(); }
+      return;
+    }
+    if (act === 'replan') {
+      const n = missedTasks().length;
+      const ok = await confirmBox('Move missed tasks?', `The ${n} missed task${n === 1 ? '' : 's'} and everything not done yet will be spread over the days from ${todayISO() > PLAN_START ? 'today' : 'the start'} until the exams. Finished tasks stay where they are.`, 'Move them');
+      if (!ok) return;
+      const r = replan('missed');
+      render();
+      toast(r.unscheduled.length ? `${r.unscheduled.length} tasks still don’t fit – raise the daily hours.` : 'Plan updated.');
+      return;
+    }
+    if (act === 'filter') { state.filter = el.dataset.f; renderPlan(); return; }
+    if (act === 'cf-yes' || act === 'cf-no') { $('#confirm-modal').hidden = true; if (confirmResolve) confirmResolve(act === 'cf-yes'); confirmResolve = null; return; }
+    if (act === 'fx-open') { state.fxPath = state.fxPath.concat(el.dataset.name); renderFiles(); return; }
+    if (act === 'fx-up') { state.fxPath = state.fxPath.slice(0, -1); renderFiles(); return; }
+    if (act === 'fx-go') { state.fxPath = state.fxPath.slice(0, +el.dataset.depth); renderFiles(); return; }
+    const f = el.dataset.file ? allFiles().find((x) => x.id === el.dataset.file) : null;
+    if (act === 'view') { openFile(f, 1); return; }
+    if (act === 'read') { openNote(f, ''); return; }
+    if (act === 'dl') { downloadFile(f); return; }
+    if (act === 'zip') { downloadZip(); return; }
+    if (act === 'local-open') { pendingLocal = { f, page: 1 }; $('#local-pdf').click(); return; }
+    if (act === 'lib-del') {
+      const ok = await confirmBox('Delete this file?', `${f.name} will be removed from the site for good.`, 'Delete');
+      if (!ok) return;
+      try { await assetsNS.delete(f.asset); await dbNS.doc('library/' + f.libId).delete(); toast('Deleted.'); } catch (err) { toast('Could not delete that file.'); }
+      return;
+    }
+    if (act === 'v-close') { closeViewer(); return; }
+    if (act === 'v-prev') { goPage(V.current - 1); return; }
+    if (act === 'v-next') { goPage(V.current + 1); return; }
+    if (act === 'v-zin') { V.fit = false; zoom(1.2); return; }
+    if (act === 'v-zout') { V.fit = false; zoom(1 / 1.2); return; }
+    if (act === 'v-fit') { V.fit = true; zoom('fit'); return; }
+    if (act === 'v-alt') { if (V.alt) V.alt(); return; }
+    if (act === 'v-dl') { if (V.file) downloadFile(V.file); return; }
+  });
+  document.addEventListener('change', (e) => {
+    const el = e.target;
+    if (el.matches('.tick')) { setDone(el.dataset.task, el.checked); return; }
+    if (el.id === 'up-file' && el.files && el.files[0]) { uploadFile(el.files[0], $('#up-subj').value); el.value = ''; return; }
+    if (el.id === 'local-pdf' && el.files && el.files[0]) {
+      const file = el.files[0]; const pl = pendingLocal; el.value = '';
+      file.arrayBuffer().then((buf) => openPDF({ data: new Uint8Array(buf), title: file.name, page: pl ? pl.page : 1, file: pl ? pl.f : null }));
+      return;
+    }
+  });
+  document.addEventListener('submit', (e) => {
+    if (e.target.id !== 'settings-form') return;
+    e.preventDefault();
+    const daily = Math.round(Math.max(2, Math.min(16, parseFloat($('#set-daily').value) || 10)) * 60);
+    const exams = {};
+    for (const s of EXAMINED) { const v = $('#ex-' + s.code).value; exams[s.code] = /^\d{4}-\d{2}-\d{2}$/.test(v) && v > PLAN_START ? v : DEFAULT_EXAM; }
+    state.settings = { daily, examTime: $('#set-time').value || '09:00', exams };
+    store.save('settings');
+    const r = replan('settings');
+    render();
+    toast(r.unscheduled.length ? `Saved – ${r.unscheduled.length} tasks don’t fit, add more hours.` : 'Saved – plan updated.');
+  });
+  document.addEventListener('input', (e) => {
+    if (e.target.id === 'fx-search') {
+      state.fxQuery = e.target.value;
+      const pos = e.target.selectionStart;
+      renderFiles();
+      const s = $('#fx-search'); s.focus(); try { s.setSelectionRange(pos, pos); } catch (err) { /* ignore */ }
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (!$('#confirm-modal').hidden) { $('#confirm-modal').hidden = true; if (confirmResolve) confirmResolve(false); confirmResolve = null; }
+      else if (!$('#viewer').hidden) closeViewer();
+      else if (!$('#timer-modal').hidden) { $('#timer-modal').hidden = true; renderTimerUI(); }
+    }
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.fx-row.folder')) { e.preventDefault(); e.target.click(); }
+    if (e.target.id === 'v-page' && e.key === 'Enter') goPage(parseInt(e.target.value, 10));
+  });
+  $('#timer-modal').addEventListener('click', (e) => { if (e.target.id === 'timer-modal') { $('#timer-modal').hidden = true; renderTimerUI(); } });
+  for (const b of $$('.tab')) b.addEventListener('click', () => show(b.dataset.view));
+  document.addEventListener('toggle', (e) => { const d = e.target; if (d.matches && d.matches('details.day[data-day]')) { if (d.open) state.openDays.add(d.dataset.day); else state.openDays.delete(d.dataset.day); } }, true);
+  $('#v-scroll').addEventListener('scroll', () => { if (V.doc) updateCurrent(); }, { passive: true });
+  window.addEventListener('resize', () => { if (V.doc && V.fit) zoom('fit'); });
+
+  // 1-second heartbeat: countdown + timers (no re-render of the lists)
+  let lastDay = todayISO();
+  setInterval(() => {
+    renderCountdown();
+    renderTimerUI();
+    const tt = $('#today-tracked'); if (tt) tt.textContent = fmtMin(trackedOn(todayISO()) / 60);
+    const tot = $('#tracked-total'); if (tot) tot.textContent = fmtMin(totalTracked() / 60);
+    if (todayISO() !== lastDay) { lastDay = todayISO(); render(); }
+  }, 1000);
+
+  // ------------------------------------------------------------------ boot
+  let initial = 'today';
+  const h = (location.hash || '').replace('#', '');
+  if (['today', 'plan', 'subjects', 'files'].includes(h)) initial = h;
+  else { try { const v = localStorage.getItem(LS + 'view'); if (['today', 'plan', 'subjects', 'files'].includes(v)) initial = v; } catch (e) { /* ignore */ } }
+  show(initial, false);
+
+  (async () => {
+    if (!window.claude || typeof window.claude.use !== 'function') return;
+    const [db, user, dl, as] = await Promise.all([
+      window.claude.use('db').catch(() => null), window.claude.use('user').catch(() => null),
+      window.claude.use('downloads').catch(() => null), window.claude.use('assets').catch(() => null)]);
+    downloadsNS = dl; assetsNS = as;
+    if (dl || as) render();
+    if (!db || !user) return;
+    const uid = await user.id();
+    dbNS = db;
+    db.collection('library').onSnapshot((qs) => {
+      state.library = qs.docs.filter((d) => d.exists).map((d) => Object.assign({ id: d.id }, d.data()));
+      if (state.view === 'files') renderFiles();
+    }, () => { /* library unavailable */ });
+    if (!uid) return;
+    store.db = db; store.uid = uid; store.mode = 'db';
+    setSync('cloud');
+    for (const name of ['settings', 'plan', 'progress', 'sessions', 'timer']) {
+      store.ref(name).onSnapshot((snap) => {
+        if (!snap.exists) return;
+        const data = snap.data();
+        if (store.pending[name] !== undefined || store.inflight[name]) return; // our own write is on its way
+        applyDoc(name, data);
+        lsSet(name, data);
+        defaultCache = null;
+        render();
+      }, (err) => { if (err && err.code === 'revoked') { store.mode = 'local'; setSync('local'); } });
+    }
+  })();
+})();
+
+</script>
+
+</body></html>
